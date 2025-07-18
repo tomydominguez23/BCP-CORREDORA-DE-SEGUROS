@@ -1,0 +1,48 @@
+{
+  "name": "BCP Corredora de Seguros",
+  "short_name": "BCP Seguros",
+  "description": "Protección integral para lo que más te importa. Seguros automotriz, hogar, vida, mascotas y viaje.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#27ae60",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["finance", "insurance", "business"],
+  "lang": "es",
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "Cotizar Seguro",
+      "short_name": "Cotizar",
+      "description": "Cotiza tu seguro en línea",
+      "url": "/pages/cotizador.html",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Ver Seguros",
+      "short_name": "Seguros",
+      "description": "Explora nuestros seguros",
+      "url": "/pages/seguros.html",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Denunciar Siniestro",
+      "short_name": "Denuncia",
+      "description": "Denuncia tu siniestro",
+      "url": "/#denuncia",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
