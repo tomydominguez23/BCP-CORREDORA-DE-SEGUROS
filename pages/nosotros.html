@@ -6,9 +6,375 @@
     <title>Nosotros - BCP Corredora de Seguros</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/seguros.css">
-    <link rel="stylesheet" href="../assets/css/nosotros.css">
     <link rel="manifest" href="../manifest.json">
     <meta name="theme-color" content="#00a651">
+    <style>
+        /* Estilos para Hero extendido con Quiénes Somos */
+        .hero-nosotros-extended {
+            background: linear-gradient(135deg, #00a651 0%, #28a745 50%, #20c997 100%);
+            color: white;
+            padding: 100px 0 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-nosotros-extended::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,0 1000,0 1000,100 0,20"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content-extended {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-main-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero-main-title h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-main-title p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .quienes-somos-hero {
+            margin-top: 80px;
+        }
+
+        .quienes-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .quienes-intro h2 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .quienes-intro p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .identidad-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .identidad-card-hero {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .identidad-card-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transition: transform 0.3s ease;
+            transform: scale(0);
+        }
+
+        .identidad-card-hero:hover::before {
+            transform: scale(1);
+        }
+
+        .identidad-card-hero:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .identidad-icon-hero {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .identidad-icon-hero i {
+            font-size: 2.2rem;
+            color: white;
+        }
+
+        .identidad-card-hero h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .identidad-card-hero p {
+            color: white;
+            opacity: 0.9;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+
+        .proposito-hero {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 60px 40px;
+            text-align: center;
+            margin-top: 60px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .proposito-hero h3 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .proposito-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .proposito-stats-hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-hero {
+            text-align: center;
+        }
+
+        .stat-hero .number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            display: block;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .stat-hero .label {
+            font-size: 1rem;
+            opacity: 0.8;
+            color: white;
+        }
+
+        .diferenciadores-preview {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .diferenciadores-preview h3 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .diferenciadores-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .diferenciador-preview {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .diferenciador-preview:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .diferenciador-preview .number {
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .diferenciador-preview h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .diferenciador-preview p {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            color: white;
+            line-height: 1.4;
+        }
+
+        .cta-hero {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .cta-hero .btn {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-white {
+            background: white;
+            color: #00a651;
+            border: 2px solid white;
+        }
+
+        .btn-white:hover {
+            background: transparent;
+            color: white;
+            border-color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .btn-outline-white:hover {
+            background: white;
+            color: #00a651;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-main-title h1 {
+                font-size: 2.5rem;
+            }
+
+            .quienes-intro h2 {
+                font-size: 2.2rem;
+            }
+
+            .identidad-cards {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .proposito-hero {
+                padding: 40px 25px;
+            }
+
+            .proposito-stats-hero {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            .diferenciadores-list {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .cta-hero .btn {
+                display: block;
+                margin: 10px 0;
+                width: 100%;
+                max-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content-extended > * {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-content-extended > *:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .hero-content-extended > *:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .hero-content-extended > *:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -45,214 +411,124 @@
     </header>
 
     <main class="main">
-        <!-- Hero Section -->
-        <section class="hero-nosotros">
+        <!-- Hero Section Extendido con Quiénes Somos -->
+        <section class="hero-nosotros-extended">
             <div class="container">
-                <div class="hero-content">
-                    <h1>Conoce BCP Corredora de Seguros</h1>
-                    <p>Más de 15 años protegiendo a familias y empresas chilenas con soluciones de seguros personalizadas y el mejor servicio del mercado.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Quiénes Somos -->
-        <section class="quienes-somos">
-            <div class="container">
-                <div class="quienes-somos-content">
-                    <div class="intro-section">
-                        <h2>¿Quiénes Somos?</h2>
-                        <p class="intro-text">
-                            Somos <strong>BCP Corredora de Seguros</strong>, una empresa chilena dedicada a brindar tranquilidad y seguridad a familias y empresas a través de soluciones integrales de seguros. Nacimos con el propósito de democratizar el acceso a productos de protección de calidad, combinando la tradición aseguradora con la innovación y el servicio personalizado.
-                        </p>
+                <div class="hero-content-extended">
+                    <!-- Título Principal -->
+                    <div class="hero-main-title">
+                        <h1>Conoce BCP Corredora de Seguros</h1>
+                        <p>Más de 15 años protegiendo a familias y empresas chilenas con soluciones de seguros personalizadas y el mejor servicio del mercado.</p>
                     </div>
 
-                    <div class="identidad-grid">
-                        <div class="identidad-card">
-                            <div class="identidad-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h3>Nuestra Esencia</h3>
-                            <p>Somos un equipo de profesionales apasionados por la protección y el bienestar de nuestros clientes. Creemos que cada persona merece acceso a seguros de calidad que se adapten a sus necesidades específicas y presupuesto.</p>
+                    <!-- Quiénes Somos Integrado -->
+                    <div class="quienes-somos-hero">
+                        <div class="quienes-intro">
+                            <h2>¿Quiénes Somos?</h2>
+                            <p>
+                                Somos <strong>BCP Corredora de Seguros</strong>, una empresa chilena dedicada a brindar tranquilidad y seguridad a familias y empresas a través de soluciones integrales de seguros. Nacimos con el propósito de democratizar el acceso a productos de protección de calidad, combinando la tradición aseguradora con la innovación y el servicio personalizado.
+                            </p>
                         </div>
-                        
-                        <div class="identidad-card">
-                            <div class="identidad-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <h3>Nuestro Compromiso</h3>
-                            <p>Nos comprometemos a ser el puente confiable entre nuestros clientes y las mejores compañías aseguradoras del mercado, garantizando asesoría transparente, servicio excepcional y acompañamiento en cada momento.</p>
-                        </div>
-                        
-                        <div class="identidad-card">
-                            <div class="identidad-icon">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <h3>Nuestra Filosofía</h3>
-                            <p>Creemos que la prevención y la protección son fundamentales para construir un futuro seguro. Por eso, trabajamos incansablemente para educar y empoderar a nuestros clientes en la toma de decisiones informadas.</p>
-                        </div>
-                    </div>
 
-                    <div class="proposito-section">
-                        <div class="proposito-content">
-                            <div class="proposito-texto">
-                                <h3>Nuestro Propósito</h3>
-                                <p>
-                                    <strong>"Proteger lo que más valoras"</strong> no es solo nuestro lema, es nuestra razón de ser. Entendemos que detrás de cada póliza hay sueños, proyectos, familias y empresas que merecen estar protegidas contra los imprevistos de la vida.
-                                </p>
-                                <p>
-                                    Trabajamos cada día para hacer que los seguros sean más accesibles, comprensibles y efectivos. Nuestro objetivo es que cada chileno tenga la oportunidad de proteger su patrimonio, su salud y su futuro sin complicaciones ni sorpresas.
-                                </p>
+                        <!-- Cards de Identidad -->
+                        <div class="identidad-cards">
+                            <div class="identidad-card-hero">
+                                <div class="identidad-icon-hero">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h3>Nuestra Esencia</h3>
+                                <p>Somos un equipo de profesionales apasionados por la protección y el bienestar de nuestros clientes. Creemos que cada persona merece acceso a seguros de calidad.</p>
                             </div>
-                            <div class="proposito-imagen">
-                                <div class="proposito-stats">
-                                    <div class="stat-circle">
-                                        <div class="stat-number">25,000+</div>
-                                        <div class="stat-desc">Familias Protegidas</div>
-                                    </div>
-                                    <div class="stat-circle">
-                                        <div class="stat-number">98%</div>
-                                        <div class="stat-desc">Satisfacción</div>
-                                    </div>
-                                    <div class="stat-circle">
-                                        <div class="stat-number">15+</div>
-                                        <div class="stat-desc">Años de Experiencia</div>
-                                    </div>
+                            
+                            <div class="identidad-card-hero">
+                                <div class="identidad-icon-hero">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h3>Nuestro Compromiso</h3>
+                                <p>Nos comprometemos a ser el puente confiable entre nuestros clientes y las mejores compañías aseguradoras del mercado, garantizando asesoría transparente.</p>
+                            </div>
+                            
+                            <div class="identidad-card-hero">
+                                <div class="identidad-icon-hero">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h3>Nuestra Filosofía</h3>
+                                <p>Creemos que la prevención y la protección son fundamentales para construir un futuro seguro. Educamos y empoderamos a nuestros clientes.</p>
+                            </div>
+                        </div>
+
+                        <!-- Propósito -->
+                        <div class="proposito-hero">
+                            <h3>Nuestro Propósito</h3>
+                            <p>
+                                <strong>"Proteger lo que más valoras"</strong> no es solo nuestro lema, es nuestra razón de ser. Entendemos que detrás de cada póliza hay sueños, proyectos, familias y empresas que merecen estar protegidas.
+                            </p>
+                            <p>
+                                Trabajamos cada día para hacer que los seguros sean más accesibles, comprensibles y efectivos. Nuestro objetivo es que cada chileno tenga la oportunidad de proteger su patrimonio, su salud y su futuro.
+                            </p>
+                            
+                            <div class="proposito-stats-hero">
+                                <div class="stat-hero">
+                                    <span class="number">25,000+</span>
+                                    <span class="label">Familias Protegidas</span>
+                                </div>
+                                <div class="stat-hero">
+                                    <span class="number">98%</span>
+                                    <span class="label">Satisfacción</span>
+                                </div>
+                                <div class="stat-hero">
+                                    <span class="number">15+</span>
+                                    <span class="label">Años de Experiencia</span>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="diferenciadores-section">
-                        <h3>¿Qué nos hace diferentes?</h3>
-                        <div class="diferenciadores-grid">
-                            <div class="diferenciador-item">
-                                <div class="diferenciador-number">01</div>
-                                <h4>Asesoría Personalizada</h4>
-                                <p>Cada cliente es único. Por eso, nuestros asesores especializados dedican el tiempo necesario para entender tus necesidades específicas y recomendar la mejor solución de protección.</p>
-                            </div>
-                            
-                            <div class="diferenciador-item">
-                                <div class="diferenciador-number">02</div>
-                                <h4>Transparencia Total</h4>
-                                <p>Sin letra pequeña ni sorpresas. Te explicamos claramente qué cubre tu seguro, qué no cubre, cuánto pagas y por qué. La confianza se construye con honestidad.</p>
-                            </div>
-                            
-                            <div class="diferenciador-item">
-                                <div class="diferenciador-number">03</div>
-                                <h4>Tecnología Avanzada</h4>
-                                <p>Combinamos la calidez humana con la eficiencia tecnológica. Nuestra plataforma digital te permite gestionar tus seguros 24/7 de manera simple y segura.</p>
-                            </div>
-                            
-                            <div class="diferenciador-item">
-                                <div class="diferenciador-number">04</div>
-                                <h4>Red de Aliados Premium</h4>
-                                <p>Trabajamos exclusivamente con las aseguradoras más sólidas y prestigiosas de Chile, garantizando que tengas acceso a los mejores productos y servicios del mercado.</p>
-                            </div>
-                            
-                            <div class="diferenciador-item">
-                                <div class="diferenciador-number">05</div>
-                                <h4>Acompañamiento Integral</h4>
-                                <p>No terminamos con la venta. Te acompañamos durante toda la vigencia de tu póliza, ayudándote en siniestros, renovaciones y ajustes según evolucionen tus necesidades.</p>
-                            </div>
-                            
-                            <div class="diferenciador-item">
-                                <div class="diferenciador-number">06</div>
-                                <h4>Compromiso Social</h4>
-                                <p>Creemos en retribuir a la comunidad. Desarrollamos programas de educación financiera y apoyamos iniciativas sociales que fortalecen el tejido social chileno.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cultura-section">
-                        <h3>Nuestra Cultura Organizacional</h3>
-                        <div class="cultura-content">
-                            <div class="cultura-texto">
-                                <p>
-                                    En BCP Corredora de Seguros cultivamos una cultura basada en la <strong>excelencia</strong>, la <strong>innovación</strong> y el <strong>respeto mutuo</strong>. Creemos que un equipo motivado y comprometido es la base de un servicio excepcional.
-                                </p>
+                        <!-- Diferenciadores Preview -->
+                        <div class="diferenciadores-preview">
+                            <h3>¿Qué nos hace diferentes?</h3>
+                            <div class="diferenciadores-list">
+                                <div class="diferenciador-preview">
+                                    <div class="number">01</div>
+                                    <h4>Asesoría Personalizada</h4>
+                                    <p>Cada cliente es único. Nuestros asesores especializados entienden tus necesidades específicas.</p>
+                                </div>
                                 
-                                <div class="cultura-principios">
-                                    <div class="principio">
-                                        <i class="fas fa-star"></i>
-                                        <div>
-                                            <h4>Excelencia Operacional</h4>
-                                            <p>Buscamos la perfección en cada proceso, desde la primera consulta hasta la resolución de siniestros.</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="principio">
-                                        <i class="fas fa-rocket"></i>
-                                        <div>
-                                            <h4>Innovación Constante</h4>
-                                            <p>Invertimos en tecnología y metodologías que mejoren continuamente la experiencia de nuestros clientes.</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="principio">
-                                        <i class="fas fa-hands-helping"></i>
-                                        <div>
-                                            <h4>Trabajo en Equipo</h4>
-                                            <p>Fomentamos la colaboración, el aprendizaje mutuo y el crecimiento profesional de todos nuestros colaboradores.</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="principio">
-                                        <i class="fas fa-leaf"></i>
-                                        <div>
-                                            <h4>Sostenibilidad</h4>
-                                            <p>Operamos de manera responsable con el medio ambiente y contribuimos al desarrollo sostenible del país.</p>
-                                        </div>
-                                    </div>
+                                <div class="diferenciador-preview">
+                                    <div class="number">02</div>
+                                    <h4>Transparencia Total</h4>
+                                    <p>Sin letra pequeña ni sorpresas. Te explicamos claramente qué cubre tu seguro.</p>
                                 </div>
-                            </div>
-                            
-                            <div class="cultura-imagen">
-                                <div class="cultura-stats">
-                                    <div class="cultura-stat">
-                                        <h4>85%</h4>
-                                        <p>De nuestros colaboradores han crecido internamente</p>
-                                    </div>
-                                    <div class="cultura-stat">
-                                        <h4>4.8/5</h4>
-                                        <p>Calificación promedio como empleador</p>
-                                    </div>
-                                    <div class="cultura-stat">
-                                        <h4>40 hrs</h4>
-                                        <p>Anuales de capacitación por colaborador</p>
-                                    </div>
+                                
+                                <div class="diferenciador-preview">
+                                    <div class="number">03</div>
+                                    <h4>Tecnología Avanzada</h4>
+                                    <p>Combinamos calidez humana con eficiencia tecnológica 24/7.</p>
+                                </div>
+                                
+                                <div class="diferenciador-preview">
+                                    <div class="number">04</div>
+                                    <h4>Red Premium</h4>
+                                    <p>Trabajamos con las aseguradoras más sólidas y prestigiosas de Chile.</p>
+                                </div>
+                                
+                                <div class="diferenciador-preview">
+                                    <div class="number">05</div>
+                                    <h4>Acompañamiento Integral</h4>
+                                    <p>Te acompañamos durante toda la vigencia de tu póliza, más allá de la venta.</p>
+                                </div>
+                                
+                                <div class="diferenciador-preview">
+                                    <div class="number">06</div>
+                                    <h4>Compromiso Social</h4>
+                                    <p>Desarrollamos programas de educación financiera y apoyamos iniciativas sociales.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="vision-futuro">
-                        <div class="vision-content">
-                            <h3>Nuestra Visión del Futuro</h3>
-                            <p>
-                                Miramos hacia el futuro con optimismo y determinación. Visualizamos un Chile donde cada familia y empresa tenga acceso a soluciones de protección innovadoras, justas y efectivas. 
-                            </p>
-                            <p>
-                                Estamos comprometidos con liderar la transformación digital del sector asegurador, manteniendo siempre el toque humano que nos caracteriza. Queremos ser reconocidos no solo como la mejor corredora de seguros, sino como el socio estratégico que acompaña a los chilenos en la construcción de un futuro más seguro y próspero.
-                            </p>
-                            
-                            <div class="compromisos-futuro">
-                                <div class="compromiso-item">
-                                    <i class="fas fa-mobile-alt"></i>
-                                    <span>Digitalización avanzada manteniendo la cercanía humana</span>
-                                </div>
-                                <div class="compromiso-item">
-                                    <i class="fas fa-graduation-cap"></i>
-                                    <span>Educación financiera para todos los chilenos</span>
-                                </div>
-                                <div class="compromiso-item">
-                                    <i class="fas fa-globe-americas"></i>
-                                    <span>Expansión responsable en Latinoamérica</span>
-                                </div>
-                                <div class="compromiso-item">
-                                    <i class="fas fa-seedling"></i>
-                                    <span>Impacto positivo en la sociedad y medio ambiente</span>
-                                </div>
-                            </div>
+                        <!-- CTA Hero -->
+                        <div class="cta-hero">
+                            <button class="btn btn-white" onclick="openCotizador()">Cotizar Seguros</button>
+                            <button class="btn btn-outline-white" onclick="openChat()">Hablar con Asesor</button>
                         </div>
                     </div>
                 </div>
