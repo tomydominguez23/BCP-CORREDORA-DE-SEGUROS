@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - BCP Corredora de Seguros</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/seguros.css">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#00a651">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="../assets/images/logo-bcp.png" alt="BCP Logo">
+                    <span>BCP Corredora de Seguros</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="#" class="dropdown-trigger">Seguros <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="seguro-auto.html">Seguro Auto</a></li>
+                                <li><a href="seguro-hogar.html">Seguro Hogar</a></li>
+                                <li><a href="seguro-vida.html">Seguro de Vida</a></li>
+                                <li><a href="seguro-salud.html">Seguro de Salud</a></li>
+                                <li><a href="seguro-mascotas.html">Seguro Mascotas</a></li>
+                                <li><a href="seguro-viaje.html">Seguro de Viaje</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero-contacto">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Contáctanos</h1>
+                    <p>Estamos aquí para ayudarte. Nuestro equipo de expertos está disponible para resolver todas tus dudas sobre seguros.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información de Contacto -->
+        <section class="info-contacto">
+            <div class="container">
+                <div class="contacto-grid">
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Teléfono</h3>
+                        <p>+56 2 2345 6789</p>
+                        <p>Lun-Vie 8:30-18:30</p>
+                        <p>Sáb 9:00-13:00</p>
+                    </div>
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>contacto@bcpseguros.cl</p>
+                        <p>ventas@bcpseguros.cl</p>
+                        <p>siniestros@bcpseguros.cl</p>
+                    </div>
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Oficina Principal</h3>
+                        <p>Av. Providencia 1234</p>
+                        <p>Providencia, Santiago</p>
+                        <p>Chile</p>
+                    </div>
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Horarios</h3>
+                        <p>Lunes a Viernes</p>
+                        <p>8:30 - 18:30 hrs</p>
+                        <p>Sábados 9:00 - 13:00 hrs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario de Contacto -->
+        <section class="formulario-contacto">
+            <div class="container">
+                <div class="formulario-content">
+                    <div class="formulario-info">
+                        <h2>Envíanos un Mensaje</h2>
+                        <p>Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas.</p>
+                        
+                        <div class="info-adicional">
+                            <div class="info-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h4>Emergencias</h4>
+                                    <p>Para emergencias y siniestros, llama al +56 2 2345 6789</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-comments"></i>
+                                <div>
+                                    <h4>Chat en Línea</h4>
+                                    <p>Disponible 24/7 para consultas inmediatas</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                    <p>+56 9 8765 4321 para consultas rápidas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="formulario-form">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre Completo *</label>
+                                    <input type="text" id="nombre" name="nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="telefono">Teléfono *</label>
+                                    <input type="tel" id="telefono" name="telefono" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="seguro">Tipo de Seguro</label>
+                                    <select id="seguro" name="seguro">
+                                        <option value="">Selecciona un seguro</option>
+                                        <option value="auto">Seguro Auto</option>
+                                        <option value="hogar">Seguro Hogar</option>
+                                        <option value="vida">Seguro de Vida</option>
+                                        <option value="salud">Seguro de Salud</option>
+                                        <option value="mascotas">Seguro Mascotas</option>
+                                        <option value="viaje">Seguro de Viaje</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="asunto">Asunto *</label>
+                                <input type="text" id="asunto" name="asunto" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje *</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="politicas" name="politicas" required>
+                                    <span class="checkmark"></span>
+                                    Acepto las <a href="#" target="_blank">políticas de privacidad</a> y el tratamiento de mis datos personales.
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Deseo recibir información sobre promociones y nuevos productos.
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa y Sucursales -->
+        <section class="mapa-sucursales">
+            <div class="container">
+                <h2>Nuestras Sucursales</h2>
+                <div class="sucursales-content">
+                    <div class="mapa-container">
+                        <div class="mapa-placeholder">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Mapa Interactivo</p>
+                            <small>Aquí se integraría Google Maps con la ubicación de nuestras sucursales</small>
+                        </div>
+                    </div>
+                    <div class="sucursales-lista">
+                        <div class="sucursal-item">
+                            <h4>Casa Matriz - Santiago</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Av. Providencia 1234, Providencia</p>
+                            <p><i class="fas fa-phone"></i> +56 2 2345 6789</p>
+                            <p><i class="fas fa-clock"></i> Lun-Vie 8:30-18:30, Sáb 9:00-13:00</p>
+                            <button class="btn btn-outline btn-small" onclick="abrirMapa('santiago')">Ver en Mapa</button>
+                        </div>
+                        <div class="sucursal-item">
+                            <h4>Sucursal Valparaíso</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Av. Pedro Montt 567, Valparaíso</p>
+                            <p><i class="fas fa-phone"></i> +56 32 234 5678</p>
+                            <p><i class="fas fa-clock"></i> Lun-Vie 9:00-18:00</p>
+                            <button class="btn btn-outline btn-small" onclick="abrirMapa('valparaiso')">Ver en Mapa</button>
+                        </div>
+                        <div class="sucursal-item">
+                            <h4>Sucursal Concepción</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Av. O'Higgins 890, Concepción</p>
+                            <p><i class="fas fa-phone"></i> +56 41 234 5678</p>
+                            <p><i class="fas fa-clock"></i> Lun-Vie 9:00-18:00</p>
+                            <button class="btn btn-outline btn-small" onclick="abrirMapa('concepcion')">Ver en Mapa</button>
+                        </div>
+                        <div class="sucursal-item">
+                            <h4>Sucursal La Serena</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Av. Francisco de Aguirre 321, La Serena</p>
+                            <p><i class="fas fa-phone"></i> +56 51 234 5678</p>
+                            <p><i class="fas fa-clock"></i> Lun-Vie 9:00-18:00</p>
+                            <button class="btn btn-outline btn-small" onclick="abrirMapa('laserena')">Ver en Mapa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto por Departamento -->
+        <section class="contacto-departamentos">
+            <div class="container">
+                <h2>Contacto por Departamento</h2>
+                <div class="departamentos-grid">
+                    <div class="departamento-card">
+                        <div class="dept-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3>Ventas</h3>
+                        <p>Para cotizar o contratar seguros</p>
+                        <p><strong>Email:</strong> ventas@bcpseguros.cl</p>
+                        <p><strong>Teléfono:</strong> +56 2 2345 6701</p>
+                        <button class="btn btn-outline btn-small" onclick="contactarDepartamento('ventas')">Contactar</button>
+                    </div>
+                    <div class="departamento-card">
+                        <div class="dept-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Siniestros</h3>
+                        <p>Para reportar y hacer seguimiento</p>
+                        <p><strong>Email:</strong> siniestros@bcpseguros.cl</p>
+                        <p><strong>Teléfono:</strong> +56 2 2345 6702</p>
+                        <button class="btn btn-outline btn-small" onclick="contactarDepartamento('siniestros')">Contactar</button>
+                    </div>
+                    <div class="departamento-card">
+                        <div class="dept-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>Atención Cliente</h3>
+                        <p>Para consultas y reclamos</p>
+                        <p><strong>Email:</strong> atencion@bcpseguros.cl</p>
+                        <p><strong>Teléfono:</strong> +56 2 2345 6703</p>
+                        <button class="btn btn-outline btn-small" onclick="contactarDepartamento('atencion')">Contactar</button>
+                    </div>
+                    <div class="departamento-card">
+                        <div class="dept-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Empresas</h3>
+                        <p>Seguros corporativos y empresariales</p>
+                        <p><strong>Email:</strong> empresas@bcpseguros.cl</p>
+                        <p><strong>Teléfono:</strong> +56 2 2345 6704</p>
+                        <button class="btn btn-outline btn-small" onclick="contactarDepartamento('empresas')">Contactar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Contacto -->
+        <section class="faq-contacto">
+            <div class="container">
+                <h2>Preguntas Frecuentes sobre Contacto</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>¿Cuál es el tiempo de respuesta a mis consultas?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Nos comprometemos a responder todas las consultas en un máximo de 24 horas hábiles. Para emergencias, nuestro call center está disponible 24/7.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>¿Puedo hacer cambios a mi póliza por teléfono?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, algunos cambios menores pueden realizarse telefónicamente. Para modificaciones importantes, necesitarás acercarte a una sucursal o enviar documentación por email.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>¿Cómo puedo agendar una cita presencial?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Puedes agendar tu cita llamando directamente a la sucursal, a través de nuestro chat online, o enviando un email con tus datos y disponibilidad.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>¿Qué documentos necesito para una consulta presencial?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Trae tu cédula de identidad, número de póliza si ya eres cliente, y cualquier documentación relacionada con tu consulta específica.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>¿Necesitas Ayuda Inmediata?</h2>
+                    <p>Nuestro equipo está disponible para atenderte las 24 horas del día, los 7 días de la semana.</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary" onclick="window.open('tel:+56223456789')">Llamar Ahora</button>
+                        <button class="btn btn-secondary" onclick="openChat()">Chat en Línea</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BCP Corredora de Seguros</h4>
+                    <p>Tu tranquilidad es nuestra prioridad. Más de 15 años protegiendo a familias chilenas.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Seguros</h4>
+                    <ul>
+                        <li><a href="seguro-auto.html">Seguro Auto</a></li>
+                        <li><a href="seguro-hogar.html">Seguro Hogar</a></li>
+                        <li><a href="seguro-vida.html">Seguro de Vida</a></li>
+                        <li><a href="seguro-salud.html">Seguro de Salud</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone"></i> +56 2 2345 6789</p>
+                    <p><i class="fas fa-envelope"></i> contacto@bcpseguros.cl</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Providencia 1234, Santiago</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BCP Corredora de Seguros. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="chat-button" onclick="openChat()">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Manejo del formulario de contacto
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validación básica
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const asunto = document.getElementById('asunto').value;
+            const mensaje = document.getElementById('mensaje').value;
+            const politicas = document.getElementById('politicas').checked;
+            
+            if (!nombre || !email || !telefono || !asunto || !mensaje || !politicas) {
+                alert('Por favor completa todos los campos obligatorios y acepta las políticas de privacidad.');
+                return;
+            }
+            
+            // Simulación de envío
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            btn.textContent = 'Enviando...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');
+                document.getElementById('contactForm').reset();
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }, 2000);
+        });
+        
+        function abrirMapa(ciudad) {
+            // Simular apertura de mapa
+            alert(`Abriendo mapa para la sucursal de ${ciudad.charAt(0).toUpperCase() + ciudad.slice(1)}`);
+        }
+        
+        function contactarDepartamento(dept) {
+            // Simular contacto con departamento
+            let email = '';
+            switch(dept) {
+                case 'ventas': email = 'ventas@bcpseguros.cl'; break;
+                case 'siniestros': email = 'siniestros@bcpseguros.cl'; break;
+                case 'atencion': email = 'atencion@bcpseguros.cl'; break;
+                case 'empresas': email = 'empresas@bcpseguros.cl'; break;
+            }
+            window.open(`mailto:${email}`, '_blank');
+        }
+    </script>
+</body>
+</html>
