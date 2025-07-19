@@ -10,6 +10,381 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#27ae60">
+    <style>
+        /* Estilos para la sección Quiénes Somos en el inicio */
+        .quienes-somos-inicio {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 50%, #58d68d 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quienes-somos-inicio::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.05"><polygon points="0,0 1000,0 1000,100 0,20"/></svg>');
+            background-size: cover;
+        }
+
+        .quienes-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .quienes-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .quienes-header h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .quienes-header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .identidad-cards-inicio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .identidad-card-inicio {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .identidad-card-inicio::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transition: transform 0.4s ease;
+            transform: scale(0);
+        }
+
+        .identidad-card-inicio:hover::before {
+            transform: scale(1);
+        }
+
+        .identidad-card-inicio:hover {
+            transform: translateY(-15px);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .identidad-icon-inicio {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .identidad-card-inicio:hover .identidad-icon-inicio {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        .identidad-icon-inicio i {
+            font-size: 2.2rem;
+            color: white;
+        }
+
+        .identidad-card-inicio h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .identidad-card-inicio p {
+            color: white;
+            opacity: 0.9;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+            font-size: 1rem;
+        }
+
+        .proposito-section-inicio {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 50px 40px;
+            text-align: center;
+            margin-bottom: 60px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .proposito-section-inicio h3 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .proposito-section-inicio p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stats-row-inicio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-item-inicio {
+            text-align: center;
+        }
+
+        .stat-item-inicio .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            display: block;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .stat-item-inicio .label {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            color: white;
+        }
+
+        .diferenciadores-preview-inicio {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .diferenciadores-preview-inicio h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .diferenciadores-grid-inicio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .diferenciador-inicio {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .diferenciador-inicio:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-8px);
+        }
+
+        .diferenciador-inicio .number {
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: 700;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .diferenciador-inicio h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .diferenciador-inicio p {
+            font-size: 0.85rem;
+            opacity: 0.85;
+            color: white;
+            line-height: 1.4;
+        }
+
+        .cta-section-inicio {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .cta-buttons-inicio {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white-inicio {
+            background: white;
+            color: #27ae60;
+            border: 2px solid white;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-white-inicio:hover {
+            background: transparent;
+            color: white;
+            border-color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-outline-white-inicio {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-outline-white-inicio:hover {
+            background: white;
+            color: #27ae60;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .quienes-somos-inicio {
+                padding: 60px 0;
+            }
+
+            .quienes-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .identidad-cards-inicio {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .proposito-section-inicio {
+                padding: 40px 25px;
+            }
+
+            .stats-row-inicio {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            .diferenciadores-grid-inicio {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .cta-buttons-inicio {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-white-inicio,
+            .btn-outline-white-inicio {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .quienes-content > * {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .quienes-content > *:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .quienes-content > *:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .quienes-content > *:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -35,6 +410,7 @@
                 <a href="#asistencias" class="nav-link">Asistencias</a>
                 <a href="#denuncia" class="nav-link">Denuncia tu siniestro</a>
                 <a href="#servicios" class="nav-link">Servicios en línea</a>
+                <a href="pages/nosotros.html" class="nav-link">Nosotros</a>
             </div>
             
             <div class="nav-actions">
@@ -79,6 +455,117 @@
         
         <button class="hero-nav prev"><i class="fas fa-chevron-left"></i></button>
         <button class="hero-nav next"><i class="fas fa-chevron-right"></i></button>
+    </section>
+
+    <!-- Quiénes Somos Section -->
+    <section class="quienes-somos-inicio">
+        <div class="quienes-content">
+            <div class="quienes-header">
+                <h2>¿Quiénes Somos?</h2>
+                <p>
+                    Somos <strong>BCP Corredora de Seguros</strong>, una empresa chilena dedicada a brindar tranquilidad y seguridad a familias y empresas a través de soluciones integrales de seguros. Nacimos con el propósito de democratizar el acceso a productos de protección de calidad, combinando la tradición aseguradora con la innovación y el servicio personalizado.
+                </p>
+            </div>
+
+            <div class="identidad-cards-inicio">
+                <div class="identidad-card-inicio">
+                    <div class="identidad-icon-inicio">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Nuestra Esencia</h3>
+                    <p>Somos un equipo de profesionales apasionados por la protección y el bienestar de nuestros clientes. Creemos que cada persona merece acceso a seguros de calidad.</p>
+                </div>
+                
+                <div class="identidad-card-inicio">
+                    <div class="identidad-icon-inicio">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Nuestro Compromiso</h3>
+                    <p>Nos comprometemos a ser el puente confiable entre nuestros clientes y las mejores compañías aseguradoras del mercado, garantizando asesoría transparente.</p>
+                </div>
+                
+                <div class="identidad-card-inicio">
+                    <div class="identidad-icon-inicio">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Nuestra Filosofía</h3>
+                    <p>Creemos que la prevención y la protección son fundamentales para construir un futuro seguro. Educamos y empoderamos a nuestros clientes.</p>
+                </div>
+            </div>
+
+            <div class="proposito-section-inicio">
+                <h3>Nuestro Propósito</h3>
+                <p>
+                    <strong>"Proteger lo que más valoras"</strong> no es solo nuestro lema, es nuestra razón de ser. Entendemos que detrás de cada póliza hay sueños, proyectos, familias y empresas que merecen estar protegidas.
+                </p>
+                <p>
+                    Trabajamos cada día para hacer que los seguros sean más accesibles, comprensibles y efectivos. Nuestro objetivo es que cada chileno tenga la oportunidad de proteger su patrimonio, su salud y su futuro.
+                </p>
+                
+                <div class="stats-row-inicio">
+                    <div class="stat-item-inicio">
+                        <span class="number">25,000+</span>
+                        <span class="label">Familias Protegidas</span>
+                    </div>
+                    <div class="stat-item-inicio">
+                        <span class="number">98%</span>
+                        <span class="label">Satisfacción</span>
+                    </div>
+                    <div class="stat-item-inicio">
+                        <span class="number">15+</span>
+                        <span class="label">Años de Experiencia</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="diferenciadores-preview-inicio">
+                <h3>¿Qué nos hace diferentes?</h3>
+                <div class="diferenciadores-grid-inicio">
+                    <div class="diferenciador-inicio">
+                        <div class="number">01</div>
+                        <h4>Asesoría Personalizada</h4>
+                        <p>Cada cliente es único. Nuestros asesores especializados entienden tus necesidades específicas.</p>
+                    </div>
+                    
+                    <div class="diferenciador-inicio">
+                        <div class="number">02</div>
+                        <h4>Transparencia Total</h4>
+                        <p>Sin letra pequeña ni sorpresas. Te explicamos claramente qué cubre tu seguro.</p>
+                    </div>
+                    
+                    <div class="diferenciador-inicio">
+                        <div class="number">03</div>
+                        <h4>Tecnología Avanzada</h4>
+                        <p>Combinamos calidez humana con eficiencia tecnológica 24/7.</p>
+                    </div>
+                    
+                    <div class="diferenciador-inicio">
+                        <div class="number">04</div>
+                        <h4>Red Premium</h4>
+                        <p>Trabajamos con las aseguradoras más sólidas y prestigiosas de Chile.</p>
+                    </div>
+                    
+                    <div class="diferenciador-inicio">
+                        <div class="number">05</div>
+                        <h4>Acompañamiento Integral</h4>
+                        <p>Te acompañamos durante toda la vigencia de tu póliza, más allá de la venta.</p>
+                    </div>
+                    
+                    <div class="diferenciador-inicio">
+                        <div class="number">06</div>
+                        <h4>Compromiso Social</h4>
+                        <p>Desarrollamos programas de educación financiera y apoyamos iniciativas sociales.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section-inicio">
+                <div class="cta-buttons-inicio">
+                    <a href="pages/cotizador.html" class="btn-white-inicio">Cotizar Seguros</a>
+                    <a href="pages/nosotros.html" class="btn-outline-white-inicio">Conoce Más</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Services Online Section -->
