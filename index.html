@@ -32,6 +32,7 @@
                         <a href="pages/seguros.html#mascotas">Mascotas</a>
                     </div>
                 </div>
+                <a href="pages/comparador.html" class="nav-link">Comparar Pólizas</a>
                 <a href="#asistencias" class="nav-link">Asistencias</a>
                 <a href="#denuncia" class="nav-link">Denuncia tu siniestro</a>
                 <a href="#servicios" class="nav-link">Servicios en línea</a>
@@ -39,7 +40,7 @@
             </div>
             
             <div class="nav-actions">
-                <a href="#contacto" class="btn-service">Servicio al Cliente</a>
+                <a href="pages/contacto.html" class="btn-service">Servicio al Cliente</a>
                 <a href="pages/cotizador.html" class="btn-primary">Hazte Cliente</a>
                 <button class="search-btn"><i class="fas fa-search"></i> BUSCAR</button>
             </div>
@@ -70,16 +71,16 @@
                     <span class="promo-text">Además obtén</span>
                     <div class="promo-highlight">2 meses gratis</div>
                 </div>
-                <button class="btn-buy">COMPRAR</button>
-                <p class="promo-details">Promoción aplica en la 2ª cuota.<br><a href="#">Ver Bases Legales</a></p>
+                <a href="pages/cotizador.html?type=home" class="btn-buy">COTIZAR AHORA</a>
+                <p class="promo-details">Promoción aplica en la 2ª cuota.<br><a href="#" onclick="showTermsModal()">Ver Bases Legales</a></p>
             </div>
             <div class="hero-image">
                 <div class="placeholder-image">Familia con mascota</div>
             </div>
         </div>
         
-        <button class="hero-nav prev"><i class="fas fa-chevron-left"></i></button>
-        <button class="hero-nav next"><i class="fas fa-chevron-right"></i></button>
+        <button class="hero-nav prev" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+        <button class="hero-nav next" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
     </section>
 
     <!-- Quiénes Somos Section -->
@@ -204,10 +205,11 @@
                     <span class="dot blue"></span>
                 </div>
                 <h2>Cotiza y contrata nuestros seguros en línea</h2>
+                <p class="section-subtitle">Encuentra la protección perfecta para ti y tu familia</p>
             </div>
             
             <div class="services-grid">
-                <div class="service-card automotriz">
+                <div class="service-card automotriz" onclick="goToCotizador('auto')">
                     <div class="service-image">
                         <div class="placeholder-image">Seguro Auto</div>
                         <div class="service-icon">
@@ -217,15 +219,19 @@
                     <div class="service-content">
                         <h3>Seguro Automotriz</h3>
                         <div class="service-options">
-                            <a href="pages/seguros.html#automotriz">Seguro Auto <span class="badge">MÁS VENDIDO</span></a>
-                            <a href="pages/seguros.html#automotriz">Seguro Pérdida Total <span class="badge new">NUEVO</span></a>
-                            <a href="pages/seguros.html#automotriz">Seguro Auto Comercial</a>
+                            <a href="pages/cotizador.html?type=auto">Seguro Auto <span class="badge">MÁS VENDIDO</span></a>
+                            <a href="pages/cotizador.html?type=auto">Seguro Pérdida Total <span class="badge new">NUEVO</span></a>
+                            <a href="pages/cotizador.html?type=auto">Seguro Auto Comercial</a>
                             <a href="pages/seguros.html#automotriz">SOAP 2025</a>
+                        </div>
+                        <div class="service-actions">
+                            <a href="pages/cotizador.html?type=auto" class="btn-cotizar">Cotizar</a>
+                            <a href="pages/comparador.html?type=auto" class="btn-comparar">Comparar</a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="service-card proteccion">
+                <div class="service-card proteccion" onclick="goToCotizador('home')">
                     <div class="service-image">
                         <div class="placeholder-image">Seguro Hogar</div>
                         <div class="service-icon">
@@ -235,15 +241,19 @@
                     <div class="service-content">
                         <h3>Seguro Protección Integral y Hogar</h3>
                         <div class="service-options">
-                            <a href="pages/seguros.html#hogar">Seguro Hogar Contenido <span class="badge new">NUEVO</span></a>
-                            <a href="pages/seguros.html#hogar">Seguro Anti Robo</a>
-                            <a href="pages/seguros.html#hogar">Seguro Hogar</a>
-                            <a href="pages/seguros.html#hogar">Comparador Seguro Hogar</a>
+                            <a href="pages/cotizador.html?type=home">Seguro Hogar Contenido <span class="badge new">NUEVO</span></a>
+                            <a href="pages/cotizador.html?type=home">Seguro Anti Robo</a>
+                            <a href="pages/cotizador.html?type=home">Seguro Hogar</a>
+                            <a href="pages/comparador.html?type=home">Comparador Seguro Hogar</a>
+                        </div>
+                        <div class="service-actions">
+                            <a href="pages/cotizador.html?type=home" class="btn-cotizar">Cotizar</a>
+                            <a href="pages/comparador.html?type=home" class="btn-comparar">Comparar</a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="service-card vida">
+                <div class="service-card vida" onclick="goToCotizador('life')">
                     <div class="service-image">
                         <div class="placeholder-image">Seguro Vida</div>
                         <div class="service-icon">
@@ -253,12 +263,46 @@
                     <div class="service-content">
                         <h3>Seguro Vida y Salud</h3>
                         <div class="service-options">
-                            <a href="pages/seguros.html#vida">Seguro Sala de Urgencias</a>
-                            <a href="pages/seguros.html#vida">Seguro de Vida</a>
-                            <a href="pages/seguros.html#vida">Seguro Catastrófico <span class="badge new">NUEVO</span></a>
-                            <a href="pages/seguros.html#vida">Muerte Accidental más Ahorro <span class="badge new">NUEVO</span></a>
+                            <a href="pages/cotizador.html?type=health">Seguro Sala de Urgencias</a>
+                            <a href="pages/cotizador.html?type=life">Seguro de Vida</a>
+                            <a href="pages/cotizador.html?type=health">Seguro Catastrófico <span class="badge new">NUEVO</span></a>
+                            <a href="pages/cotizador.html?type=life">Muerte Accidental más Ahorro <span class="badge new">NUEVO</span></a>
+                        </div>
+                        <div class="service-actions">
+                            <a href="pages/cotizador.html?type=life" class="btn-cotizar">Cotizar</a>
+                            <a href="pages/comparador.html?type=life" class="btn-comparar">Comparar</a>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Quick Access Tools -->
+            <div class="quick-tools">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h4>Cotizador Rápido</h4>
+                    <p>Obtén una cotización en menos de 3 minutos</p>
+                    <a href="pages/cotizador.html" class="tool-link">Iniciar</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h4>Comparador de Pólizas</h4>
+                    <p>Compara hasta 3 seguros lado a lado</p>
+                    <a href="pages/comparador.html" class="tool-link">Comparar</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4>Asesoría Gratuita</h4>
+                    <p>Habla con un experto en seguros</p>
+                    <a href="tel:+56600600292" class="tool-link">Llamar</a>
                 </div>
             </div>
         </div>
@@ -282,12 +326,12 @@
                     <h3>Denuncia por teléfono:</h3>
                     <div class="phone-number">
                         <i class="fas fa-phone"></i>
-                        <span>600 6000 292</span>
+                        <a href="tel:+56600600292">600 6000 292</a>
                     </div>
                     <p>o desde Celulares:</p>
                     <div class="mobile-number">
                         <i class="fas fa-mobile-alt"></i>
-                        <span>226799700</span>
+                        <a href="tel:+56226799700">226 799 700</a>
                     </div>
                 </div>
                 
@@ -323,7 +367,7 @@
                     </div>
                     <div class="assistance-content">
                         <h3>Conoce nuestra<br>Asistencia<br>Automotriz</h3>
-                        <a href="#" class="assistance-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                        <a href="pages/seguros.html#automotriz" class="assistance-link">Ver más <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -333,7 +377,7 @@
                     </div>
                     <div class="assistance-content">
                         <h3>Conoce nuestra<br>Asistencia<br>Mascotas</h3>
-                        <a href="#" class="assistance-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                        <a href="pages/seguros.html#mascotas" class="assistance-link">Ver más <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -343,7 +387,7 @@
                     </div>
                     <div class="assistance-content">
                         <h3>Conoce nuestra<br>Asistencia<br>Hogar Contenido</h3>
-                        <a href="#" class="assistance-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                        <a href="pages/seguros.html#hogar" class="assistance-link">Ver más <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -433,58 +477,187 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Conócenos</h4>
+                    <h4>Navegación</h4>
                     <ul>
-                        <li><a href="#">Presencia internacional</a></li>
-                        <li><a href="#">Investor relations</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="pages/nosotros.html">Nosotros</a></li>
+                        <li><a href="pages/seguros.html">Seguros</a></li>
+                        <li><a href="pages/cotizador.html">Cotizar</a></li>
+                        <li><a href="pages/comparador.html">Comparar</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Información normativa</h4>
+                    <h4>Contacto</h4>
                     <ul>
-                        <li><a href="#">Licitaciones seguros hipotecarios</a></li>
+                        <li><a href="tel:+56600600292">600 6000 292</a></li>
+                        <li><a href="tel:+56226799700">226 799 700</a></li>
+                        <li><a href="mailto:info@bcp.cl">info@bcp.cl</a></li>
+                        <li><a href="pages/contacto.html">Formulario de Contacto</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Filiales</h4>
+                    <h4>Seguros</h4>
                     <ul>
-                        <li><a href="#">BCP Miami</a></li>
-                        <li><a href="#">BCP Asset Management</a></li>
+                        <li><a href="pages/seguro-auto.html">Automotriz</a></li>
+                        <li><a href="pages/seguro-hogar.html">Hogar</a></li>
+                        <li><a href="pages/seguro-salud.html">Salud</a></li>
+                        <li><a href="pages/seguro-viaje.html">Viaje</a></li>
+                        <li><a href="pages/seguro-mascotas.html">Mascotas</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Sitios relacionados</h4>
+                    <h4>Herramientas</h4>
                     <ul>
-                        <li><a href="#">BCP Propiedades</a></li>
-                        <li><a href="#">Portal de APIS</a></li>
+                        <li><a href="pages/cotizador.html">Cotizador Online</a></li>
+                        <li><a href="pages/comparador.html">Comparador de Pólizas</a></li>
+                        <li><a href="#denuncia">Denunciar Siniestro</a></li>
+                        <li><a href="#servicios">Servicios en Línea</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Encuéntranos</h4>
+                    <h4>Legal</h4>
                     <ul>
-                        <li><a href="#">Servicio al cliente</a></li>
-                        <li><a href="#">Cajeros y sucursales</a></li>
+                        <li><a href="#" onclick="showTermsModal()">Términos y Condiciones</a></li>
+                        <li><a href="#" onclick="showPrivacyModal()">Política de Privacidad</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                        <li><a href="#">Información Regulatoria</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
                 <p>&copy; 2025 BCP Corredora de Seguros. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 
     <!-- Chat Widget -->
-    <div class="chat-widget">
+    <div class="chat-widget" onclick="toggleChat()">
         <div class="chat-button">
             <i class="fas fa-comments"></i>
+        </div>
+        <div class="chat-tooltip">¿Necesitas ayuda? ¡Hablemos!</div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Términos y Condiciones</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p><strong>Promoción "2 meses gratis" - Términos y Condiciones:</strong></p>
+                <ul>
+                    <li>Válida para contrataciones nuevas realizadas entre el 01/01/2025 y el 31/12/2025</li>
+                    <li>Aplicable solo para seguros de hogar con pago mensual</li>
+                    <li>El beneficio se aplica en la segunda cuota del seguro</li>
+                    <li>No aplica para renovaciones de pólizas existentes</li>
+                    <li>Sujeto a aprobación crediticia y evaluación de riesgo</li>
+                    <li>BCP Corredora de Seguros se reserva el derecho de modificar o terminar la promoción</li>
+                </ul>
+                <p><small>Para más información, consulta nuestros términos completos o contacta a un asesor.</small></p>
+            </div>
         </div>
     </div>
 
     <script src="scripts/main.js"></script>
+    <script>
+        // Quick navigation functions
+        function goToCotizador(type) {
+            window.location.href = `pages/cotizador.html?type=${type}`;
+        }
+
+        // Hero slider functionality
+        let currentSlide = 0;
+        const slides = [
+            {
+                title: "Seguridad total para tu hogar con BCP",
+                price: "$8.500",
+                type: "home"
+            },
+            {
+                title: "Protege tu auto con la mejor cobertura",
+                price: "$35.000",
+                type: "auto"
+            },
+            {
+                title: "Seguro de vida que se adapta a ti",
+                price: "$25.000",
+                type: "life"
+            }
+        ];
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlide();
+        }
+
+        function prevSlide() {
+            currentSlide = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
+            updateSlide();
+        }
+
+        function updateSlide() {
+            const slide = slides[currentSlide];
+            document.querySelector('.hero h1').textContent = slide.title;
+            document.querySelector('.price').textContent = slide.price;
+            document.querySelector('.btn-buy').href = `pages/cotizador.html?type=${slide.type}`;
+        }
+
+        // Auto-advance slides
+        setInterval(nextSlide, 5000);
+
+        // Modal functions
+        function showTermsModal() {
+            document.getElementById('termsModal').style.display = 'block';
+        }
+
+        function showPrivacyModal() {
+            // Placeholder for privacy modal
+            alert('Política de Privacidad - En desarrollo');
+        }
+
+        // Chat widget
+        function toggleChat() {
+            const chatWidget = document.querySelector('.chat-widget');
+            const phoneNumber = '+56600600292';
+            const message = '¡Hola! Me interesa conocer más sobre sus seguros.';
+            const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Modal event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            const modals = document.querySelectorAll('.modal');
+            const closeButtons = document.querySelectorAll('.close');
+            
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const modal = this.closest('.modal');
+                    modal.style.display = 'none';
+                });
+            });
+            
+            window.addEventListener('click', function(event) {
+                modals.forEach(modal => {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
