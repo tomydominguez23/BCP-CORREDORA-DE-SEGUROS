@@ -1,0 +1,635 @@
+/* Comparador Styles */
+
+.comparador-hero {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.comparador-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Filter Section */
+.filter-section {
+    padding: 40px 0;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e6ed;
+}
+
+.filter-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filter-container h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    color: #2c3e50;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.filter-group select {
+    padding: 12px 16px;
+    border: 2px solid #e0e6ed;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.filter-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-clear,
+.btn-compare {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-clear {
+    background: #95a5a6;
+    color: white;
+}
+
+.btn-clear:hover {
+    background: #7f8c8d;
+}
+
+.btn-compare {
+    background: #3498db;
+    color: white;
+}
+
+.btn-compare:hover {
+    background: #2980b9;
+}
+
+.btn-compare:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Policies Section */
+.policies-section {
+    padding: 60px 0;
+    background: white;
+}
+
+.policies-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.policies-header h2 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.sort-options {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sort-options label {
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+.sort-options select {
+    padding: 8px 12px;
+    border: 2px solid #e0e6ed;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+}
+
+/* Policies Grid */
+.policies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.policy-card {
+    background: white;
+    border: 2px solid #e0e6ed;
+    border-radius: 15px;
+    padding: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.policy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-color: #3498db;
+}
+
+.policy-card.selected {
+    border-color: #27ae60;
+    box-shadow: 0 5px 20px rgba(39, 174, 96, 0.3);
+}
+
+.policy-header {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e6ed;
+}
+
+.company-logo {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.policy-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rating {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.stars {
+    color: #f39c12;
+    font-size: 0.8rem;
+}
+
+.policy-select input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #27ae60;
+}
+
+.policy-content {
+    padding: 1.5rem;
+}
+
+.policy-content h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.policy-type {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.policy-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.period {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Coverage Levels */
+.coverage-level {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.coverage-level.basic {
+    background: #ecf0f1;
+    color: #7f8c8d;
+}
+
+.coverage-level.intermediate {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.coverage-level.premium {
+    background: #d4edda;
+    color: #155724;
+}
+
+.coverage-level.complete {
+    background: #cce5ff;
+    color: #0056b3;
+}
+
+/* Features List */
+.features-list {
+    margin-bottom: 2rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.feature i {
+    width: 16px;
+    text-align: center;
+}
+
+.feature.limited {
+    opacity: 0.6;
+}
+
+.feature .fas.fa-check {
+    color: #27ae60;
+}
+
+.feature .fas.fa-times {
+    color: #e74c3c;
+}
+
+.feature span {
+    color: #2c3e50;
+}
+
+/* Policy Actions */
+.policy-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-details,
+.btn-quote {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-details {
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+
+.btn-details:hover {
+    background: #bdc3c7;
+}
+
+.btn-quote {
+    background: #3498db;
+    color: white;
+}
+
+.btn-quote:hover {
+    background: #2980b9;
+}
+
+/* No Results */
+.no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #7f8c8d;
+}
+
+.no-results i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.3;
+}
+
+.no-results h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Comparison Modal */
+.comparison-modal {
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: auto;
+}
+
+.comparison-modal .modal-body {
+    padding: 1rem;
+}
+
+#comparisonTable {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e6ed;
+}
+
+.comparison-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table .feature-row td:first-child {
+    font-weight: 500;
+    background: #f8f9fa;
+}
+
+.comparison-table .check {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.comparison-table .cross {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.comparison-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-contact {
+    background: #27ae60;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+    background: #219a52;
+}
+
+/* Policy Details Modal */
+.policy-modal {
+    max-width: 600px;
+}
+
+.policy-details {
+    display: grid;
+    gap: 2rem;
+}
+
+.detail-section h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.detail-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-section li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #7f8c8d;
+}
+
+.detail-section li i {
+    color: #27ae60;
+    width: 16px;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-white,
+.btn-outline-white {
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-white {
+    background: white;
+    color: #2c3e50;
+    border: 2px solid white;
+}
+
+.btn-white:hover {
+    background: transparent;
+    color: white;
+}
+
+.btn-outline-white {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-outline-white:hover {
+    background: white;
+    color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .comparador-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .policies-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .policies-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .policy-actions {
+        flex-direction: column;
+    }
+    
+    .filter-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .comparison-modal {
+        max-width: 95vw;
+    }
+    
+    .comparison-table {
+        font-size: 0.8rem;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.5rem;
+    }
+    
+    .comparison-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-section {
+        padding: 20px 0;
+    }
+    
+    .policies-section {
+        padding: 40px 0;
+    }
+    
+    .policy-card {
+        margin: 0 -10px;
+    }
+    
+    .cta-section {
+        padding: 60px 0;
+    }
+    
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+}
