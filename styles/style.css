@@ -140,7 +140,7 @@ body {
 
 .nav-actions {
     display: flex;
-    gap: 15px;
+    gap: 12px;
     align-items: center;
     flex-shrink: 0;
 }
@@ -195,23 +195,26 @@ body {
 }
 
 .search-btn {
-    background: none;
+    background: #3498db;
     border: none;
-    color: #3498db;
+    color: white;
     cursor: pointer;
     font-weight: 600;
-    transition: color 0.3s ease;
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-size: 14px;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 13px;
     white-space: nowrap;
-    min-width: 70px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
 }
 
 .search-btn:hover {
-    color: #2980b9;
-    background: rgba(52, 152, 219, 0.1);
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
 }
 
 .mobile-menu-toggle {
@@ -1415,7 +1418,7 @@ body {
     }
     
     .nav-actions {
-        gap: 12px;
+        gap: 8px;
     }
     
     .btn-primary {
@@ -1429,9 +1432,8 @@ body {
     }
 
     .search-btn {
-        padding: 8px 12px;
-        font-size: 13px;
-        min-width: 60px;
+        padding: 8px 14px;
+        font-size: 12px;
     }
     
     .hero-content {
@@ -1539,7 +1541,7 @@ body {
     }
     
     .nav-actions {
-        gap: 8px;
+        gap: 6px;
     }
     
     .btn-primary {
@@ -1553,9 +1555,8 @@ body {
     }
 
     .search-btn {
-        padding: 6px 10px;
-        font-size: 12px;
-        min-width: 50px;
+        padding: 6px 12px;
+        font-size: 11px;
     }
     
     .logo-text {
