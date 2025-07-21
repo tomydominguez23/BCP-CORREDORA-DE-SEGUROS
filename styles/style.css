@@ -49,38 +49,43 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
-    max-width: 1200px;
+    padding: 20px 30px;
+    max-width: 1400px;
     margin: 0 auto;
+    gap: 2rem;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    flex-shrink: 0;
 }
 
 .logo-img {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     background: linear-gradient(45deg, #e74c3c, #f39c12, #f1c40f, #3498db);
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .logo-text {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     color: #2c3e50;
 }
 
 .logo-subtext {
-    font-size: 12px;
+    font-size: 13px;
     color: #7f8c8d;
+    white-space: nowrap;
 }
 
 .nav-menu {
     display: flex;
-    gap: 30px;
+    gap: 40px;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 .nav-link {
@@ -89,6 +94,8 @@ body {
     font-weight: 500;
     position: relative;
     transition: color 0.3s ease;
+    white-space: nowrap;
+    padding: 8px 12px;
 }
 
 .nav-link:hover {
@@ -133,8 +140,9 @@ body {
 
 .nav-actions {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .btn-service {
@@ -151,32 +159,38 @@ body {
 .btn-primary {
     background: #27ae60;
     color: white;
-    padding: 12px 24px;
+    padding: 14px 28px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(39, 174, 96, 0.2);
 }
 
 .btn-primary:hover {
     background: #229954;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
 }
 
 .btn-secondary {
     background: #3498db;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 20px;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
     transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
 }
 
 .btn-secondary:hover {
     background: #2980b9;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
 }
 
 .search-btn {
@@ -186,17 +200,21 @@ body {
     cursor: pointer;
     font-weight: 600;
     transition: color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 6px;
 }
 
 .search-btn:hover {
     color: #2980b9;
+    background: rgba(52, 152, 219, 0.1);
 }
 
 .mobile-menu-toggle {
     display: none;
-    font-size: 20px;
+    font-size: 22px;
     color: #2c3e50;
     cursor: pointer;
+    padding: 8px;
 }
 
 /* Hero Section */
@@ -1386,17 +1404,22 @@ body {
         display: none;
     }
     
+    .nav-container {
+        padding: 15px 20px;
+        gap: 1rem;
+    }
+    
     .nav-actions {
-        gap: 10px;
+        gap: 12px;
     }
     
     .btn-primary {
-        padding: 8px 16px;
+        padding: 10px 18px;
         font-size: 14px;
     }
 
     .btn-secondary {
-        padding: 6px 14px;
+        padding: 8px 16px;
         font-size: 12px;
     }
     
@@ -1500,11 +1523,11 @@ body {
     }
     
     .nav-container {
-        padding: 10px 15px;
+        padding: 12px 15px;
     }
     
     .logo-text {
-        font-size: 20px;
+        font-size: 22px;
     }
     
     .search-btn {
