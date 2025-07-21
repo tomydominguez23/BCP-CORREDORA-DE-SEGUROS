@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador - BCP Corredora de Seguros</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/cotizador.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-img"></div>
+                <span class="logo-text">BCP</span>
+                <span class="logo-subtext">Corredora de Seguros</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Seguros <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="seguros.html#automotriz">Automotriz</a>
+                        <a href="seguros.html#hogar">Hogar</a>
+                        <a href="seguros.html#vida">Vida y Salud</a>
+                        <a href="seguros.html#viaje">Viaje</a>
+                        <a href="seguros.html#mascotas">Mascotas</a>
+                    </div>
+                </div>
+                <a href="comparador.html" class="nav-link">Comparar Pólizas</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="contacto.html" class="btn-service">Servicio al Cliente</a>
+                <a href="tel:+56226799700" class="btn-primary">Llamar Ahora</a>
+            </div>
+            
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="cotizador-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="brand-colors">
+                    <span class="dot red"></span>
+                    <span class="dot orange"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot blue"></span>
+                </div>
+                <h1>Cotiza tu Seguro con BCP</h1>
+                <p class="hero-subtitle">Encuentra la protección perfecta para ti y tu familia. Más de 25,000 familias confían en nosotros.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Info Section -->
+    <section class="company-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-text">
+                    <h2>¿Por qué elegir BCP Corredora de Seguros?</h2>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>15+ Años de Experiencia</h3>
+                                <p>Somos líderes en el mercado chileno con un historial comprobado de excelencia.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>25,000+ Familias Protegidas</h3>
+                                <p>Miles de clientes satisfechos respaldan la calidad de nuestros servicios.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Asesoría Personalizada</h3>
+                                <p>Cada cliente recibe atención especializada según sus necesidades específicas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Respaldo Integral</h3>
+                                <p>Trabajamos con las aseguradoras más sólidas y prestigiosas de Chile.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stats-card">
+                    <h3>Nuestros Números</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Satisfacción</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Atención</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Aseguradoras</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">48h</span>
+                            <span class="stat-label">Respuesta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section class="quote-form-section">
+        <div class="container">
+            <div class="form-header">
+                <h2>Solicita tu Cotización Gratuita</h2>
+                <p>Completa el formulario y recibe tu cotización personalizada en menos de 24 horas</p>
+            </div>
+            
+            <div class="quote-form-container">
+                <form class="quote-form" id="quoteForm">
+                    <div class="form-step active" data-step="1">
+                        <h3>Paso 1: Información Personal</h3>
+                        <div class="form-group">
+                            <label for="fullName">Nombre Completo *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Teléfono *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rut">RUT *</label>
+                                <input type="text" id="rut" name="rut" placeholder="12345678-9" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="age">Edad *</label>
+                                <input type="number" id="age" name="age" min="18" max="100" required>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn-next" onclick="nextStep()">Siguiente <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    
+                    <div class="form-step" data-step="2">
+                        <h3>Paso 2: Tipo de Seguro</h3>
+                        <div class="insurance-types">
+                            <div class="insurance-option">
+                                <input type="radio" id="auto" name="insuranceType" value="auto">
+                                <label for="auto">
+                                    <div class="option-content">
+                                        <i class="fas fa-car"></i>
+                                        <span>Seguro Automotriz</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="insurance-option">
+                                <input type="radio" id="home" name="insuranceType" value="home">
+                                <label for="home">
+                                    <div class="option-content">
+                                        <i class="fas fa-home"></i>
+                                        <span>Seguro Hogar</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="insurance-option">
+                                <input type="radio" id="life" name="insuranceType" value="life">
+                                <label for="life">
+                                    <div class="option-content">
+                                        <i class="fas fa-heart"></i>
+                                        <span>Seguro de Vida</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="insurance-option">
+                                <input type="radio" id="health" name="insuranceType" value="health">
+                                <label for="health">
+                                    <div class="option-content">
+                                        <i class="fas fa-user-md"></i>
+                                        <span>Seguro de Salud</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="insurance-option">
+                                <input type="radio" id="travel" name="insuranceType" value="travel">
+                                <label for="travel">
+                                    <div class="option-content">
+                                        <i class="fas fa-plane"></i>
+                                        <span>Seguro de Viaje</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="insurance-option">
+                                <input type="radio" id="pet" name="insuranceType" value="pet">
+                                <label for="pet">
+                                    <div class="option-content">
+                                        <i class="fas fa-paw"></i>
+                                        <span>Seguro Mascotas</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="button" class="btn-prev" onclick="prevStep()"><i class="fas fa-arrow-left"></i> Anterior</button>
+                            <button type="button" class="btn-next" onclick="nextStep()">Siguiente <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-step" data-step="3">
+                        <h3>Paso 3: Detalles Específicos</h3>
+                        <div class="form-group">
+                            <label for="coverage">Cobertura Deseada</label>
+                            <select id="coverage" name="coverage">
+                                <option value="">Selecciona una opción</option>
+                                <option value="basic">Básica</option>
+                                <option value="intermediate">Intermedia</option>
+                                <option value="premium">Premium</option>
+                                <option value="complete">Completa</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Presupuesto Mensual (CLP)</label>
+                            <select id="budget" name="budget">
+                                <option value="">Selecciona tu rango</option>
+                                <option value="0-25000">$0 - $25.000</option>
+                                <option value="25000-50000">$25.000 - $50.000</option>
+                                <option value="50000-100000">$50.000 - $100.000</option>
+                                <option value="100000+">Más de $100.000</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="comments">Comentarios Adicionales</label>
+                            <textarea id="comments" name="comments" rows="4" placeholder="Cuéntanos sobre tus necesidades específicas o cualquier pregunta que tengas..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="contactConsent" name="contactConsent" required>
+                                <span class="checkmark"></span>
+                                Acepto ser contactado por BCP Corredora de Seguros para recibir información sobre productos y servicios *
+                            </label>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="button" class="btn-prev" onclick="prevStep()"><i class="fas fa-arrow-left"></i> Anterior</button>
+                            <button type="submit" class="btn-submit">Enviar Cotización <i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </form>
+                
+                <div class="form-sidebar">
+                    <div class="contact-info">
+                        <h4>¿Prefieres hablar directamente?</h4>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Llámanos:</strong><br>
+                                <a href="tel:+56600600292">600 6000 292</a><br>
+                                <a href="tel:+56226799700">226 799 700</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong><br>
+                                <a href="mailto:cotizaciones@bcp.cl">cotizaciones@bcp.cl</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Horarios:</strong><br>
+                                Lun-Vie: 8:00 - 18:00<br>
+                                Sáb: 9:00 - 14:00
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="benefits-sidebar">
+                        <h4>Beneficios de Cotizar con Nosotros</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Cotización gratuita y sin compromiso</li>
+                            <li><i class="fas fa-check"></i> Comparamos múltiples aseguradoras</li>
+                            <li><i class="fas fa-check"></i> Asesoría personalizada</li>
+                            <li><i class="fas fa-check"></i> Respuesta en menos de 24 horas</li>
+                            <li><i class="fas fa-check"></i> Mejores precios del mercado</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <h2>Compañías que Confían en Nosotros</h2>
+            <div class="companies-logos">
+                <div class="company-logo">
+                    <div class="placeholder-logo">BCP Seguros</div>
+                </div>
+                <div class="company-logo">
+                    <div class="placeholder-logo">BNP Paribas</div>
+                </div>
+                <div class="company-logo">
+                    <div class="placeholder-logo">Penta Security</div>
+                </div>
+                <div class="company-logo">
+                    <div class="placeholder-logo">EuroAmérica</div>
+                </div>
+                <div class="company-logo">
+                    <div class="placeholder-logo">Bice Vida</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="seguros.html">Seguros</a></li>
+                        <li><a href="comparador.html">Comparar Pólizas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+56600600292">600 6000 292</a></li>
+                        <li><a href="tel:+56226799700">226 799 700</a></li>
+                        <li><a href="mailto:info@bcp.cl">info@bcp.cl</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Seguros</h4>
+                    <ul>
+                        <li><a href="seguro-auto.html">Automotriz</a></li>
+                        <li><a href="seguro-hogar.html">Hogar</a></li>
+                        <li><a href="seguro-salud.html">Salud</a></li>
+                        <li><a href="seguro-viaje.html">Viaje</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BCP Corredora de Seguros. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-check-circle"></i> ¡Cotización Enviada!</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Gracias por confiar en BCP Corredora de Seguros. Hemos recibido tu solicitud de cotización.</p>
+                <p><strong>¿Qué sigue?</strong></p>
+                <ul>
+                    <li>Nuestro equipo revisará tu información</li>
+                    <li>Te contactaremos en las próximas 24 horas</li>
+                    <li>Recibirás cotizaciones personalizadas</li>
+                    <li>Te ayudaremos a elegir la mejor opción</li>
+                </ul>
+                <p>Si tienes urgencia, puedes llamarnos al <a href="tel:+56600600292">600 6000 292</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/cotizador.js"></script>
+</body>
+</html>
