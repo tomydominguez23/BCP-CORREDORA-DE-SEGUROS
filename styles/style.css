@@ -201,8 +201,12 @@ body {
     cursor: pointer;
     font-weight: 600;
     transition: color 0.3s ease;
-    padding: 8px 12px;
-    border-radius: 6px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+    min-width: 70px;
+    text-align: center;
 }
 
 .search-btn:hover {
@@ -1423,6 +1427,12 @@ body {
         padding: 8px 16px;
         font-size: 12px;
     }
+
+    .search-btn {
+        padding: 8px 12px;
+        font-size: 13px;
+        min-width: 60px;
+    }
     
     .hero-content {
         flex-direction: column;
@@ -1541,13 +1551,15 @@ body {
         padding: 6px 14px;
         font-size: 11px;
     }
+
+    .search-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+        min-width: 50px;
+    }
     
     .logo-text {
         font-size: 20px;
-    }
-    
-    .search-btn {
-        display: none;
     }
 
     .chat-widget {
