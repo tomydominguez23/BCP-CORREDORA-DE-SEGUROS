@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Pólizas - BCP Corredora de Seguros</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/comparador.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-img"></div>
+                <span class="logo-text">BCP</span>
+                <span class="logo-subtext">Corredora de Seguros</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Seguros <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="seguros.html#automotriz">Automotriz</a>
+                        <a href="seguros.html#hogar">Hogar</a>
+                        <a href="seguros.html#vida">Vida y Salud</a>
+                        <a href="seguros.html#viaje">Viaje</a>
+                        <a href="seguros.html#mascotas">Mascotas</a>
+                    </div>
+                </div>
+                <a href="cotizador.html" class="nav-link">Cotizar</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="contacto.html" class="btn-service">Servicio al Cliente</a>
+                <a href="tel:+56226799700" class="btn-primary">Llamar Ahora</a>
+            </div>
+            
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="comparador-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="brand-colors">
+                    <span class="dot red"></span>
+                    <span class="dot orange"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot blue"></span>
+                </div>
+                <h1>Comparador de Pólizas de Seguro</h1>
+                <p class="hero-subtitle">Encuentra y compara las mejores opciones de seguros disponibles en el mercado. Toma decisiones informadas con nuestra herramienta de comparación.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-container">
+                <h2>Personaliza tu Búsqueda</h2>
+                <div class="filter-grid">
+                    <div class="filter-group">
+                        <label for="insuranceTypeFilter">Tipo de Seguro</label>
+                        <select id="insuranceTypeFilter" onchange="filterPolicies()">
+                            <option value="">Todos los seguros</option>
+                            <option value="auto">Automotriz</option>
+                            <option value="home">Hogar</option>
+                            <option value="life">Vida</option>
+                            <option value="health">Salud</option>
+                            <option value="travel">Viaje</option>
+                            <option value="pet">Mascotas</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="coverageFilter">Cobertura</label>
+                        <select id="coverageFilter" onchange="filterPolicies()">
+                            <option value="">Todas las coberturas</option>
+                            <option value="basic">Básica</option>
+                            <option value="intermediate">Intermedia</option>
+                            <option value="premium">Premium</option>
+                            <option value="complete">Completa</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="priceFilter">Rango de Precio (CLP mensual)</label>
+                        <select id="priceFilter" onchange="filterPolicies()">
+                            <option value="">Todos los precios</option>
+                            <option value="0-25000">$0 - $25.000</option>
+                            <option value="25000-50000">$25.000 - $50.000</option>
+                            <option value="50000-100000">$50.000 - $100.000</option>
+                            <option value="100000+">Más de $100.000</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="companyFilter">Aseguradora</label>
+                        <select id="companyFilter" onchange="filterPolicies()">
+                            <option value="">Todas las compañías</option>
+                            <option value="bcp">BCP Seguros</option>
+                            <option value="bnp">BNP Paribas</option>
+                            <option value="penta">Penta Security</option>
+                            <option value="euroamerica">EuroAmérica</option>
+                            <option value="bice">Bice Vida</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="filter-actions">
+                    <button class="btn-clear" onclick="clearFilters()">Limpiar Filtros</button>
+                    <button class="btn-compare" onclick="showComparison()">Comparar Seleccionados (<span id="selectedCount">0</span>)</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policies Grid Section -->
+    <section class="policies-section">
+        <div class="container">
+            <div class="policies-header">
+                <h2>Pólizas Disponibles</h2>
+                <div class="sort-options">
+                    <label for="sortBy">Ordenar por:</label>
+                    <select id="sortBy" onchange="sortPolicies()">
+                        <option value="price-asc">Precio: Menor a Mayor</option>
+                        <option value="price-desc">Precio: Mayor a Menor</option>
+                        <option value="coverage-desc">Cobertura: Mayor a Menor</option>
+                        <option value="company">Compañía</option>
+                        <option value="rating-desc">Valoración</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="policies-grid" id="policiesGrid">
+                <!-- Auto Insurance Policies -->
+                <div class="policy-card" data-type="auto" data-coverage="premium" data-price="45000" data-company="bcp">
+                    <div class="policy-header">
+                        <div class="company-logo">BCP Seguros</div>
+                        <div class="policy-rating">
+                            <span class="rating">4.8</span>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <div class="policy-select">
+                            <input type="checkbox" class="policy-checkbox" data-id="auto-premium-bcp">
+                        </div>
+                    </div>
+                    
+                    <div class="policy-content">
+                        <h3>Seguro Auto Premium</h3>
+                        <div class="policy-type">Automotriz</div>
+                        <div class="policy-price">
+                            <span class="price">$45.000</span>
+                            <span class="period">/mes</span>
+                        </div>
+                        
+                        <div class="coverage-level premium">
+                            <span>Cobertura Premium</span>
+                        </div>
+                        
+                        <div class="features-list">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Cobertura total de daños</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Asistencia 24/7</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Auto de reemplazo</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Cristales incluidos</span>
+                            </div>
+                        </div>
+                        
+                        <div class="policy-actions">
+                            <button class="btn-details" onclick="showPolicyDetails('auto-premium-bcp')">Ver Detalles</button>
+                            <button class="btn-quote" onclick="requestQuote('auto-premium-bcp')">Cotizar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="policy-card" data-type="auto" data-coverage="intermediate" data-price="28000" data-company="euroamerica">
+                    <div class="policy-header">
+                        <div class="company-logo">EuroAmérica</div>
+                        <div class="policy-rating">
+                            <span class="rating">4.5</span>
+                            <div class="stars">★★★★☆</div>
+                        </div>
+                        <div class="policy-select">
+                            <input type="checkbox" class="policy-checkbox" data-id="auto-intermediate-euro">
+                        </div>
+                    </div>
+                    
+                    <div class="policy-content">
+                        <h3>Seguro Auto Intermedio</h3>
+                        <div class="policy-type">Automotriz</div>
+                        <div class="policy-price">
+                            <span class="price">$28.000</span>
+                            <span class="period">/mes</span>
+                        </div>
+                        
+                        <div class="coverage-level intermediate">
+                            <span>Cobertura Intermedia</span>
+                        </div>
+                        
+                        <div class="features-list">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Daños parciales y totales</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Asistencia en carretera</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Robo e incendio</span>
+                            </div>
+                            <div class="feature limited">
+                                <i class="fas fa-times"></i>
+                                <span>Cristales (opcional)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="policy-actions">
+                            <button class="btn-details" onclick="showPolicyDetails('auto-intermediate-euro')">Ver Detalles</button>
+                            <button class="btn-quote" onclick="requestQuote('auto-intermediate-euro')">Cotizar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Insurance Policies -->
+                <div class="policy-card" data-type="home" data-coverage="complete" data-price="35000" data-company="bcp">
+                    <div class="policy-header">
+                        <div class="company-logo">BCP Seguros</div>
+                        <div class="policy-rating">
+                            <span class="rating">4.9</span>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <div class="policy-select">
+                            <input type="checkbox" class="policy-checkbox" data-id="home-complete-bcp">
+                        </div>
+                    </div>
+                    
+                    <div class="policy-content">
+                        <h3>Seguro Hogar Completo</h3>
+                        <div class="policy-type">Hogar</div>
+                        <div class="policy-price">
+                            <span class="price">$35.000</span>
+                            <span class="period">/mes</span>
+                        </div>
+                        
+                        <div class="coverage-level complete">
+                            <span>Cobertura Completa</span>
+                        </div>
+                        
+                        <div class="features-list">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Estructura y contenido</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Responsabilidad civil</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Fenómenos naturales</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Gastos adicionales</span>
+                            </div>
+                        </div>
+                        
+                        <div class="policy-actions">
+                            <button class="btn-details" onclick="showPolicyDetails('home-complete-bcp')">Ver Detalles</button>
+                            <button class="btn-quote" onclick="requestQuote('home-complete-bcp')">Cotizar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Life Insurance Policies -->
+                <div class="policy-card" data-type="life" data-coverage="premium" data-price="55000" data-company="bice">
+                    <div class="policy-header">
+                        <div class="company-logo">Bice Vida</div>
+                        <div class="policy-rating">
+                            <span class="rating">4.7</span>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <div class="policy-select">
+                            <input type="checkbox" class="policy-checkbox" data-id="life-premium-bice">
+                        </div>
+                    </div>
+                    
+                    <div class="policy-content">
+                        <h3>Seguro de Vida Premium</h3>
+                        <div class="policy-type">Vida</div>
+                        <div class="policy-price">
+                            <span class="price">$55.000</span>
+                            <span class="period">/mes</span>
+                        </div>
+                        
+                        <div class="coverage-level premium">
+                            <span>Cobertura Premium</span>
+                        </div>
+                        
+                        <div class="features-list">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Muerte natural y accidental</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Invalidez total y parcial</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Enfermedades graves</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Beneficio de ahorro</span>
+                            </div>
+                        </div>
+                        
+                        <div class="policy-actions">
+                            <button class="btn-details" onclick="showPolicyDetails('life-premium-bice')">Ver Detalles</button>
+                            <button class="btn-quote" onclick="requestQuote('life-premium-bice')">Cotizar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health Insurance Policies -->
+                <div class="policy-card" data-type="health" data-coverage="intermediate" data-price="42000" data-company="bnp">
+                    <div class="policy-header">
+                        <div class="company-logo">BNP Paribas</div>
+                        <div class="policy-rating">
+                            <span class="rating">4.6</span>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <div class="policy-select">
+                            <input type="checkbox" class="policy-checkbox" data-id="health-intermediate-bnp">
+                        </div>
+                    </div>
+                    
+                    <div class="policy-content">
+                        <h3>Seguro de Salud Integral</h3>
+                        <div class="policy-type">Salud</div>
+                        <div class="policy-price">
+                            <span class="price">$42.000</span>
+                            <span class="period">/mes</span>
+                        </div>
+                        
+                        <div class="coverage-level intermediate">
+                            <span>Cobertura Intermedia</span>
+                        </div>
+                        
+                        <div class="features-list">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Hospitalización</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Cirugías ambulatorias</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Medicina preventiva</span>
+                            </div>
+                            <div class="feature limited">
+                                <i class="fas fa-times"></i>
+                                <span>Medicamentos (copago)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="policy-actions">
+                            <button class="btn-details" onclick="showPolicyDetails('health-intermediate-bnp')">Ver Detalles</button>
+                            <button class="btn-quote" onclick="requestQuote('health-intermediate-bnp')">Cotizar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Travel Insurance Policies -->
+                <div class="policy-card" data-type="travel" data-coverage="basic" data-price="15000" data-company="penta">
+                    <div class="policy-header">
+                        <div class="company-logo">Penta Security</div>
+                        <div class="policy-rating">
+                            <span class="rating">4.4</span>
+                            <div class="stars">★★★★☆</div>
+                        </div>
+                        <div class="policy-select">
+                            <input type="checkbox" class="policy-checkbox" data-id="travel-basic-penta">
+                        </div>
+                    </div>
+                    
+                    <div class="policy-content">
+                        <h3>Seguro de Viaje Básico</h3>
+                        <div class="policy-type">Viaje</div>
+                        <div class="policy-price">
+                            <span class="price">$15.000</span>
+                            <span class="period">/viaje</span>
+                        </div>
+                        
+                        <div class="coverage-level basic">
+                            <span>Cobertura Básica</span>
+                        </div>
+                        
+                        <div class="features-list">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Gastos médicos</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Equipaje</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Cancelación de viaje</span>
+                            </div>
+                            <div class="feature limited">
+                                <i class="fas fa-times"></i>
+                                <span>Deportes extremos</span>
+                            </div>
+                        </div>
+                        
+                        <div class="policy-actions">
+                            <button class="btn-details" onclick="showPolicyDetails('travel-basic-penta')">Ver Detalles</button>
+                            <button class="btn-quote" onclick="requestQuote('travel-basic-penta')">Cotizar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No se encontraron pólizas</h3>
+                <p>Intenta ajustar tus filtros para ver más opciones.</p>
+                <button class="btn-clear" onclick="clearFilters()">Limpiar Filtros</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Modal -->
+    <div id="comparisonModal" class="modal">
+        <div class="modal-content comparison-modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-balance-scale"></i> Comparación de Pólizas</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="comparisonTable">
+                    <!-- Comparison table will be dynamically generated -->
+                </div>
+                <div class="comparison-actions">
+                    <button class="btn-quote" onclick="requestMultipleQuotes()">Solicitar Cotizaciones</button>
+                    <button class="btn-contact" onclick="contactAdviser()">Hablar con Asesor</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Policy Details Modal -->
+    <div id="policyModal" class="modal">
+        <div class="modal-content policy-modal">
+            <div class="modal-header">
+                <h3 id="policyModalTitle">Detalles de la Póliza</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body" id="policyModalBody">
+                <!-- Policy details will be dynamically generated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Necesitas Ayuda para Decidir?</h2>
+                <p>Nuestros expertos en seguros pueden ayudarte a encontrar la póliza perfecta para tus necesidades específicas.</p>
+                <div class="cta-buttons">
+                    <a href="cotizador.html" class="btn-white">Solicitar Cotización</a>
+                    <a href="tel:+56600600292" class="btn-outline-white">Llamar Asesor</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="seguros.html">Seguros</a></li>
+                        <li><a href="cotizador.html">Cotizar</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+56600600292">600 6000 292</a></li>
+                        <li><a href="tel:+56226799700">226 799 700</a></li>
+                        <li><a href="mailto:info@bcp.cl">info@bcp.cl</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Seguros</h4>
+                    <ul>
+                        <li><a href="seguro-auto.html">Automotriz</a></li>
+                        <li><a href="seguro-hogar.html">Hogar</a></li>
+                        <li><a href="seguro-salud.html">Salud</a></li>
+                        <li><a href="seguro-viaje.html">Viaje</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Herramientas</h4>
+                    <ul>
+                        <li><a href="cotizador.html">Cotizador</a></li>
+                        <li><a href="comparador.html">Comparador</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BCP Corredora de Seguros. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/comparador.js"></script>
+</body>
+</html>
