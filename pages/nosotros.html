@@ -4,810 +4,767 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros - BCP Corredora de Seguros</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/seguros.css">
+    
+    <!-- Google Fonts - Tipografía Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
     <link rel="manifest" href="../manifest.json">
-    <meta name="theme-color" content="#00a651">
+    <meta name="theme-color" content="#0f2942">
+    
     <style>
-        /* Estilos para Hero extendido con Quiénes Somos */
-        .hero-nosotros-extended {
-            background: linear-gradient(135deg, #00a651 0%, #28a745 50%, #20c997 100%);
-            color: white;
-            padding: 100px 0 80px 0;
+        /* Estilos específicos para página Nosotros */
+        .nosotros-hero {
+            background: var(--gradient-hero);
+            color: var(--white);
+            padding: 140px 0 100px;
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .hero-nosotros-extended::before {
+        .nosotros-hero::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,0 1000,0 1000,100 0,20"/></svg>');
-            background-size: cover;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
         }
 
-        .hero-content-extended {
+        .nosotros-hero .container {
             position: relative;
-            z-index: 2;
+            z-index: 1;
         }
 
-        .hero-main-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .hero-main-title h1 {
+        .nosotros-hero h1 {
+            font-family: var(--font-display);
             font-size: 3.5rem;
             font-weight: 700;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 1.25rem;
+            letter-spacing: -1px;
         }
 
-        .hero-main-title p {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            max-width: 800px;
+        .nosotros-hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
             margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .quienes-somos-hero {
-            margin-top: 80px;
-        }
-
-        .quienes-intro {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .quienes-intro h2 {
-            font-size: 2.8rem;
-            font-weight: 600;
-            margin-bottom: 30px;
-            color: white;
-        }
-
-        .quienes-intro p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 900px;
-            margin: 0 auto;
+            opacity: 0.92;
             line-height: 1.7;
         }
 
-        .identidad-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
+        /* Historia Section */
+        .historia-section {
+            padding: 100px 0;
+            background: var(--white);
         }
 
-        .identidad-card-hero {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 40px 30px;
-            border-radius: 20px;
+        .historia-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .historia-content h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .historia-content p {
+            color: var(--medium-gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .historia-image {
+            background: var(--gradient-primary);
+            height: 450px;
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Misión Visión Valores */
+        .mvv-section {
+            padding: 100px 0;
+            background: var(--pearl);
+        }
+
+        .mvv-section .section-header {
+            margin-bottom: 60px;
+        }
+
+        .mvv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .mvv-card {
+            background: var(--white);
+            padding: 48px 36px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
             text-align: center;
-            transition: all 0.3s ease;
+            transition: all var(--transition-normal);
+            border: 2px solid transparent;
             position: relative;
             overflow: hidden;
         }
 
-        .identidad-card-hero::before {
+        .mvv-card::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            transition: transform 0.3s ease;
-            transform: scale(0);
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-gold);
         }
 
-        .identidad-card-hero:hover::before {
-            transform: scale(1);
-        }
-
-        .identidad-card-hero:hover {
+        .mvv-card:hover {
             transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.25);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--secondary);
         }
 
-        .identidad-icon-hero {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.2);
+        .mvv-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--gradient-primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 25px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .identidad-icon-hero i {
+            margin: 0 auto 28px;
             font-size: 2.2rem;
-            color: white;
+            color: var(--white);
+            box-shadow: var(--shadow-md);
         }
 
-        .identidad-card-hero h3 {
-            font-size: 1.6rem;
-            font-weight: 600;
+        .mvv-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--primary-dark);
             margin-bottom: 20px;
-            color: white;
-            position: relative;
-            z-index: 2;
-        }
-
-        .identidad-card-hero p {
-            color: white;
-            opacity: 0.9;
-            line-height: 1.6;
-            position: relative;
-            z-index: 2;
-        }
-
-        .proposito-hero {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            padding: 60px 40px;
-            text-align: center;
-            margin-top: 60px;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .proposito-hero h3 {
-            font-size: 2.5rem;
             font-weight: 600;
-            margin-bottom: 30px;
-            color: white;
         }
 
-        .proposito-hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+        .mvv-card p {
+            color: var(--medium-gray);
             line-height: 1.7;
-            margin-bottom: 25px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        .proposito-stats-hero {
+        .mvv-card ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .mvv-card ul li {
+            color: var(--dark-gray);
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .mvv-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+
+        /* Estadísticas */
+        .stats-section {
+            padding: 100px 0;
+            background: var(--gradient-hero);
+            color: var(--white);
+        }
+
+        .stats-section .section-header h2 {
+            color: var(--white);
+        }
+
+        .stats-grid-large {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .stat-hero {
-            text-align: center;
-        }
-
-        .stat-hero .number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: white;
-            display: block;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .stat-hero .label {
-            font-size: 1rem;
-            opacity: 0.8;
-            color: white;
-        }
-
-        .diferenciadores-preview {
-            margin-top: 80px;
-            text-align: center;
-        }
-
-        .diferenciadores-preview h3 {
-            font-size: 2.2rem;
-            font-weight: 600;
-            margin-bottom: 40px;
-            color: white;
-        }
-
-        .diferenciadores-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 40px;
             max-width: 1000px;
             margin: 0 auto;
         }
 
-        .diferenciador-preview {
+        .stat-card {
+            text-align: center;
+            padding: 32px 20px;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 25px 20px;
+            border-radius: var(--radius-lg);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
+            transition: all var(--transition-normal);
         }
 
-        .diferenciador-preview:hover {
-            background: rgba(255, 255, 255, 0.2);
+        .stat-card:hover {
             transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
         }
 
-        .diferenciador-preview .number {
-            width: 35px;
-            height: 35px;
-            background: rgba(255, 255, 255, 0.3);
+        .stat-card .number {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .stat-card .label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Equipo */
+        .equipo-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .equipo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .equipo-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            border: 2px solid transparent;
+        }
+
+        .equipo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--secondary);
+        }
+
+        .equipo-foto {
+            height: 280px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 4rem;
+        }
+
+        .equipo-info {
+            padding: 32px;
+            text-align: center;
+        }
+
+        .equipo-info h4 {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .equipo-info .cargo {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .equipo-info p {
+            color: var(--medium-gray);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Certificaciones */
+        .cert-section {
+            padding: 100px 0;
+            background: var(--pearl);
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+        }
+
+        .cert-card {
+            background: var(--white);
+            padding: 40px 32px;
+            border-radius: var(--radius-xl);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+        }
+
+        .cert-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .cert-card .cert-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-gold);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 15px;
-            font-weight: 700;
-            color: white;
+            margin: 0 auto 24px;
+            font-size: 2rem;
+            color: var(--primary-dark);
+            box-shadow: var(--shadow-gold);
         }
 
-        .diferenciador-preview h4 {
-            font-size: 1.1rem;
+        .cert-card h4 {
+            font-family: var(--font-display);
+            color: var(--primary-dark);
+            font-size: 1.2rem;
+            margin-bottom: 12px;
             font-weight: 600;
-            margin-bottom: 10px;
-            color: white;
         }
 
-        .diferenciador-preview p {
-            font-size: 0.9rem;
-            opacity: 0.85;
-            color: white;
-            line-height: 1.4;
+        .cert-card p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
-        .cta-hero {
-            margin-top: 60px;
+        /* CTA Section */
+        .cta-nosotros {
+            padding: 100px 0;
+            background: var(--gradient-hero);
             text-align: center;
+            color: var(--white);
         }
 
-        .cta-hero .btn {
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            margin: 0 15px;
-            transition: all 0.3s ease;
+        .cta-nosotros h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
         }
 
-        .btn-white {
-            background: white;
-            color: #00a651;
-            border: 2px solid white;
+        .cta-nosotros p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            opacity: 0.92;
         }
 
-        .btn-white:hover {
-            background: transparent;
-            color: white;
-            border-color: white;
-            transform: translateY(-2px);
-        }
-
-        .btn-outline-white {
-            background: transparent;
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.8);
-        }
-
-        .btn-outline-white:hover {
-            background: white;
-            color: #00a651;
-            transform: translateY(-2px);
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         /* Responsive */
+        @media (max-width: 992px) {
+            .historia-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .historia-image {
+                height: 350px;
+            }
+        }
+
         @media (max-width: 768px) {
-            .hero-main-title h1 {
+            .nosotros-hero {
+                padding: 100px 0 70px;
+            }
+
+            .nosotros-hero h1 {
                 font-size: 2.5rem;
             }
 
-            .quienes-intro h2 {
-                font-size: 2.2rem;
+            .historia-section,
+            .mvv-section,
+            .stats-section,
+            .equipo-section,
+            .cert-section {
+                padding: 70px 0;
             }
 
-            .identidad-cards {
-                grid-template-columns: 1fr;
-                gap: 20px;
+            .stat-card .number {
+                font-size: 2.5rem;
             }
 
-            .proposito-hero {
-                padding: 40px 25px;
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
-
-            .proposito-stats-hero {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 20px;
-            }
-
-            .diferenciadores-list {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .cta-hero .btn {
-                display: block;
-                margin: 10px 0;
-                width: 100%;
-                max-width: 300px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-
-        /* Animaciones */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-content-extended > * {
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .hero-content-extended > *:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .hero-content-extended > *:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-
-        .hero-content-extended > *:nth-child(4) {
-            animation-delay: 0.6s;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="../assets/images/logo-bcp.png" alt="BCP Logo">
-                    <span>BCP Corredora de Seguros</span>
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-img"></div>
+                <span class="logo-text">BCP</span>
+                <span class="logo-subtext">Corredora de Seguros</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Seguros <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="seguros.html#automotriz">Automotriz</a>
+                        <a href="seguros.html#hogar">Hogar</a>
+                        <a href="seguros.html#vida">Vida y Salud</a>
+                        <a href="seguros.html#viaje">Viaje</a>
+                        <a href="seguros.html#mascotas">Mascotas</a>
+                    </div>
                 </div>
-                <div class="nav-menu" id="nav-menu">
-                    <ul class="nav-list">
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="#" class="dropdown-trigger">Seguros <i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="seguro-auto.html">Seguro Auto</a></li>
-                                <li><a href="seguro-hogar.html">Seguro Hogar</a></li>
-                                <li><a href="seguro-vida.html">Seguro de Vida</a></li>
-                                <li><a href="seguro-salud.html">Seguro de Salud</a></li>
-                                <li><a href="seguro-mascotas.html">Seguro Mascotas</a></li>
-                                <li><a href="seguro-viaje.html">Seguro de Viaje</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="nav-toggle" id="nav-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+                <a href="comparador.html" class="nav-link">Comparar Pólizas</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="cotizador.html" class="btn-primary">Cotizar Seguro</a>
+                <a href="tel:+56600600292" class="btn-secondary">Llamar Ahora</a>
+            </div>
+            
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
         </nav>
     </header>
 
-    <main class="main">
-        <!-- Hero Section Extendido con Quiénes Somos -->
-        <section class="hero-nosotros-extended">
-            <div class="container">
-                <div class="hero-content-extended">
-                    <!-- Título Principal -->
-                    <div class="hero-main-title">
-                        <h1>Conoce BCP Corredora de Seguros</h1>
-                        <p>Más de 15 años protegiendo a familias y empresas chilenas con soluciones de seguros personalizadas y el mejor servicio del mercado.</p>
-                    </div>
-
-                    <!-- Quiénes Somos Integrado -->
-                    <div class="quienes-somos-hero">
-                        <div class="quienes-intro">
-                            <h2>¿Quiénes Somos?</h2>
-                            <p>
-                                Somos <strong>BCP Corredora de Seguros</strong>, una empresa chilena dedicada a brindar tranquilidad y seguridad a familias y empresas a través de soluciones integrales de seguros. Nacimos con el propósito de democratizar el acceso a productos de protección de calidad, combinando la tradición aseguradora con la innovación y el servicio personalizado.
-                            </p>
-                        </div>
-
-                        <!-- Cards de Identidad -->
-                        <div class="identidad-cards">
-                            <div class="identidad-card-hero">
-                                <div class="identidad-icon-hero">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <h3>Nuestra Esencia</h3>
-                                <p>Somos un equipo de profesionales apasionados por la protección y el bienestar de nuestros clientes. Creemos que cada persona merece acceso a seguros de calidad.</p>
-                            </div>
-                            
-                            <div class="identidad-card-hero">
-                                <div class="identidad-icon-hero">
-                                    <i class="fas fa-handshake"></i>
-                                </div>
-                                <h3>Nuestro Compromiso</h3>
-                                <p>Nos comprometemos a ser el puente confiable entre nuestros clientes y las mejores compañías aseguradoras del mercado, garantizando asesoría transparente.</p>
-                            </div>
-                            
-                            <div class="identidad-card-hero">
-                                <div class="identidad-icon-hero">
-                                    <i class="fas fa-lightbulb"></i>
-                                </div>
-                                <h3>Nuestra Filosofía</h3>
-                                <p>Creemos que la prevención y la protección son fundamentales para construir un futuro seguro. Educamos y empoderamos a nuestros clientes.</p>
-                            </div>
-                        </div>
-
-                        <!-- Propósito -->
-                        <div class="proposito-hero">
-                            <h3>Nuestro Propósito</h3>
-                            <p>
-                                <strong>"Proteger lo que más valoras"</strong> no es solo nuestro lema, es nuestra razón de ser. Entendemos que detrás de cada póliza hay sueños, proyectos, familias y empresas que merecen estar protegidas.
-                            </p>
-                            <p>
-                                Trabajamos cada día para hacer que los seguros sean más accesibles, comprensibles y efectivos. Nuestro objetivo es que cada chileno tenga la oportunidad de proteger su patrimonio, su salud y su futuro.
-                            </p>
-                            
-                            <div class="proposito-stats-hero">
-                                <div class="stat-hero">
-                                    <span class="number">25,000+</span>
-                                    <span class="label">Familias Protegidas</span>
-                                </div>
-                                <div class="stat-hero">
-                                    <span class="number">98%</span>
-                                    <span class="label">Satisfacción</span>
-                                </div>
-                                <div class="stat-hero">
-                                    <span class="number">15+</span>
-                                    <span class="label">Años de Experiencia</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Diferenciadores Preview -->
-                        <div class="diferenciadores-preview">
-                            <h3>¿Qué nos hace diferentes?</h3>
-                            <div class="diferenciadores-list">
-                                <div class="diferenciador-preview">
-                                    <div class="number">01</div>
-                                    <h4>Asesoría Personalizada</h4>
-                                    <p>Cada cliente es único. Nuestros asesores especializados entienden tus necesidades específicas.</p>
-                                </div>
-                                
-                                <div class="diferenciador-preview">
-                                    <div class="number">02</div>
-                                    <h4>Transparencia Total</h4>
-                                    <p>Sin letra pequeña ni sorpresas. Te explicamos claramente qué cubre tu seguro.</p>
-                                </div>
-                                
-                                <div class="diferenciador-preview">
-                                    <div class="number">03</div>
-                                    <h4>Tecnología Avanzada</h4>
-                                    <p>Combinamos calidez humana con eficiencia tecnológica 24/7.</p>
-                                </div>
-                                
-                                <div class="diferenciador-preview">
-                                    <div class="number">04</div>
-                                    <h4>Red Premium</h4>
-                                    <p>Trabajamos con las aseguradoras más sólidas y prestigiosas de Chile.</p>
-                                </div>
-                                
-                                <div class="diferenciador-preview">
-                                    <div class="number">05</div>
-                                    <h4>Acompañamiento Integral</h4>
-                                    <p>Te acompañamos durante toda la vigencia de tu póliza, más allá de la venta.</p>
-                                </div>
-                                
-                                <div class="diferenciador-preview">
-                                    <div class="number">06</div>
-                                    <h4>Compromiso Social</h4>
-                                    <p>Desarrollamos programas de educación financiera y apoyamos iniciativas sociales.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- CTA Hero -->
-                        <div class="cta-hero">
-                            <button class="btn btn-white" onclick="openCotizador()">Cotizar Seguros</button>
-                            <button class="btn btn-outline-white" onclick="openChat()">Hablar con Asesor</button>
-                        </div>
-                    </div>
-                </div>
+    <!-- Hero Section -->
+    <section class="nosotros-hero">
+        <div class="container">
+            <div class="brand-colors">
+                <span class="dot red"></span>
+                <span class="dot orange"></span>
+                <span class="dot yellow"></span>
+                <span class="dot blue"></span>
             </div>
-        </section>
+            <h1>Conoce BCP Corredora de Seguros</h1>
+            <p>Más de 15 años protegiendo a familias y empresas chilenas con soluciones de seguros personalizadas y el mejor servicio del mercado.</p>
+        </div>
+    </section>
 
-        <!-- Nuestra Historia -->
-        <section class="historia">
-            <div class="container">
+    <!-- Historia -->
+    <section class="historia-section">
+        <div class="container">
+            <div class="historia-grid">
                 <div class="historia-content">
-                    <div class="historia-texto">
-                        <h2>Nuestra Historia</h2>
-                        <p>BCP Corredora de Seguros nació en 2009 con la visión de democratizar el acceso a seguros de calidad en Chile. Fundada por un equipo de profesionales con amplia experiencia en el sector asegurador, nos propusimos ser más que una simple corredora: queríamos ser el aliado estratégico de nuestros clientes.</p>
-                        
-                        <p>Durante estos años, hemos crecido de manera sostenida, manteniendo siempre nuestro compromiso con la excelencia en el servicio y la cercanía con cada cliente. Nuestra experiencia nos ha permitido desarrollar una comprensión profunda de las necesidades específicas del mercado chileno.</p>
-                        
-                        <p>Hoy somos una de las corredoras de seguros más reconocidas del país, con presencia en las principales ciudades y un equipo de más de 50 profesionales especializados.</p>
-                    </div>
-                    <div class="historia-imagen">
-                        <img src="../assets/images/historia-bcp.jpg" alt="Historia BCP">
-                    </div>
+                    <h2>Nuestra Historia</h2>
+                    <p>BCP Corredora de Seguros nació en 2009 con la visión de democratizar el acceso a seguros de calidad en Chile. Fundada por un equipo de profesionales con amplia experiencia en el sector asegurador, nos propusimos ser más que una simple corredora: queríamos ser el aliado estratégico de nuestros clientes.</p>
+                    
+                    <p>Durante estos años, hemos crecido de manera sostenida, manteniendo siempre nuestro compromiso con la excelencia en el servicio y la cercanía con cada cliente. Nuestra experiencia nos ha permitido desarrollar una comprensión profunda de las necesidades específicas del mercado chileno.</p>
+                    
+                    <p>Hoy somos una de las corredoras de seguros más reconocidas del país, con presencia en las principales ciudades y un equipo de más de 50 profesionales especializados dedicados a proteger lo que más valoras.</p>
+                </div>
+                <div class="historia-image">
+                    <span>Historia BCP</span>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Misión, Visión, Valores -->
-        <section class="mision-vision">
-            <div class="container">
-                <div class="mvv-grid">
-                    <div class="mvv-card">
-                        <div class="mvv-icon">
-                            <i class="fas fa-target"></i>
-                        </div>
-                        <h3>Misión</h3>
-                        <p>Brindar soluciones integrales de seguros personalizadas, acompañando a nuestros clientes en cada etapa de su vida con productos de calidad, asesoría especializada y un servicio excepcional que genere tranquilidad y confianza.</p>
+    <!-- Misión, Visión, Valores -->
+    <section class="mvv-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="brand-colors">
+                    <span class="dot red"></span>
+                    <span class="dot orange"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot blue"></span>
+                </div>
+                <h2>Nuestra Identidad</h2>
+                <p class="section-subtitle">Los pilares que guían nuestro compromiso con cada cliente</p>
+            </div>
+            
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-bullseye"></i>
                     </div>
-                    <div class="mvv-card">
-                        <div class="mvv-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <h3>Visión</h3>
-                        <p>Ser la corredora de seguros líder en Chile, reconocida por nuestra innovación, excelencia en el servicio al cliente y por ser el socio estratégico preferido tanto de asegurados como de compañías aseguradoras.</p>
+                    <h3>Misión</h3>
+                    <p>Brindar soluciones integrales de seguros personalizadas, acompañando a nuestros clientes en cada etapa de su vida con productos de calidad, asesoría especializada y un servicio excepcional que genere tranquilidad y confianza.</p>
+                </div>
+                
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-eye"></i>
                     </div>
-                    <div class="mvv-card">
-                        <div class="mvv-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h3>Valores</h3>
-                        <ul>
-                            <li><strong>Integridad:</strong> Actuamos con honestidad y transparencia</li>
-                            <li><strong>Excelencia:</strong> Buscamos la mejora continua</li>
-                            <li><strong>Cercanía:</strong> Mantenemos una relación personal</li>
-                            <li><strong>Compromiso:</strong> Cumplimos nuestras promesas</li>
-                        </ul>
+                    <h3>Visión</h3>
+                    <p>Ser la corredora de seguros líder en Chile, reconocida por nuestra innovación, excelencia en el servicio al cliente y por ser el socio estratégico preferido tanto de asegurados como de compañías aseguradoras.</p>
+                </div>
+                
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-heart"></i>
                     </div>
+                    <h3>Valores</h3>
+                    <ul>
+                        <li><strong>Integridad:</strong> Actuamos con honestidad y transparencia</li>
+                        <li><strong>Excelencia:</strong> Buscamos la mejora continua</li>
+                        <li><strong>Cercanía:</strong> Mantenemos una relación personal</li>
+                        <li><strong>Compromiso:</strong> Cumplimos nuestras promesas</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Números que nos Respaldan -->
-        <section class="estadisticas">
-            <div class="container">
+    <!-- Estadísticas -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-header">
                 <h2>Números que nos Respaldan</h2>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Años de Experiencia</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">25,000+</div>
-                        <div class="stat-label">Clientes Satisfechos</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Profesionales</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">98%</div>
-                        <div class="stat-label">Satisfacción Cliente</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Atención al Cliente</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">15</div>
-                        <div class="stat-label">Compañías Aliadas</div>
-                    </div>
+            </div>
+            
+            <div class="stats-grid-large">
+                <div class="stat-card">
+                    <span class="number">15+</span>
+                    <span class="label">Años de Experiencia</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">25,000+</span>
+                    <span class="label">Clientes Satisfechos</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">50+</span>
+                    <span class="label">Profesionales</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">98%</span>
+                    <span class="label">Satisfacción</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">24/7</span>
+                    <span class="label">Atención</span>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Nuestro Equipo -->
-        <section class="equipo">
-            <div class="container">
+    <!-- Equipo -->
+    <section class="equipo-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="brand-colors">
+                    <span class="dot red"></span>
+                    <span class="dot orange"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot blue"></span>
+                </div>
                 <h2>Nuestro Equipo Directivo</h2>
-                <div class="equipo-grid">
-                    <div class="miembro-card">
-                        <div class="miembro-foto">
-                            <img src="../assets/images/equipo-ceo.jpg" alt="CEO">
-                        </div>
-                        <div class="miembro-info">
-                            <h4>Carlos Mendoza</h4>
-                            <p class="cargo">Chief Executive Officer</p>
-                            <p>Ingeniero Comercial con MBA, cuenta con más de 20 años de experiencia en la industria aseguradora. Lideró la expansión de BCP a nivel nacional.</p>
-                        </div>
+                <p class="section-subtitle">Profesionales comprometidos con tu protección</p>
+            </div>
+            
+            <div class="equipo-grid">
+                <div class="equipo-card">
+                    <div class="equipo-foto">
+                        <i class="fas fa-user"></i>
                     </div>
-                    <div class="miembro-card">
-                        <div class="miembro-foto">
-                            <img src="../assets/images/equipo-coo.jpg" alt="COO">
-                        </div>
-                        <div class="miembro-info">
-                            <h4>Patricia González</h4>
-                            <p class="cargo">Chief Operating Officer</p>
-                            <p>Actuaria con especialización en seguros de vida y salud. Responsable de la operación diaria y la excelencia en el servicio al cliente.</p>
-                        </div>
+                    <div class="equipo-info">
+                        <h4>Carlos Mendoza</h4>
+                        <p class="cargo">Chief Executive Officer</p>
+                        <p>Ingeniero Comercial con MBA, cuenta con más de 20 años de experiencia en la industria aseguradora. Lideró la expansión de BCP a nivel nacional.</p>
                     </div>
-                    <div class="miembro-card">
-                        <div class="miembro-foto">
-                            <img src="../assets/images/equipo-cto.jpg" alt="CTO">
-                        </div>
-                        <div class="miembro-info">
-                            <h4>Roberto Silva</h4>
-                            <p class="cargo">Chief Technology Officer</p>
-                            <p>Ingeniero en Sistemas con experiencia en fintech. Lidera la transformación digital y la innovación tecnológica de la compañía.</p>
-                        </div>
+                </div>
+                
+                <div class="equipo-card">
+                    <div class="equipo-foto">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="equipo-info">
+                        <h4>Patricia González</h4>
+                        <p class="cargo">Chief Operating Officer</p>
+                        <p>Actuaria con especialización en seguros de vida y salud. Responsable de la operación diaria y la excelencia en el servicio al cliente.</p>
+                    </div>
+                </div>
+                
+                <div class="equipo-card">
+                    <div class="equipo-foto">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="equipo-info">
+                        <h4>Roberto Silva</h4>
+                        <p class="cargo">Chief Technology Officer</p>
+                        <p>Ingeniero en Sistemas con experiencia en fintech. Lidera la transformación digital y la innovación tecnológica de la compañía.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Certificaciones -->
-        <section class="certificaciones">
-            <div class="container">
+    <!-- Certificaciones -->
+    <section class="cert-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="brand-colors">
+                    <span class="dot red"></span>
+                    <span class="dot orange"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot blue"></span>
+                </div>
                 <h2>Certificaciones y Reconocimientos</h2>
-                <div class="cert-grid">
-                    <div class="cert-item">
-                        <div class="cert-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h4>Registro CMF</h4>
-                        <p>Corredora registrada en la Comisión para el Mercado Financiero bajo el N° 2024-001</p>
+            </div>
+            
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
                     </div>
-                    <div class="cert-item">
-                        <div class="cert-icon">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <h4>ISO 9001:2015</h4>
-                        <p>Certificación de calidad en gestión de procesos y atención al cliente</p>
+                    <h4>Registro CMF</h4>
+                    <p>Corredora registrada en la Comisión para el Mercado Financiero bajo el N° 2024-001</p>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-award"></i>
                     </div>
-                    <div class="cert-item">
-                        <div class="cert-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h4>AACH</h4>
-                        <p>Miembro activo de la Asociación de Aseguradores de Chile</p>
+                    <h4>ISO 9001:2015</h4>
+                    <p>Certificación de calidad en gestión de procesos y atención al cliente</p>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <div class="cert-item">
-                        <div class="cert-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>Premio Excelencia</h4>
-                        <p>Reconocimiento a la mejor corredora de seguros 2023-2024</p>
+                    <h4>AACH</h4>
+                    <p>Miembro activo de la Asociación de Aseguradores de Chile</p>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-star"></i>
                     </div>
+                    <h4>Premio Excelencia</h4>
+                    <p>Reconocimiento a la mejor corredora de seguros 2023-2024</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Nuestras Oficinas -->
-        <section class="oficinas">
-            <div class="container">
-                <h2>Nuestras Oficinas</h2>
-                <div class="oficinas-grid">
-                    <div class="oficina-card">
-                        <h4>Casa Matriz - Santiago</h4>
-                        <p><i class="fas fa-map-marker-alt"></i> Av. Providencia 1234, Providencia</p>
-                        <p><i class="fas fa-phone"></i> +56 2 2345 6789</p>
-                        <p><i class="fas fa-clock"></i> Lun-Vie 8:30-18:30</p>
-                    </div>
-                    <div class="oficina-card">
-                        <h4>Sucursal Valparaíso</h4>
-                        <p><i class="fas fa-map-marker-alt"></i> Av. Pedro Montt 567, Valparaíso</p>
-                        <p><i class="fas fa-phone"></i> +56 32 234 5678</p>
-                        <p><i class="fas fa-clock"></i> Lun-Vie 9:00-18:00</p>
-                    </div>
-                    <div class="oficina-card">
-                        <h4>Sucursal Concepción</h4>
-                        <p><i class="fas fa-map-marker-alt"></i> Av. O'Higgins 890, Concepción</p>
-                        <p><i class="fas fa-phone"></i> +56 41 234 5678</p>
-                        <p><i class="fas fa-clock"></i> Lun-Vie 9:00-18:00</p>
-                    </div>
-                    <div class="oficina-card">
-                        <h4>Sucursal La Serena</h4>
-                        <p><i class="fas fa-map-marker-alt"></i> Av. Francisco de Aguirre 321, La Serena</p>
-                        <p><i class="fas fa-phone"></i> +56 51 234 5678</p>
-                        <p><i class="fas fa-clock"></i> Lun-Vie 9:00-18:00</p>
-                    </div>
-                </div>
+    <!-- CTA -->
+    <section class="cta-nosotros">
+        <div class="container">
+            <h2>¿Listo para Proteger lo que Más Valoras?</h2>
+            <p>Nuestro equipo de expertos está listo para asesorarte y encontrar la mejor solución para ti.</p>
+            <div class="cta-buttons">
+                <a href="cotizador.html" class="btn-white-inicio">Cotizar Seguro</a>
+                <a href="contacto.html" class="btn-outline-white-inicio">Contactar Asesor</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Compromiso Social -->
-        <section class="compromiso-social">
-            <div class="container">
-                <div class="compromiso-content">
-                    <div class="compromiso-texto">
-                        <h2>Compromiso Social y Medioambiental</h2>
-                        <p>En BCP Corredora de Seguros creemos en la importancia de retribuir a la comunidad y cuidar nuestro planeta. Por eso, desarrollamos diversas iniciativas de responsabilidad social y sostenibilidad.</p>
-                        
-                        <div class="iniciativas">
-                            <div class="iniciativa">
-                                <h4><i class="fas fa-graduation-cap"></i> Educación Financiera</h4>
-                                <p>Programa gratuito de educación sobre seguros y planificación financiera en colegios y universidades.</p>
-                            </div>
-                            <div class="iniciativa">
-                                <h4><i class="fas fa-leaf"></i> Oficina Verde</h4>
-                                <p>Implementación de prácticas sustentables: papel reciclado, energía renovable y reducción de huella de carbono.</p>
-                            </div>
-                            <div class="iniciativa">
-                                <h4><i class="fas fa-hands-helping"></i> Fundación BCP</h4>
-                                <p>Apoyo a familias vulnerables con seguros sociales y programas de protección comunitaria.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="compromiso-imagen">
-                        <img src="../assets/images/compromiso-social.jpg" alt="Compromiso Social">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>¿Quieres Formar Parte del Equipo BCP?</h2>
-                    <p>Estamos siempre buscando talento comprometido con la excelencia y el servicio al cliente.</p>
-                    <div class="cta-buttons">
-                        <button class="btn btn-primary" onclick="window.open('mailto:rrhh@bcpseguros.cl', '_blank')">Ver Oportunidades</button>
-                        <button class="btn btn-secondary" onclick="openChat()">Conoce más sobre nosotros</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>BCP Corredora de Seguros</h4>
-                    <p>Tu tranquilidad es nuestra prioridad. Más de 15 años protegiendo a familias chilenas.</p>
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="seguros.html">Seguros</a></li>
+                        <li><a href="cotizador.html">Cotizar</a></li>
+                        <li><a href="comparador.html">Comparar</a></li>
+                    </ul>
                 </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+56600600292">600 6000 292</a></li>
+                        <li><a href="tel:+56226799700">226 799 700</a></li>
+                        <li><a href="mailto:info@bcp.cl">info@bcp.cl</a></li>
+                        <li><a href="contacto.html">Formulario de Contacto</a></li>
+                    </ul>
+                </div>
+                
                 <div class="footer-section">
                     <h4>Seguros</h4>
                     <ul>
-                        <li><a href="seguro-auto.html">Seguro Auto</a></li>
-                        <li><a href="seguro-hogar.html">Seguro Hogar</a></li>
-                        <li><a href="seguro-vida.html">Seguro de Vida</a></li>
-                        <li><a href="seguro-salud.html">Seguro de Salud</a></li>
+                        <li><a href="seguro-auto.html">Automotriz</a></li>
+                        <li><a href="seguro-hogar.html">Hogar</a></li>
+                        <li><a href="seguro-salud.html">Salud</a></li>
+                        <li><a href="seguro-viaje.html">Viaje</a></li>
+                        <li><a href="seguro-mascotas.html">Mascotas</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <p><i class="fas fa-phone"></i> +56 2 2345 6789</p>
-                    <p><i class="fas fa-envelope"></i> contacto@bcpseguros.cl</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Av. Providencia 1234, Santiago</p>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                        <li><a href="#">Información Regulatoria</a></li>
+                    </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2025 BCP Corredora de Seguros. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <div class="chat-button" onclick="openChat()">
-        <i class="fas fa-comments"></i>
+    <!-- Chat Widget -->
+    <div class="chat-widget" onclick="toggleChat()">
+        <div class="chat-button">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="chat-tooltip">¿Necesitas ayuda? ¡Hablemos!</div>
     </div>
 
-    <script src="../assets/js/main.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script>
+        function toggleChat() {
+            const phoneNumber = '+56600600292';
+            const message = '¡Hola! Me interesa conocer más sobre sus seguros.';
+            const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
 </body>
 </html>

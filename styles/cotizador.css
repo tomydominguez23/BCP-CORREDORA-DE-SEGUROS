@@ -1,183 +1,262 @@
-/* Cotizador Styles */
+/* ========================================
+   Cotizador Premium - BCP Corredora de Seguros
+   ======================================== */
 
+/* ========================================
+   Hero del Cotizador
+   ======================================== */
 .cotizador-hero {
-    background: #000;
-    color: white;
-    padding: 120px 0 80px;
+    background: var(--gradient-hero);
+    color: var(--white);
+    padding: 140px 0 100px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cotizador-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.cotizador-hero .hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .cotizador-hero h1 {
+    font-family: var(--font-display);
     font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    letter-spacing: -1px;
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
-    font-weight: 300;
-    max-width: 600px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    max-width: 650px;
     margin: 0 auto;
-    opacity: 0.9;
+    opacity: 0.92;
+    line-height: 1.7;
 }
 
-/* Company Info Section */
+/* ========================================
+   Company Info Section
+   ======================================== */
 .company-info {
-    padding: 80px 0;
-    background: #f5f5f5;
+    padding: 100px 0;
+    background: var(--pearl);
 }
 
 .info-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.8fr 1fr;
     gap: 60px;
     align-items: start;
 }
 
 .info-text h2 {
+    font-family: var(--font-display);
     font-size: 2.5rem;
-    color: #000;
-    margin-bottom: 2rem;
+    color: var(--primary-dark);
+    margin-bottom: 2.5rem;
     font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .benefits-list {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .benefit-item {
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
-    padding: 1.5rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.75rem;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    border: 2px solid transparent;
 }
 
 .benefit-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary);
 }
 
 .benefit-icon {
-    width: 60px;
-    height: 60px;
-    background: #000;
+    width: 64px;
+    height: 64px;
+    background: var(--gradient-primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    box-shadow: var(--shadow-md);
 }
 
 .benefit-icon i {
-    color: white;
+    color: var(--white);
     font-size: 1.5rem;
 }
 
 .benefit-content h3 {
-    color: #000;
-    font-size: 1.2rem;
+    color: var(--primary-dark);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
 .benefit-content p {
-    color: #666;
+    color: var(--medium-gray);
     line-height: 1.6;
+    font-size: 0.95rem;
 }
 
-/* Stats Card */
+/* ========================================
+   Stats Card
+   ======================================== */
 .stats-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
     text-align: center;
     position: sticky;
-    top: 100px;
+    top: 120px;
+    border: 2px solid var(--light-gray);
+    overflow: hidden;
+}
+
+.stats-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gradient-gold);
 }
 
 .stats-card h3 {
-    color: #000;
+    color: var(--primary-dark);
+    font-family: var(--font-display);
     font-size: 1.5rem;
     margin-bottom: 2rem;
     font-weight: 600;
+    position: relative;
 }
 
 .stats-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
 }
 
 .stat-item {
-    padding: 1rem;
-    background: #f5f5f5;
-    border-radius: 10px;
+    padding: 1.25rem;
+    background: var(--pearl);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.stat-item:hover {
+    background: rgba(201, 164, 62, 0.1);
+    transform: translateY(-2px);
 }
 
 .stat-number {
     display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 0.5rem;
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin-bottom: 0.4rem;
 }
 
 .stat-label {
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 0.85rem;
+    color: var(--medium-gray);
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
-/* Quote Form Section */
+/* ========================================
+   Quote Form Section
+   ======================================== */
 .quote-form-section {
-    padding: 80px 0;
-    background: white;
+    padding: 100px 0;
+    background: var(--white);
 }
 
 .form-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
 }
 
 .form-header h2 {
+    font-family: var(--font-display);
     font-size: 2.5rem;
-    color: #000;
+    color: var(--primary-dark);
     margin-bottom: 1rem;
     font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .form-header p {
     font-size: 1.1rem;
-    color: #666;
+    color: var(--medium-gray);
     max-width: 600px;
     margin: 0 auto;
+    line-height: 1.7;
 }
 
 .quote-form-container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.8fr 1fr;
     gap: 4rem;
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 0 auto;
 }
 
-/* Form Styles */
+/* ========================================
+   Form Styles
+   ======================================== */
 .quote-form {
-    background: #f5f5f5;
+    background: var(--pearl);
     padding: 3rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--light-gray);
 }
 
 .form-step {
     display: none;
+    animation: fadeInForm 0.4s ease;
+}
+
+@keyframes fadeInForm {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .form-step.active {
@@ -185,13 +264,24 @@
 }
 
 .form-step h3 {
-    color: #000;
+    color: var(--primary-dark);
+    font-family: var(--font-display);
     font-size: 1.5rem;
     margin-bottom: 2rem;
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.form-step h3::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--secondary);
+    border-radius: 50%;
 }
 
 .form-group {
@@ -201,44 +291,55 @@
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 .form-group label {
     display: block;
-    color: #000;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 12px 16px;
-    border: 2px solid #e5e5e5;
-    border-radius: 8px;
+    padding: 14px 18px;
+    border: 2px solid var(--light-gray);
+    border-radius: var(--radius-md);
     font-size: 1rem;
-    transition: border-color 0.3s ease;
-    background: white;
+    font-family: var(--font-primary);
+    transition: all var(--transition-fast);
+    background: var(--white);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #000;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(30, 74, 122, 0.1);
+}
+
+.form-group input:hover:not(:focus),
+.form-group select:hover:not(:focus),
+.form-group textarea:hover:not(:focus) {
+    border-color: var(--medium-gray);
 }
 
 .form-group textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 120px;
 }
 
-/* Insurance Type Selection */
+/* ========================================
+   Insurance Type Selection
+   ======================================== */
 .insurance-types {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 1rem;
     margin-bottom: 2rem;
 }
@@ -255,120 +356,151 @@
 
 .insurance-option label {
     display: block;
-    padding: 1.5rem;
-    background: white;
-    border: 2px solid #e5e5e5;
-    border-radius: 12px;
+    padding: 1.75rem 1rem;
+    background: var(--white);
+    border: 2px solid var(--light-gray);
+    border-radius: var(--radius-lg);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all var(--transition-normal);
     text-align: center;
 }
 
 .insurance-option label:hover {
-    border-color: #000;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
 }
 
 .insurance-option input[type="radio"]:checked + label {
-    border-color: #000;
-    background: #000;
-    color: white;
+    border-color: var(--primary);
+    background: var(--gradient-primary);
+    color: var(--white);
+    box-shadow: var(--shadow-lg);
+}
+
+.insurance-option input[type="radio"]:checked + label .option-content i {
+    color: var(--secondary-light);
 }
 
 .option-content i {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     display: block;
+    color: var(--primary);
+    transition: color var(--transition-fast);
 }
 
 .option-content span {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.9rem;
+    display: block;
 }
 
-/* Checkbox Styles */
+/* ========================================
+   Checkbox Styles
+   ======================================== */
 .checkbox-label {
     display: flex !important;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.75rem;
     cursor: pointer;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .checkbox-label input[type="checkbox"] {
     width: auto !important;
     margin: 0;
+    opacity: 0;
+    position: absolute;
 }
 
 .checkmark {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #e5e5e5;
-    border-radius: 4px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--light-gray);
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     margin-top: 2px;
+    transition: all var(--transition-fast);
+}
+
+.checkbox-label:hover .checkmark {
+    border-color: var(--primary);
 }
 
 .checkbox-label input[type="checkbox"]:checked + .checkmark {
-    background: #000;
-    border-color: #000;
+    background: var(--gradient-primary);
+    border-color: var(--primary);
 }
 
 .checkbox-label input[type="checkbox"]:checked + .checkmark::after {
     content: "✓";
-    color: white;
-    font-size: 12px;
+    color: var(--white);
+    font-size: 13px;
     font-weight: bold;
 }
 
-/* Form Buttons */
+/* ========================================
+   Form Buttons
+   ======================================== */
 .form-buttons {
     display: flex;
     gap: 1rem;
     justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--light-gray);
 }
 
 .btn-next,
 .btn-prev,
 .btn-submit {
-    padding: 12px 24px;
+    padding: 14px 28px;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--radius-full);
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all var(--transition-fast);
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-family: var(--font-primary);
 }
 
 .btn-next,
 .btn-submit {
-    background: #000;
-    color: white;
+    background: var(--gradient-gold);
+    color: var(--primary-dark);
     margin-left: auto;
+    box-shadow: var(--shadow-gold);
 }
 
 .btn-next:hover,
 .btn-submit:hover {
-    background: #333;
     transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(201, 164, 62, 0.4);
 }
 
 .btn-prev {
-    background: #666;
-    color: white;
+    background: var(--white);
+    color: var(--primary-dark);
+    border: 2px solid var(--light-gray);
 }
 
 .btn-prev:hover {
-    background: #555;
+    background: var(--pearl);
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
-/* Form Sidebar */
+/* ========================================
+   Form Sidebar
+   ======================================== */
 .form-sidebar {
     display: flex;
     flex-direction: column;
@@ -377,18 +509,34 @@
 
 .contact-info,
 .benefits-sidebar {
-    background: white;
+    background: var(--white);
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--light-gray);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info::before,
+.benefits-sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-gold);
 }
 
 .contact-info h4,
 .benefits-sidebar h4 {
-    color: #000;
+    color: var(--primary-dark);
+    font-family: var(--font-display);
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     font-weight: 600;
+    margin-top: 0.5rem;
 }
 
 .contact-item {
@@ -398,50 +546,75 @@
     margin-bottom: 1.5rem;
 }
 
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
 .contact-item i {
-    color: #000;
-    font-size: 1.2rem;
-    margin-top: 2px;
+    color: var(--secondary);
+    font-size: 1.25rem;
+    margin-top: 4px;
     flex-shrink: 0;
+    width: 24px;
+    text-align: center;
+}
+
+.contact-item strong {
+    color: var(--primary-dark);
+    display: block;
+    margin-bottom: 4px;
 }
 
 .contact-item a {
-    color: #000;
+    color: var(--primary);
     text-decoration: none;
     font-weight: 500;
+    transition: color var(--transition-fast);
 }
 
 .contact-item a:hover {
+    color: var(--primary-dark);
     text-decoration: underline;
 }
 
 .benefits-sidebar ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .benefits-sidebar li {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
     margin-bottom: 1rem;
-    color: #666;
+    color: var(--dark-gray);
+    font-size: 0.95rem;
+}
+
+.benefits-sidebar li:last-child {
+    margin-bottom: 0;
 }
 
 .benefits-sidebar li i {
-    color: #000;
+    color: var(--accent-green);
     font-size: 0.9rem;
+    width: 20px;
+    text-align: center;
 }
 
-/* Trust Section */
+/* ========================================
+   Trust Section
+   ======================================== */
 .trust-section {
-    padding: 60px 0;
-    background: #f5f5f5;
+    padding: 80px 0;
+    background: var(--pearl);
     text-align: center;
 }
 
 .trust-section h2 {
-    color: #000;
+    color: var(--primary-dark);
+    font-family: var(--font-display);
     font-size: 2rem;
     margin-bottom: 3rem;
     font-weight: 600;
@@ -451,49 +624,56 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 2.5rem;
     flex-wrap: wrap;
 }
 
 .company-logo {
-    background: white;
-    padding: 1.5rem 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    background: var(--white);
+    padding: 1.5rem 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    border: 2px solid transparent;
 }
 
 .company-logo:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary);
 }
 
 .placeholder-logo {
-    color: #666;
+    color: var(--medium-gray);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
-/* Modal Styles */
+/* ========================================
+   Modal Styles
+   ======================================== */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 2000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(15, 41, 66, 0.7);
+    backdrop-filter: blur(4px);
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: var(--white);
     margin: 5% auto;
     padding: 0;
-    border-radius: 15px;
+    border-radius: var(--radius-xl);
     width: 90%;
     max-width: 600px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: var(--shadow-xl);
     animation: modalSlideIn 0.3s ease;
+    overflow: hidden;
 }
 
 @keyframes modalSlideIn {
@@ -508,57 +688,113 @@
 }
 
 .modal-header {
-    padding: 2rem 2rem 1rem;
-    border-bottom: 1px solid #e5e5e5;
+    padding: 2rem;
+    background: var(--pearl);
+    border-bottom: 2px solid var(--light-gray);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .modal-header h3 {
-    color: #000;
+    color: var(--primary-dark);
+    font-family: var(--font-display);
     font-size: 1.5rem;
     font-weight: 600;
     margin: 0;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
 }
 
 .modal-header h3 i {
-    color: #000;
+    color: var(--accent-green);
+    font-size: 1.75rem;
 }
 
 .close {
-    color: #aaa;
-    font-size: 28px;
+    color: var(--medium-gray);
+    font-size: 32px;
     font-weight: bold;
     cursor: pointer;
     line-height: 1;
+    transition: all var(--transition-fast);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
 .close:hover {
-    color: #000;
+    color: var(--primary-dark);
+    background: var(--light-gray);
 }
 
 .modal-body {
     padding: 2rem;
 }
 
+.modal-body p {
+    color: var(--dark-gray);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
 .modal-body ul {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    padding-left: 0;
+    list-style: none;
 }
 
 .modal-body li {
-    margin-bottom: 0.5rem;
-    color: #666;
+    margin-bottom: 0.75rem;
+    color: var(--medium-gray);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+.modal-body li::before {
+    content: '✓';
+    color: var(--accent-green);
+    font-weight: bold;
+}
+
+/* ========================================
+   Progress Indicator
+   ======================================== */
+.form-progress {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 0.5rem;
+}
+
+.progress-step {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--light-gray);
+    transition: all var(--transition-fast);
+}
+
+.progress-step.active {
+    background: var(--gradient-gold);
+    transform: scale(1.2);
+}
+
+.progress-step.completed {
+    background: var(--accent-green);
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+@media (max-width: 992px) {
     .cotizador-hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
     }
     
     .hero-subtitle {
@@ -576,7 +812,27 @@
     
     .quote-form-container {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cotizador-hero {
+        padding: 100px 0 70px;
+    }
+    
+    .cotizador-hero h1 {
+        font-size: 2.25rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .company-info,
+    .quote-form-section,
+    .trust-section {
+        padding: 70px 0;
     }
     
     .quote-form {
@@ -603,5 +859,55 @@
     .modal-header,
     .modal-body {
         padding: 1.5rem;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .btn-next,
+    .btn-prev,
+    .btn-submit {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-next,
+    .btn-submit {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .cotizador-hero h1 {
+        font-size: 1.85rem;
+    }
+    
+    .form-header h2,
+    .info-text h2 {
+        font-size: 1.75rem;
+    }
+
+    .benefit-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .benefit-icon {
+        margin: 0 auto;
+    }
+
+    .insurance-option label {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .option-content i {
+        font-size: 1.5rem;
+    }
+
+    .option-content span {
+        font-size: 0.8rem;
     }
 }
