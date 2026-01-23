@@ -1,7 +1,7 @@
 /* Estilos específicos para la sección Quiénes Somos */
 .quienes-somos {
     padding: 80px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: #ffffff;
 }
 
 .quienes-somos-content {
@@ -16,14 +16,14 @@
 
 .intro-section h2 {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: #000;
     margin-bottom: 20px;
     font-weight: 700;
 }
 
 .intro-text {
     font-size: 1.2rem;
-    color: #5a6c7d;
+    color: #666;
     line-height: 1.8;
     max-width: 800px;
     margin: 0 auto;
@@ -43,16 +43,18 @@
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    border: 2px solid #e5e5e5;
 }
 
 .identidad-card:hover {
     transform: translateY(-10px);
+    border-color: #000;
 }
 
 .identidad-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #00a651, #28a745);
+    background: #000;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -67,7 +69,7 @@
 
 .identidad-card h3 {
     font-size: 1.5rem;
-    color: #2c3e50;
+    color: #000;
     margin-bottom: 15px;
     font-weight: 600;
 }
@@ -85,13 +87,13 @@
 
 .proposito-texto h3 {
     font-size: 2rem;
-    color: #2c3e50;
+    color: #000;
     margin-bottom: 20px;
 }
 
 .proposito-texto p {
     font-size: 1.1rem;
-    color: #5a6c7d;
+    color: #666;
     line-height: 1.7;
     margin-bottom: 20px;
 }
@@ -108,17 +110,18 @@
     padding: 20px;
     text-align: center;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border: 2px solid #e5e5e5;
 }
 
 .stat-circle .stat-number {
     font-size: 2rem;
     font-weight: 700;
-    color: #00a651;
+    color: #000;
 }
 
 .stat-circle .stat-desc {
     font-size: 0.9rem;
-    color: #5a6c7d;
+    color: #666;
 }
 
 .diferenciadores-section {
@@ -127,7 +130,7 @@
 
 .diferenciadores-section h3 {
     font-size: 2.2rem;
-    color: #2c3e50;
+    color: #000;
     text-align: center;
     margin-bottom: 50px;
 }
@@ -144,13 +147,18 @@
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     position: relative;
+    border: 2px solid #e5e5e5;
+}
+
+.diferenciador-item:hover {
+    border-color: #000;
 }
 
 .diferenciador-number {
     position: absolute;
     top: -15px;
     left: 30px;
-    background: linear-gradient(135deg, #00a651, #28a745);
+    background: #000;
     color: white;
     width: 40px;
     height: 40px;
@@ -163,7 +171,7 @@
 }
 
 .diferenciador-item h4 {
-    color: #2c3e50;
+    color: #000;
     margin-bottom: 15px;
     font-size: 1.3rem;
     margin-top: 15px;
@@ -175,7 +183,7 @@
 
 .cultura-section h3 {
     font-size: 2.2rem;
-    color: #2c3e50;
+    color: #000;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -198,17 +206,22 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    border: 2px solid #e5e5e5;
+}
+
+.principio:hover {
+    border-color: #000;
 }
 
 .principio i {
-    color: #00a651;
+    color: #000;
     font-size: 1.5rem;
     margin-right: 15px;
     margin-top: 5px;
 }
 
 .principio h4 {
-    color: #2c3e50;
+    color: #000;
     margin-bottom: 5px;
     font-size: 1.1rem;
 }
@@ -218,6 +231,7 @@
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 2px solid #e5e5e5;
 }
 
 .cultura-stat {
@@ -235,18 +249,18 @@
 
 .cultura-stat h4 {
     font-size: 2rem;
-    color: #00a651;
+    color: #000;
     margin-bottom: 5px;
     font-weight: 700;
 }
 
 .cultura-stat p {
-    color: #5a6c7d;
+    color: #666;
     font-size: 0.9rem;
 }
 
 .vision-futuro {
-    background: linear-gradient(135deg, #2c3e50, #3498db);
+    background: #000;
     padding: 60px 40px;
     border-radius: 20px;
     color: white;
@@ -284,7 +298,7 @@
 .compromiso-item i {
     font-size: 1.5rem;
     margin-right: 15px;
-    color: #74d6ac;
+    color: #ccc;
 }
 
 /* Responsive */
