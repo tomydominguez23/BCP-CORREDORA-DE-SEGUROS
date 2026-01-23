@@ -17,7 +17,7 @@
 }
 
 .chat-header {
-    background: linear-gradient(45deg, #27ae60, #229954);
+    background: #000;
     color: white;
     padding: 20px;
     border-radius: 20px 20px 0 0;
@@ -79,20 +79,20 @@
 }
 
 .user-message .message-content {
-    background: #3498db;
+    background: #000;
     color: white;
     border-bottom-right-radius: 4px;
 }
 
 .bot-message .message-content {
-    background: #f1f3f4;
-    color: #2c3e50;
+    background: #f1f1f1;
+    color: #000;
     border-bottom-left-radius: 4px;
 }
 
 .message-time {
     font-size: 11px;
-    color: #95a5a6;
+    color: #999;
     margin-top: 4px;
     align-self: flex-end;
 }
@@ -103,7 +103,7 @@
 
 .chat-input-container {
     padding: 20px;
-    border-top: 1px solid #ecf0f1;
+    border-top: 1px solid #e5e5e5;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -112,7 +112,7 @@
 .chat-input {
     flex: 1;
     padding: 12px 15px;
-    border: 2px solid #ecf0f1;
+    border: 2px solid #e5e5e5;
     border-radius: 25px;
     font-size: 14px;
     outline: none;
@@ -120,11 +120,11 @@
 }
 
 .chat-input:focus {
-    border-color: #3498db;
+    border-color: #000;
 }
 
 .send-message {
-    background: #3498db;
+    background: #000;
     color: white;
     border: none;
     width: 40px;
@@ -138,7 +138,7 @@
 }
 
 .send-message:hover {
-    background: #2980b9;
+    background: #333;
     transform: scale(1.1);
 }
 
@@ -149,7 +149,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(44, 62, 80, 0.95);
+    background: rgba(0, 0, 0, 0.95);
     z-index: 2000;
     animation: fadeIn 0.3s ease;
 }
@@ -174,7 +174,7 @@
     border-radius: 15px;
     outline: none;
     background: white;
-    color: #2c3e50;
+    color: #000;
 }
 
 .close-search {
@@ -202,7 +202,7 @@
 }
 
 .search-suggestions h4 {
-    color: #2c3e50;
+    color: #000;
     margin-bottom: 20px;
     font-size: 18px;
 }
@@ -214,18 +214,18 @@
 }
 
 .suggestion {
-    background: #f8f9fa;
-    color: #2c3e50;
+    background: #f5f5f5;
+    color: #000;
     padding: 10px 15px;
     border-radius: 20px;
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 1px solid #ecf0f1;
+    border: 1px solid #e5e5e5;
 }
 
 .suggestion:hover {
-    background: #3498db;
+    background: #000;
     color: white;
     transform: translateY(-2px);
 }
@@ -245,19 +245,19 @@
 }
 
 .notification.success {
-    border-left: 5px solid #27ae60;
+    border-left: 5px solid #000;
 }
 
 .notification.error {
-    border-left: 5px solid #e74c3c;
+    border-left: 5px solid #333;
 }
 
 .notification.info {
-    border-left: 5px solid #3498db;
+    border-left: 5px solid #666;
 }
 
 .notification.warning {
-    border-left: 5px solid #f39c12;
+    border-left: 5px solid #999;
 }
 
 .notification-content {
@@ -269,7 +269,7 @@
 }
 
 .notification-message {
-    color: #2c3e50;
+    color: #000;
     font-size: 14px;
     line-height: 1.4;
     flex: 1;
@@ -278,7 +278,7 @@
 .notification-close {
     background: none;
     border: none;
-    color: #95a5a6;
+    color: #999;
     font-size: 18px;
     cursor: pointer;
     padding: 5px;
@@ -286,7 +286,7 @@
 }
 
 .notification-close:hover {
-    color: #e74c3c;
+    color: #000;
 }
 
 /* Animation Classes */
@@ -310,7 +310,7 @@
     width: 20px;
     height: 20px;
     border: 3px solid #f3f3f3;
-    border-top: 3px solid #3498db;
+    border-top: 3px solid #000;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
