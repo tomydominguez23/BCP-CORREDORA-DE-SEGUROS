@@ -308,6 +308,116 @@ function initScrollAnimations() {
     });
 }
 
+// Inicializar Galería de Imágenes
+function initGalleryCarousel() {
+    const track = document.querySelector('.gallery-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.gallery-next');
+    const prevButton = document.querySelector('.gallery-prev');
+    const dotsNav = document.querySelector('.gallery-dots');
+    
+    if (!track || slides.length === 0) return;
+
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    
+    // Arrange slides next to one another
+    const setSlidePosition = (slide, index) => {
+        slide.style.left = slideWidth * index + 'px';
+    };
+    slides.forEach(setSlidePosition);
+
+    // Create dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.classList.add('gallery-dot');
+        if (index === 0) dot.classList.add('active-dot');
+        dot.addEventListener('click', () => {
+            const currentSlide = track.querySelector('.current-slide') || slides[0];
+            const targetSlide = slides[index];
+            moveToSlide(track, currentSlide, targetSlide);
+            updateDots(index);
+        });
+        dotsNav.appendChild(dot);
+    });
+    
+    // Initial state
+    slides[0].classList.add('current-slide');
+    
+    const moveToSlide = (track, currentSlide, targetSlide) => {
+        track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+        currentSlide.classList.remove('current-slide');
+        targetSlide.classList.add('current-slide');
+    };
+    
+    const updateDots = (targetIndex) => {
+        const currentDot = dotsNav.querySelector('.active-dot');
+        const targetDot = dotsNav.children[targetIndex];
+        if (currentDot) currentDot.classList.remove('active-dot');
+        if (targetDot) targetDot.classList.add('active-dot');
+    };
+    
+    // Next Button
+    nextButton.addEventListener('click', () => {
+        const currentSlide = track.querySelector('.current-slide');
+        let nextSlide = currentSlide.nextElementSibling;
+        let nextIndex = slides.indexOf(nextSlide);
+        
+        if (!nextSlide) {
+            nextSlide = slides[0];
+            nextIndex = 0;
+        }
+        
+        moveToSlide(track, currentSlide, nextSlide);
+        updateDots(nextIndex);
+    });
+    
+    // Prev Button
+    prevButton.addEventListener('click', () => {
+        const currentSlide = track.querySelector('.current-slide');
+        let prevSlide = currentSlide.previousElementSibling;
+        let prevIndex = slides.indexOf(prevSlide);
+        
+        if (!prevSlide) {
+            prevSlide = slides[slides.length - 1];
+            prevIndex = slides.length - 1;
+        }
+        
+        moveToSlide(track, currentSlide, prevSlide);
+        updateDots(prevIndex);
+    });
+    
+    // Auto Play
+    let autoPlayInterval = setInterval(() => {
+        if (document.querySelector('.gallery-next')) {
+            document.querySelector('.gallery-next').click();
+        }
+    }, 5000);
+    
+    // Pause on hover
+    const galleryContainer = document.querySelector('.gallery-wrapper');
+    galleryContainer.addEventListener('mouseenter', () => {
+        clearInterval(autoPlayInterval);
+    });
+    
+    galleryContainer.addEventListener('mouseleave', () => {
+        autoPlayInterval = setInterval(() => {
+            if (document.querySelector('.gallery-next')) {
+                document.querySelector('.gallery-next').click();
+            }
+        }, 5000);
+    });
+    
+    // Update slide position on resize
+    window.addEventListener('resize', () => {
+        const newSlideWidth = slides[0].getBoundingClientRect().width;
+        slides.forEach((slide, index) => {
+            slide.style.left = newSlideWidth * index + 'px';
+        });
+        const currentSlide = track.querySelector('.current-slide');
+        moveToSlide(track, currentSlide, currentSlide);
+    });
+}
+
 // Inicializar todas las funcionalidades cuando el DOM esté cargado
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
@@ -317,6 +427,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSearch();
     initSmoothScrolling();
     initScrollAnimations();
+    initGalleryCarousel(); // Nueva función
     
     console.log('BCP Corredora de Seguros - Sistema inicializado');
 });
