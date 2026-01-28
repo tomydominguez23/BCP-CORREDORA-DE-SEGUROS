@@ -549,7 +549,7 @@ body {
 .quienes-somos-inicio {
     background: var(--gradient-hero);
     color: var(--white);
-    padding: 100px 0;
+    padding: 100px 0 40px 0;
     position: relative;
     overflow: hidden;
 }
