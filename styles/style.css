@@ -599,7 +599,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 32px;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
 }
 
 .identidad-card-inicio {
