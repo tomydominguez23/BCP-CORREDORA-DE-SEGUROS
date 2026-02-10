@@ -114,110 +114,89 @@
                 </p>
             </div>
 
-            <!-- Galería de imágenes Quiénes Somos -->
-            <div class="quienes-gallery">
-                <div class="gallery-item">
-                    <div class="gallery-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop" 
-                             alt="Asesor&iacute;a personalizada - Reuni&oacute;n con cliente" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-label">
-                                <i class="fas fa-user-check"></i>
-                                <span>Asesor&iacute;a Personalizada</span>
+            <!-- Carrusel de imágenes Quiénes Somos -->
+            <div class="quienes-carousel-container">
+                <button class="quienes-carousel-btn quienes-carousel-prev" onclick="prevQuienesSlide()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="quienes-carousel-track-container">
+                    <div class="quienes-carousel-track">
+                        <div class="quienes-carousel-slide">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop" 
+                                     alt="Asesor&iacute;a personalizada - Reuni&oacute;n con cliente" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-label">
+                                        <i class="fas fa-user-check"></i>
+                                        <span>Asesor&iacute;a Personalizada</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quienes-carousel-slide">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop" 
+                                     alt="Transparencia total - Profesional explicando" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-label">
+                                        <i class="fas fa-eye"></i>
+                                        <span>Transparencia Total</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quienes-carousel-slide">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop" 
+                                     alt="Comparaci&oacute;n real de p&oacute;lizas" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-label">
+                                        <i class="fas fa-balance-scale"></i>
+                                        <span>Comparaci&oacute;n Real</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quienes-carousel-slide">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop" 
+                                     alt="Acompa&ntilde;amiento en siniestros - Equipo de trabajo" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-label">
+                                        <i class="fas fa-hands-helping"></i>
+                                        <span>Acompa&ntilde;amiento Real</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quienes-carousel-slide">
+                            <div class="gallery-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=400&fit=crop" 
+                                     alt="Confianza y cercan&iacute;a - Equipo profesional" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-label">
+                                        <i class="fas fa-handshake"></i>
+                                        <span>Confianza y Cercan&iacute;a</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <div class="gallery-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop" 
-                             alt="Transparencia total - Profesional explicando" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-label">
-                                <i class="fas fa-eye"></i>
-                                <span>Transparencia Total</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop" 
-                             alt="Comparaci&oacute;n real de p&oacute;lizas" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-label">
-                                <i class="fas fa-balance-scale"></i>
-                                <span>Comparaci&oacute;n Real</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop" 
-                             alt="Acompa&ntilde;amiento en siniestros - Equipo de trabajo" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-label">
-                                <i class="fas fa-hands-helping"></i>
-                                <span>Acompa&ntilde;amiento Real</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item gallery-item-wide">
-                    <div class="gallery-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=400&fit=crop" 
-                             alt="Confianza y cercan&iacute;a - Equipo profesional" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-label">
-                                <i class="fas fa-handshake"></i>
-                                <span>Confianza y Cercan&iacute;a</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                <button class="quienes-carousel-btn quienes-carousel-next" onclick="nextQuienesSlide()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
 
-            <div class="identidad-cards-inicio">
-                <div class="identidad-card-inicio">
-                    <div class="identidad-icon-inicio">
-                        <i class="fas fa-user-check"></i>
-                    </div>
-                    <h3>Asesor&iacute;a Personalizada</h3>
-                    <p>Cada cliente es &uacute;nico. Entendemos tus necesidades y te recomendamos la mejor soluci&oacute;n.</p>
-                </div>
-                
-                <div class="identidad-card-inicio">
-                    <div class="identidad-icon-inicio">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Transparencia Total</h3>
-                    <p>Sin letra peque&ntilde;a ni sorpresas. Te explicamos claramente qu&eacute; cubre tu seguro.</p>
-                </div>
-                
-                <div class="identidad-card-inicio">
-                    <div class="identidad-icon-inicio">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3>Comparaci&oacute;n Real de P&oacute;lizas</h3>
-                    <p>Comparamos entre m&uacute;ltiples aseguradoras para encontrar la mejor opci&oacute;n para ti.</p>
-                </div>
-
-                <div class="identidad-card-inicio">
-                    <div class="identidad-icon-inicio">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3>Acompa&ntilde;amiento en Siniestros</h3>
-                    <p>Te orientamos y gestionamos con la aseguradora cuando m&aacute;s lo necesitas.</p>
-                </div>
-
-                <div class="identidad-card-inicio">
-                    <div class="identidad-icon-inicio">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Confianza y Cercan&iacute;a</h3>
-                    <p>Construimos relaciones de largo plazo basadas en la confianza y el servicio.</p>
-                </div>
+            <!-- Indicadores del carrusel Quiénes Somos -->
+            <div class="quienes-carousel-indicators">
+                <button class="quienes-indicator active" onclick="goToQuienesSlide(0)"></button>
+                <button class="quienes-indicator" onclick="goToQuienesSlide(1)"></button>
+                <button class="quienes-indicator" onclick="goToQuienesSlide(2)"></button>
+                <button class="quienes-indicator" onclick="goToQuienesSlide(3)"></button>
+                <button class="quienes-indicator" onclick="goToQuienesSlide(4)"></button>
             </div>
 
             <div class="cta-section-inicio">
@@ -780,6 +759,133 @@
         }
 
         document.addEventListener('DOMContentLoaded', initCarousel);
+
+        // ========================================
+        // Carrusel Quiénes Somos - Funcionalidad
+        // ========================================
+        let quienesCurrentIndex = 0;
+        const quienesTrack = document.querySelector('.quienes-carousel-track');
+        const quienesSlides = document.querySelectorAll('.quienes-carousel-slide');
+        const quienesIndicators = document.querySelectorAll('.quienes-indicator');
+        let quienesSlidesPerView = 3;
+        let autoQuienesInterval;
+
+        function updateQuienesSlidesPerView() {
+            if (window.innerWidth <= 768) {
+                quienesSlidesPerView = 1;
+            } else if (window.innerWidth <= 1024) {
+                quienesSlidesPerView = 2;
+            } else {
+                quienesSlidesPerView = 3;
+            }
+        }
+
+        function getQuienesMaxIndex() {
+            return Math.max(0, quienesSlides.length - quienesSlidesPerView);
+        }
+
+        function updateQuienesPosition() {
+            if (!quienesTrack) return;
+            const slideWidth = 100 / quienesSlidesPerView;
+            const offset = quienesCurrentIndex * slideWidth;
+            quienesTrack.style.transform = `translateX(-${offset}%)`;
+            
+            quienesIndicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === quienesCurrentIndex);
+            });
+        }
+
+        function nextQuienesSlide() {
+            const maxIndex = getQuienesMaxIndex();
+            if (quienesCurrentIndex < maxIndex) {
+                quienesCurrentIndex++;
+            } else {
+                quienesCurrentIndex = 0;
+            }
+            updateQuienesPosition();
+            resetAutoQuienes();
+        }
+
+        function prevQuienesSlide() {
+            const maxIndex = getQuienesMaxIndex();
+            if (quienesCurrentIndex > 0) {
+                quienesCurrentIndex--;
+            } else {
+                quienesCurrentIndex = maxIndex;
+            }
+            updateQuienesPosition();
+            resetAutoQuienes();
+        }
+
+        function goToQuienesSlide(index) {
+            const maxIndex = getQuienesMaxIndex();
+            quienesCurrentIndex = Math.min(index, maxIndex);
+            updateQuienesPosition();
+            resetAutoQuienes();
+        }
+
+        function startAutoQuienes() {
+            autoQuienesInterval = setInterval(nextQuienesSlide, 4000);
+        }
+
+        function resetAutoQuienes() {
+            clearInterval(autoQuienesInterval);
+            startAutoQuienes();
+        }
+
+        function initQuienesCarousel() {
+            updateQuienesSlidesPerView();
+            updateQuienesPosition();
+            startAutoQuienes();
+        }
+
+        window.addEventListener('resize', function() {
+            updateQuienesSlidesPerView();
+            const maxIndex = getQuienesMaxIndex();
+            if (quienesCurrentIndex > maxIndex) {
+                quienesCurrentIndex = maxIndex;
+            }
+            updateQuienesPosition();
+        });
+
+        const quienesContainer = document.querySelector('.quienes-carousel-container');
+        if (quienesContainer) {
+            quienesContainer.addEventListener('mouseenter', () => {
+                clearInterval(autoQuienesInterval);
+            });
+            quienesContainer.addEventListener('mouseleave', () => {
+                startAutoQuienes();
+            });
+        }
+
+        // Soporte swipe móviles para carrusel Quiénes Somos
+        let quienesTouchStartX = 0;
+        let quienesTouchEndX = 0;
+
+        const quienesTrackContainer = document.querySelector('.quienes-carousel-track-container');
+        if (quienesTrackContainer) {
+            quienesTrackContainer.addEventListener('touchstart', (e) => {
+                quienesTouchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            quienesTrackContainer.addEventListener('touchend', (e) => {
+                quienesTouchEndX = e.changedTouches[0].screenX;
+                handleQuienesSwipe();
+            }, { passive: true });
+        }
+
+        function handleQuienesSwipe() {
+            const swipeThreshold = 50;
+            const diff = quienesTouchStartX - quienesTouchEndX;
+            
+            if (diff > swipeThreshold) {
+                nextQuienesSlide();
+            } else if (diff < -swipeThreshold) {
+                prevQuienesSlide();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', initQuienesCarousel);
     </script>
 </body>
 </html>
