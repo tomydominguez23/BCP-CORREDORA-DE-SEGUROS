@@ -4,576 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguro de Viaje - BCP Corredora de Seguros</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/seguros.css">
-    <link rel="manifest" href="../manifest.json">
-    <meta name="theme-color" content="#00a651">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <meta name="theme-color" content="#0f2942">
+    <meta name="description" content="Seguro de Viaje - Protecci&oacute;n ante emergencias m&eacute;dicas, p&eacute;rdida de equipaje y cancelaciones durante tus viajes.">
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="../assets/images/logo-bcp.png" alt="BCP Logo">
-                    <span>BCP Corredora de Seguros</span>
-                </div>
-                <div class="nav-menu" id="nav-menu">
-                    <ul class="nav-list">
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="#" class="dropdown-trigger">Seguros <i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="seguro-auto.html">Seguro Auto</a></li>
-                                <li><a href="seguro-hogar.html">Seguro Hogar</a></li>
-                                <li><a href="seguro-vida.html">Seguro de Vida</a></li>
-                                <li><a href="seguro-salud.html">Seguro de Salud</a></li>
-                                <li><a href="seguro-mascotas.html">Seguro Mascotas</a></li>
-                                <li><a href="seguro-viaje.html">Seguro de Viaje</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="../pages/nosotros.html">Nosotros</a></li>
-                        <li><a href="../pages/contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="nav-toggle" id="nav-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-img"></div>
+                <span class="logo-text">BCP</span>
+                <span class="logo-subtext">Corredora de Seguros</span>
             </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="nosotros.html" class="nav-link">Qui&eacute;nes Somos</a>
+                <div class="nav-item dropdown">
+                    <a href="seguros.html" class="nav-link active">Nuestros Seguros <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="seguro-auto.html">Seguro Automotriz</a>
+                        <a href="seguro-hogar.html">Seguro Hogar</a>
+                        <a href="seguros-personas.html">Seguros para Personas</a>
+                        <a href="seguros-empresas.html">Seguros para Empresas y Comunidades</a>
+                    </div>
+                </div>
+                <a href="../index.html#siniestros" class="nav-link">Siniestros</a>
+                <a href="../index.html#faq" class="nav-link">FAQ</a>
+            </div>
+            <div class="nav-actions">
+                <a href="cotizador.html" class="btn-primary">Cotiza Gratis</a>
+                <a href="https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20de%20viaje" target="_blank" class="btn-secondary">Habla con un Asesor</a>
+            </div>
+            <div class="mobile-menu-toggle"><i class="fas fa-bars"></i></div>
         </nav>
     </header>
 
-    <main class="main">
-        <!-- Hero Section -->
-        <section class="hero-seguro">
-            <div class="hero-content">
-                <div class="container">
-                    <div class="hero-text">
-                        <h1>Seguro de Viaje</h1>
-                        <p>Viaja con tranquilidad. Cobertura médica, cancelación de viaje y asistencia 24/7 en todo el mundo.</p>
-                        <button class="btn btn-primary" onclick="openCotizador('viaje')">Cotizar Ahora</button>
-                    </div>
-                    <div class="hero-image">
-                        <img src="../assets/images/seguro-viaje-hero.jpg" alt="Seguro de Viaje">
-                    </div>
-                </div>
+    <section class="seguro-page-hero">
+        <div class="container">
+            <div class="brand-colors">
+                <span class="dot red"></span><span class="dot orange"></span><span class="dot yellow"></span><span class="dot blue"></span>
             </div>
-        </section>
+            <h1><i class="fas fa-plane"></i> Seguro de Viaje</h1>
+            <p>Protecci&oacute;n ante emergencias m&eacute;dicas, p&eacute;rdida de equipaje y cancelaciones durante tus viajes nacionales e internacionales.</p>
+            <div class="hero-cta">
+                <a href="cotizador.html?type=travel" class="btn-cta btn-cta-primary">Cotiza tu Seguro de Viaje</a>
+                <a href="https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20de%20viaje" target="_blank" class="btn-cta btn-cta-outline">Habla con un Asesor</a>
+            </div>
+        </div>
+    </section>
 
-        <!-- Tipos de Viaje -->
-        <section class="tipos-viaje">
-            <div class="container">
-                <h2>Elige tu Tipo de Viaje</h2>
-                <div class="viaje-tabs">
-                    <div class="tab-buttons">
-                        <button class="tab-btn active" onclick="showViajeTab('nacional')">Nacional</button>
-                        <button class="tab-btn" onclick="showViajeTab('internacional')">Internacional</button>
-                        <button class="tab-btn" onclick="showViajeTab('cruceros')">Cruceros</button>
-                        <button class="tab-btn" onclick="showViajeTab('aventura')">Aventura</button>
-                    </div>
-                    
-                    <div class="tab-content active" id="nacional">
-                        <div class="viaje-info">
-                            <h3>Viajes Nacionales</h3>
-                            <p>Protección completa para tus viajes dentro de Chile</p>
-                            <div class="planes-grid">
-                                <div class="plan-card">
-                                    <h4>Plan Básico Nacional</h4>
-                                    <div class="precio">Desde $8.000/día</div>
-                                    <ul class="beneficios">
-                                        <li><i class="fas fa-check"></i> Gastos médicos $500.000</li>
-                                        <li><i class="fas fa-check"></i> Cancelación viaje $200.000</li>
-                                        <li><i class="fas fa-check"></i> Pérdida equipaje $100.000</li>
-                                        <li><i class="fas fa-check"></i> Asistencia 24/7</li>
-                                    </ul>
-                                </div>
-                                <div class="plan-card featured">
-                                    <div class="badge">Recomendado</div>
-                                    <h4>Plan Completo Nacional</h4>
-                                    <div class="precio">Desde $12.000/día</div>
-                                    <ul class="beneficios">
-                                        <li><i class="fas fa-check"></i> Gastos médicos $1.000.000</li>
-                                        <li><i class="fas fa-check"></i> Cancelación viaje $500.000</li>
-                                        <li><i class="fas fa-check"></i> Pérdida equipaje $300.000</li>
-                                        <li><i class="fas fa-check"></i> Repatriación incluida</li>
-                                        <li><i class="fas fa-check"></i> Deportes de riesgo</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="tab-content" id="internacional">
-                        <div class="viaje-info">
-                            <h3>Viajes Internacionales</h3>
-                            <p>Cobertura mundial con asistencia en tu idioma</p>
-                            <div class="planes-grid">
-                                <div class="plan-card">
-                                    <h4>Plan América</h4>
-                                    <div class="precio">Desde $15.000/día</div>
-                                    <ul class="beneficios">
-                                        <li><i class="fas fa-check"></i> Gastos médicos US$30.000</li>
-                                        <li><i class="fas fa-check"></i> Cobertura COVID-19</li>
-                                        <li><i class="fas fa-check"></i> Cancelación US$2.000</li>
-                                        <li><i class="fas fa-check"></i> Equipaje US$1.000</li>
-                                    </ul>
-                                </div>
-                                <div class="plan-card featured">
-                                    <div class="badge">Más Popular</div>
-                                    <h4>Plan Europa</h4>
-                                    <div class="precio">Desde $25.000/día</div>
-                                    <ul class="beneficios">
-                                        <li><i class="fas fa-check"></i> Gastos médicos US$60.000</li>
-                                        <li><i class="fas fa-check"></i> Cumple Schengen</li>
-                                        <li><i class="fas fa-check"></i> Cancelación US$5.000</li>
-                                        <li><i class="fas fa-check"></i> Equipaje US$2.000</li>
-                                        <li><i class="fas fa-check"></i> Deportes invernales</li>
-                                    </ul>
-                                </div>
-                                <div class="plan-card">
-                                    <h4>Plan Mundial</h4>
-                                    <div class="precio">Desde $35.000/día</div>
-                                    <ul class="beneficios">
-                                        <li><i class="fas fa-check"></i> Gastos médicos US$100.000</li>
-                                        <li><i class="fas fa-check"></i> Cobertura mundial</li>
-                                        <li><i class="fas fa-check"></i> Cancelación US$10.000</li>
-                                        <li><i class="fas fa-check"></i> Equipaje US$3.000</li>
-                                        <li><i class="fas fa-check"></i> Todo tipo de deportes</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="tab-content" id="cruceros">
-                        <div class="viaje-info">
-                            <h3>Seguros para Cruceros</h3>
-                            <p>Protección especializada para viajes en crucero</p>
-                            <div class="crucero-features">
-                                <div class="feature-item">
-                                    <i class="fas fa-ship"></i>
-                                    <h4>Evacuación Marítima</h4>
-                                    <p>Evacuación médica desde el barco a puerto más cercano</p>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="fas fa-plane"></i>
-                                    <h4>Interrupción de Crucero</h4>
-                                    <p>Gastos para alcanzar el barco si pierdes la partida</p>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="fas fa-suitcase"></i>
-                                    <h4>Equipaje en Cabina</h4>
-                                    <p>Cobertura especial para equipaje en espacios reducidos</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="tab-content" id="aventura">
-                        <div class="viaje-info">
-                            <h3>Seguros de Aventura</h3>
-                            <p>Para viajeros que buscan experiencias extremas</p>
-                            <div class="aventura-grid">
-                                <div class="aventura-category">
-                                    <h4>Deportes de Montaña</h4>
-                                    <ul>
-                                        <li>Escalada en roca</li>
-                                        <li>Montañismo</li>
-                                        <li>Esquí fuera de pista</li>
-                                        <li>Snowboard extremo</li>
-                                    </ul>
-                                </div>
-                                <div class="aventura-category">
-                                    <h4>Deportes Acuáticos</h4>
-                                    <ul>
-                                        <li>Buceo profesional</li>
-                                        <li>Surf en olas grandes</li>
-                                        <li>Rafting clase V</li>
-                                        <li>Kitesurf</li>
-                                    </ul>
-                                </div>
-                                <div class="aventura-category">
-                                    <h4>Deportes Aéreos</h4>
-                                    <ul>
-                                        <li>Paracaidismo</li>
-                                        <li>Parapente</li>
-                                        <li>Ala delta</li>
-                                        <li>Bungee jumping</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <section class="seguro-content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Coberturas Principales</h2>
+                <p class="section-subtitle">Viaja tranquilo con protecci&oacute;n completa</p>
+            </div>
+            <div class="seguro-cards-grid">
+                <div class="seguro-feature-card">
+                    <div class="card-icon"><i class="fas fa-hospital"></i></div>
+                    <h4>Emergencias M&eacute;dicas</h4>
+                    <p>Atenci&oacute;n m&eacute;dica, hospitalizaci&oacute;n y medicamentos en caso de emergencia durante tu viaje.</p>
+                </div>
+                <div class="seguro-feature-card">
+                    <div class="card-icon" style="background: var(--gradient-gold);"><i class="fas fa-suitcase-rolling" style="color: var(--primary-dark);"></i></div>
+                    <h4>P&eacute;rdida de Equipaje</h4>
+                    <p>Cobertura por p&eacute;rdida, robo o da&ntilde;o de tu equipaje y pertenencias personales.</p>
+                </div>
+                <div class="seguro-feature-card">
+                    <div class="card-icon"><i class="fas fa-times-circle"></i></div>
+                    <h4>Cancelaciones</h4>
+                    <p>Reembolso por cancelaci&oacute;n o interrupci&oacute;n del viaje por causas cubiertas.</p>
+                </div>
+                <div class="seguro-feature-card">
+                    <div class="card-icon" style="background: var(--gradient-gold);"><i class="fas fa-phone-alt" style="color: var(--primary-dark);"></i></div>
+                    <h4>Asistencia 24/7</h4>
+                    <p>L&iacute;nea de emergencia disponible las 24 horas en espa&ntilde;ol, en cualquier parte del mundo.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Coberturas Principales -->
-        <section class="coberturas-viaje">
-            <div class="container">
-                <h2>¿Qué Cubre tu Seguro de Viaje?</h2>
-                <div class="coberturas-grid">
-                    <div class="cobertura-item">
-                        <div class="cobertura-icon">
-                            <i class="fas fa-hospital"></i>
-                        </div>
-                        <h3>Gastos Médicos</h3>
-                        <p>Atención médica, hospitalización, medicamentos y tratamientos de emergencia.</p>
-                        <ul>
-                            <li>Consultas médicas</li>
-                            <li>Hospitalización</li>
-                            <li>Cirugías de emergencia</li>
-                            <li>Medicamentos recetados</li>
-                        </ul>
-                    </div>
-                    <div class="cobertura-item">
-                        <div class="cobertura-icon">
-                            <i class="fas fa-times-circle"></i>
-                        </div>
-                        <h3>Cancelación e Interrupción</h3>
-                        <p>Reembolso por cancelación o interrupción del viaje por causas cubiertas.</p>
-                        <ul>
-                            <li>Enfermedad grave</li>
-                            <li>Accidente</li>
-                            <li>Fallecimiento familiar</li>
-                            <li>Problemas laborales</li>
-                        </ul>
-                    </div>
-                    <div class="cobertura-item">
-                        <div class="cobertura-icon">
-                            <i class="fas fa-suitcase-rolling"></i>
-                        </div>
-                        <h3>Equipaje y Efectos</h3>
-                        <p>Protección contra pérdida, robo o daño de tu equipaje y pertenencias.</p>
-                        <ul>
-                            <li>Equipaje facturado</li>
-                            <li>Equipaje de mano</li>
-                            <li>Efectos personales</li>
-                            <li>Documentos de viaje</li>
-                        </ul>
-                    </div>
-                    <div class="cobertura-item">
-                        <div class="cobertura-icon">
-                            <i class="fas fa-plane"></i>
-                        </div>
-                        <h3>Repatriación</h3>
-                        <p>Traslado médico de regreso a Chile en caso de emergencia grave.</p>
-                        <ul>
-                            <li>Ambulancia aérea</li>
-                            <li>Acompañante médico</li>
-                            <li>Repatriación funeraria</li>
-                            <li>Gestión completa</li>
-                        </ul>
-                    </div>
-                    <div class="cobertura-item">
-                        <div class="cobertura-icon">
-                            <i class="fas fa-gavel"></i>
-                        </div>
-                        <h3>Responsabilidad Civil</h3>
-                        <p>Cobertura por daños que puedas causar involuntariamente a terceros.</p>
-                        <ul>
-                            <li>Daños materiales</li>
-                            <li>Lesiones corporales</li>
-                            <li>Defensa jurídica</li>
-                            <li>Fianzas</li>
-                        </ul>
-                    </div>
-                    <div class="cobertura-item">
-                        <div class="cobertura-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3>Demoras y Conexiones</h3>
-                        <p>Gastos adicionales por retrasos, pérdida de conexiones y sobrestadía.</p>
-                        <ul>
-                            <li>Alojamiento extra</li>
-                            <li>Comidas</li>
-                            <li>Transporte alternativo</li>
-                            <li>Comunicaciones</li>
-                        </ul>
-                    </div>
-                </div>
+    <section class="seguro-content-section" style="background: var(--gradient-hero); color: var(--white); text-align: center;">
+        <div class="container">
+            <h2 style="color: var(--white);">Cotiza tu Seguro de Viaje</h2>
+            <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 2rem; font-size: 1.15rem;">No dejes que un imprevisto arruine tu viaje. Prot&eacute;gete con el mejor seguro.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="cotizador.html?type=travel" class="btn-white-inicio">Cotiza Gratis</a>
+                <a href="seguros-personas.html" class="btn-outline-white-inicio">Ver todos los Seguros para Personas</a>
             </div>
-        </section>
-
-        <!-- Calculadora de Viaje -->
-        <section class="calculadora-viaje">
-            <div class="container">
-                <h2>Cotiza tu Seguro de Viaje</h2>
-                <div class="calc-container">
-                    <div class="calc-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Destino:</label>
-                                <select id="destino">
-                                    <option value="nacional">Chile (Nacional)</option>
-                                    <option value="america">América</option>
-                                    <option value="europa">Europa</option>
-                                    <option value="mundial">Mundial</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Número de Viajeros:</label>
-                                <select id="viajeros">
-                                    <option value="1">1 persona</option>
-                                    <option value="2">2 personas</option>
-                                    <option value="3">3 personas</option>
-                                    <option value="4">4 personas</option>
-                                    <option value="5">5+ personas</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Fecha de Salida:</label>
-                                <input type="date" id="fechaSalida">
-                            </div>
-                            <div class="form-group">
-                                <label>Fecha de Regreso:</label>
-                                <input type="date" id="fechaRegreso">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Edad del Viajero Principal:</label>
-                                <select id="edadViajero">
-                                    <option value="18-30">18-30 años</option>
-                                    <option value="31-50">31-50 años</option>
-                                    <option value="51-65">51-65 años</option>
-                                    <option value="66-75">66-75 años</option>
-                                    <option value="76+">76+ años</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Tipo de Viaje:</label>
-                                <select id="tipoViaje">
-                                    <option value="turismo">Turismo</option>
-                                    <option value="negocios">Negocios</option>
-                                    <option value="estudio">Estudio</option>
-                                    <option value="deportes">Deportes</option>
-                                    <option value="crucero">Crucero</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Actividades de riesgo:</label>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" id="deportesExtremoz"> Deportes extremos</label>
-                                <label><input type="checkbox" id="montanismo"> Montañismo</label>
-                                <label><input type="checkbox" id="buceo"> Buceo</label>
-                                <label><input type="checkbox" id="esqui"> Esquí</label>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary" onclick="calcularSeguroViaje()">Calcular Precio</button>
-                    </div>
-                    <div class="calc-result" id="viajeResult" style="display: none;">
-                        <h3>Tu Cotización de Seguro de Viaje</h3>
-                        <div class="cotizacion-detalles">
-                            <div class="detalle-viaje" id="detalleViaje"></div>
-                            <div class="planes-recomendados" id="planesRecomendados"></div>
-                        </div>
-                        <button class="btn btn-secondary" onclick="openCotizador('viaje')">Contratar Seguro</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Asistencia Mundial -->
-        <section class="asistencia-mundial">
-            <div class="container">
-                <h2>Asistencia 24/7 en Todo el Mundo</h2>
-                <div class="asistencia-grid">
-                    <div class="asistencia-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <h4>Línea de Emergencia</h4>
-                        <p>Atención telefónica las 24 horas en español</p>
-                        <span class="numero">+56 2 2345 6789</span>
-                    </div>
-                    <div class="asistencia-item">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h4>App Móvil</h4>
-                        <p>Reporta siniestros y solicita ayuda desde tu celular</p>
-                        <span class="numero">Descarga gratuita</span>
-                    </div>
-                    <div class="asistencia-item">
-                        <i class="fas fa-envelope"></i>
-                        <h4>Email de Emergencia</h4>
-                        <p>Contacto alternativo para situaciones urgentes</p>
-                        <span class="numero">emergencias@bcpseguros.cl</span>
-                    </div>
-                    <div class="asistencia-item">
-                        <i class="fas fa-comments"></i>
-                        <h4>Chat Online</h4>
-                        <p>Asistencia inmediata a través de nuestra web</p>
-                        <span class="numero">Disponible 24/7</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="faq">
-            <div class="container">
-                <h2>Preguntas Frecuentes</h2>
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Hasta cuándo puedo contratar el seguro?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Puedes contratar tu seguro hasta el día anterior a tu viaje. Sin embargo, para cobertura de cancelación, debes contratarlo dentro de 7 días de tu primera reserva.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Cubre enfermedades preexistentes?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Las enfermedades preexistentes están cubiertas solo para emergencias agudas e imprevistas, siempre que estén controladas y declaradas al momento de la contratación.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Qué pasa si mi vuelo se cancela?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Cubrimos gastos adicionales de alojamiento y alimentación por cancelación de vuelos por causas meteorológicas o huelgas, hasta los límites de tu póliza.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Puedo extender mi seguro durante el viaje?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Sí, puedes extender tu seguro hasta por 30 días adicionales, siempre que no hayas presentado ningún reclamo y lo solicites antes del vencimiento.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Viaja sin Preocupaciones</h2>
-                    <p>No dejes que un imprevisto arruine tu viaje. Protégete con el mejor seguro de viaje.</p>
-                    <div class="cta-buttons">
-                        <button class="btn btn-primary" onclick="openCotizador('viaje')">Cotizar Online</button>
-                        <button class="btn btn-secondary" onclick="openChat()">Hablar con Asesor</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>BCP Corredora de Seguros</h4>
-                    <p>Tu tranquilidad es nuestra prioridad.</p>
+                    <h4>Navegaci&oacute;n</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Qui&eacute;nes Somos</a></li>
+                        <li><a href="seguros.html">Nuestros Seguros</a></li>
+                        <li><a href="cotizador.html">Cotizar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Seguros</h4>
+                    <ul>
+                        <li><a href="seguro-auto.html">Seguro Automotriz</a></li>
+                        <li><a href="seguro-hogar.html">Seguro Hogar</a></li>
+                        <li><a href="seguros-personas.html">Seguros para Personas</a></li>
+                        <li><a href="seguros-empresas.html">Seguros para Empresas</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contacto</h4>
-                    <p><i class="fas fa-phone"></i> +56 2 2345 6789</p>
-                    <p><i class="fas fa-envelope"></i> contacto@bcpseguros.cl</p>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+56600600292">600 6000 292</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/56600600292" target="_blank">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@bcp.cl">info@bcp.cl</a></li>
+                        <li><a href="contacto.html">Formulario de Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Pol&iacute;ticas de Privacidad</a></li>
+                        <li><a href="#">T&eacute;rminos y Condiciones</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 BCP Corredora de Seguros. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/56600600292" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <div class="chat-button" onclick="openChat()">
-        <i class="fas fa-comments"></i>
+    <div class="chat-widget" onclick="window.open('https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20de%20viaje','_blank')">
+        <div class="chat-button"><i class="fab fa-whatsapp"></i></div>
+        <div class="chat-tooltip">&iquest;Necesitas ayuda? &iexcl;Hablemos!</div>
     </div>
 
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/seguros.js"></script>
-    <script>
-        function showViajeTab(tabName) {
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
-            
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-        }
-        
-        function calcularSeguroViaje() {
-            const destino = document.getElementById('destino').value;
-            const viajeros = parseInt(document.getElementById('viajeros').value);
-            const fechaSalida = new Date(document.getElementById('fechaSalida').value);
-            const fechaRegreso = new Date(document.getElementById('fechaRegreso').value);
-            const edadViajero = document.getElementById('edadViajero').value;
-            const tipoViaje = document.getElementById('tipoViaje').value;
-            
-            if (!fechaSalida || !fechaRegreso) {
-                alert('Por favor completa las fechas del viaje');
-                return;
-            }
-            
-            const dias = Math.ceil((fechaRegreso - fechaSalida) / (1000 * 60 * 60 * 24));
-            
-            if (dias <= 0) {
-                alert('La fecha de regreso debe ser posterior a la fecha de salida');
-                return;
-            }
-            
-            // Cálculo de precios base por destino
-            let precioBase = 0;
-            switch(destino) {
-                case 'nacional': precioBase = 8000; break;
-                case 'america': precioBase = 15000; break;
-                case 'europa': precioBase = 25000; break;
-                case 'mundial': precioBase = 35000; break;
-            }
-            
-            // Ajustes por edad
-            if (edadViajero === '51-65') precioBase *= 1.3;
-            else if (edadViajero === '66-75') precioBase *= 1.8;
-            else if (edadViajero === '76+') precioBase *= 2.5;
-            
-            // Ajustes por tipo de viaje
-            if (tipoViaje === 'deportes') precioBase *= 1.5;
-            else if (tipoViaje === 'crucero') precioBase *= 1.2;
-            
-            // Descuento por múltiples viajeros
-            let descuento = 1;
-            if (viajeros >= 2) descuento = 0.9;
-            if (viajeros >= 4) descuento = 0.85;
-            
-            const precioTotal = Math.round(precioBase * dias * viajeros * descuento);
-            
-            // Mostrar resultados
-            const detalleViaje = `
-                <h4>Detalle del Viaje</h4>
-                <p><strong>Destino:</strong> ${destino.charAt(0).toUpperCase() + destino.slice(1)}</p>
-                <p><strong>Duración:</strong> ${dias} días</p>
-                <p><strong>Viajeros:</strong> ${viajeros} persona${viajeros > 1 ? 's' : ''}</p>
-                <p><strong>Precio Total:</strong> ${new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(precioTotal)}</p>
-            `;
-            
-            const planesRecomendados = `
-                <h4>Planes Recomendados</h4>
-                <div class="plan-mini">
-                    <h5>Plan ${destino === 'nacional' ? 'Nacional' : destino.charAt(0).toUpperCase() + destino.slice(1)}</h5>
-                    <p>Cobertura completa para tu viaje</p>
-                    <div class="precio-mini">${new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(precioTotal)}</div>
-                </div>
-            `;
-            
-            document.getElementById('detalleViaje').innerHTML = detalleViaje;
-            document.getElementById('planesRecomendados').innerHTML = planesRecomendados;
-            document.getElementById('viajeResult').style.display = 'block';
-        }
-    </script>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>

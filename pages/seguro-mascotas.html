@@ -3,494 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seguro Mascotas - BCP Corredora de Seguros</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/seguros.css">
-    <link rel="manifest" href="../manifest.json">
-    <meta name="theme-color" content="#00a651">
+    <title>Seguro de Mascotas - BCP Corredora de Seguros</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <meta name="theme-color" content="#0f2942">
+    <meta name="description" content="Seguro de Mascotas - Cobertura veterinaria y asistencia para el cuidado de tus mascotas.">
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="../assets/images/logo-bcp.png" alt="BCP Logo">
-                    <span>BCP Corredora de Seguros</span>
-                </div>
-                <div class="nav-menu" id="nav-menu">
-                    <ul class="nav-list">
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="#" class="dropdown-trigger">Seguros <i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="seguro-auto.html">Seguro Auto</a></li>
-                                <li><a href="seguro-hogar.html">Seguro Hogar</a></li>
-                                <li><a href="seguro-vida.html">Seguro de Vida</a></li>
-                                <li><a href="seguro-salud.html">Seguro de Salud</a></li>
-                                <li><a href="seguro-mascotas.html">Seguro Mascotas</a></li>
-                                <li><a href="seguro-viaje.html">Seguro de Viaje</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="../pages/nosotros.html">Nosotros</a></li>
-                        <li><a href="../pages/contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="nav-toggle" id="nav-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-img"></div>
+                <span class="logo-text">BCP</span>
+                <span class="logo-subtext">Corredora de Seguros</span>
             </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="nosotros.html" class="nav-link">Qui&eacute;nes Somos</a>
+                <div class="nav-item dropdown">
+                    <a href="seguros.html" class="nav-link active">Nuestros Seguros <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="seguro-auto.html">Seguro Automotriz</a>
+                        <a href="seguro-hogar.html">Seguro Hogar</a>
+                        <a href="seguros-personas.html">Seguros para Personas</a>
+                        <a href="seguros-empresas.html">Seguros para Empresas y Comunidades</a>
+                    </div>
+                </div>
+                <a href="../index.html#siniestros" class="nav-link">Siniestros</a>
+                <a href="../index.html#faq" class="nav-link">FAQ</a>
+            </div>
+            <div class="nav-actions">
+                <a href="cotizador.html" class="btn-primary">Cotiza Gratis</a>
+                <a href="https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20de%20mascotas" target="_blank" class="btn-secondary">Habla con un Asesor</a>
+            </div>
+            <div class="mobile-menu-toggle"><i class="fas fa-bars"></i></div>
         </nav>
     </header>
 
-    <main class="main">
-        <!-- Hero Section -->
-        <section class="hero-seguro">
-            <div class="hero-content">
-                <div class="container">
-                    <div class="hero-text">
-                        <h1>Seguro para Mascotas</h1>
-                        <p>Protege la salud de tu mejor amigo. Cobertura veterinaria completa para perros y gatos.</p>
-                        <button class="btn btn-primary" onclick="openCotizador('mascotas')">Cotizar Ahora</button>
-                    </div>
-                    <div class="hero-image">
-                        <img src="../assets/images/seguro-mascotas-hero.jpg" alt="Seguro Mascotas">
-                    </div>
-                </div>
+    <section class="seguro-page-hero">
+        <div class="container">
+            <div class="brand-colors">
+                <span class="dot red"></span><span class="dot orange"></span><span class="dot yellow"></span><span class="dot blue"></span>
             </div>
-        </section>
+            <h1><i class="fas fa-paw"></i> Seguro de Mascotas</h1>
+            <p>Cobertura veterinaria y asistencia para el cuidado de tus mascotas. Protege a tu mejor amigo.</p>
+            <div class="hero-cta">
+                <a href="cotizador.html?type=pets" class="btn-cta btn-cta-primary">Cotiza tu Seguro de Mascotas</a>
+                <a href="https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20de%20mascotas" target="_blank" class="btn-cta btn-cta-outline">Habla con un Asesor</a>
+            </div>
+        </div>
+    </section>
 
-        <!-- Información del Seguro -->
-        <section class="seguro-info">
-            <div class="container">
-                <div class="info-grid">
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h3>Salud Completa</h3>
-                        <p>Consultas veterinarias, exámenes, cirugías y medicamentos para tu mascota.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Responsabilidad Civil</h3>
-                        <p>Protección contra daños que tu mascota pueda causar a terceros o sus propiedades.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h3>Búsqueda y Hallazgo</h3>
-                        <p>Servicios especializados para encontrar tu mascota si se pierde.</p>
-                    </div>
+    <section class="seguro-content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Coberturas Principales</h2>
+                <p class="section-subtitle">Todo lo que tu mascota necesita, protegido</p>
+            </div>
+            <div class="seguro-cards-grid">
+                <div class="seguro-feature-card">
+                    <div class="card-icon"><i class="fas fa-stethoscope"></i></div>
+                    <h4>Consultas Veterinarias</h4>
+                    <p>Acceso a consultas generales y especializadas para el cuidado de tu mascota.</p>
+                </div>
+                <div class="seguro-feature-card">
+                    <div class="card-icon" style="background: var(--gradient-gold);"><i class="fas fa-cut" style="color: var(--primary-dark);"></i></div>
+                    <h4>Cirug&iacute;as</h4>
+                    <p>Cobertura para cirug&iacute;as de emergencia y procedimientos programados.</p>
+                </div>
+                <div class="seguro-feature-card">
+                    <div class="card-icon"><i class="fas fa-pills"></i></div>
+                    <h4>Medicamentos</h4>
+                    <p>Medicamentos recetados y tratamientos cr&oacute;nicos incluidos.</p>
+                </div>
+                <div class="seguro-feature-card">
+                    <div class="card-icon" style="background: var(--gradient-gold);"><i class="fas fa-hospital" style="color: var(--primary-dark);"></i></div>
+                    <h4>Hospitalizaci&oacute;n</h4>
+                    <p>Internaci&oacute;n veterinaria cuando tu mascota lo necesite.</p>
+                </div>
+                <div class="seguro-feature-card">
+                    <div class="card-icon"><i class="fas fa-syringe"></i></div>
+                    <h4>Vacunas</h4>
+                    <p>Programa de vacunaci&oacute;n anual incluido seg&uacute;n plan.</p>
+                </div>
+                <div class="seguro-feature-card">
+                    <div class="card-icon" style="background: var(--gradient-gold);"><i class="fas fa-phone-alt" style="color: var(--primary-dark);"></i></div>
+                    <h4>Asistencia Integral</h4>
+                    <p>L&iacute;nea de consultas veterinarias y orientaci&oacute;n 24/7.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Planes para Mascotas -->
-        <section class="planes-mascotas">
-            <div class="container">
-                <h2>Planes de Protección para tu Mascota</h2>
-                <div class="mascotas-tabs">
-                    <div class="tab-buttons">
-                        <button class="tab-btn active" onclick="showMascotaTab('perros')">Perros</button>
-                        <button class="tab-btn" onclick="showMascotaTab('gatos')">Gatos</button>
-                    </div>
-                    
-                    <div class="tab-content active" id="perros">
-                        <div class="planes-grid">
-                            <div class="plan-card">
-                                <h3>Plan Básico Perros</h3>
-                                <div class="precio">Desde $25.000/mes</div>
-                                <ul class="beneficios">
-                                    <li><i class="fas fa-check"></i> Consultas veterinarias</li>
-                                    <li><i class="fas fa-check"></i> Vacunas anuales</li>
-                                    <li><i class="fas fa-check"></i> Desparasitación</li>
-                                    <li><i class="fas fa-check"></i> Urgencias básicas</li>
-                                    <li><i class="fas fa-check"></i> Responsabilidad civil $500.000</li>
-                                </ul>
-                                <button class="btn btn-outline">Seleccionar</button>
-                            </div>
-                            <div class="plan-card featured">
-                                <div class="badge">Más Popular</div>
-                                <h3>Plan Completo Perros</h3>
-                                <div class="precio">Desde $45.000/mes</div>
-                                <ul class="beneficios">
-                                    <li><i class="fas fa-check"></i> Todo lo del Plan Básico</li>
-                                    <li><i class="fas fa-check"></i> Cirugías menores</li>
-                                    <li><i class="fas fa-check"></i> Hospitalización</li>
-                                    <li><i class="fas fa-check"></i> Exámenes especializados</li>
-                                    <li><i class="fas fa-check"></i> Medicamentos crónicos</li>
-                                    <li><i class="fas fa-check"></i> Responsabilidad civil $2.000.000</li>
-                                </ul>
-                                <button class="btn btn-primary">Seleccionar</button>
-                            </div>
-                            <div class="plan-card">
-                                <h3>Plan Premium Perros</h3>
-                                <div class="precio">Desde $75.000/mes</div>
-                                <ul class="beneficios">
-                                    <li><i class="fas fa-check"></i> Todo lo del Plan Completo</li>
-                                    <li><i class="fas fa-check"></i> Cirugías mayores</li>
-                                    <li><i class="fas fa-check"></i> Tratamientos oncológicos</li>
-                                    <li><i class="fas fa-check"></i> Fisioterapia</li>
-                                    <li><i class="fas fa-check"></i> Servicio de búsqueda</li>
-                                    <li><i class="fas fa-check"></i> Responsabilidad civil $5.000.000</li>
-                                </ul>
-                                <button class="btn btn-outline">Seleccionar</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="tab-content" id="gatos">
-                        <div class="planes-grid">
-                            <div class="plan-card">
-                                <h3>Plan Básico Gatos</h3>
-                                <div class="precio">Desde $20.000/mes</div>
-                                <ul class="beneficios">
-                                    <li><i class="fas fa-check"></i> Consultas veterinarias</li>
-                                    <li><i class="fas fa-check"></i> Vacunas anuales</li>
-                                    <li><i class="fas fa-check"></i> Desparasitación</li>
-                                    <li><i class="fas fa-check"></i> Urgencias básicas</li>
-                                    <li><i class="fas fa-check"></i> Responsabilidad civil $300.000</li>
-                                </ul>
-                                <button class="btn btn-outline">Seleccionar</button>
-                            </div>
-                            <div class="plan-card featured">
-                                <div class="badge">Más Popular</div>
-                                <h3>Plan Completo Gatos</h3>
-                                <div class="precio">Desde $35.000/mes</div>
-                                <ul class="beneficios">
-                                    <li><i class="fas fa-check"></i> Todo lo del Plan Básico</li>
-                                    <li><i class="fas fa-check"></i> Cirugías menores</li>
-                                    <li><i class="fas fa-check"></i> Hospitalización</li>
-                                    <li><i class="fas fa-check"></i> Exámenes especializados</li>
-                                    <li><i class="fas fa-check"></i> Medicamentos crónicos</li>
-                                    <li><i class="fas fa-check"></i> Responsabilidad civil $1.000.000</li>
-                                </ul>
-                                <button class="btn btn-primary">Seleccionar</button>
-                            </div>
-                            <div class="plan-card">
-                                <h3>Plan Premium Gatos</h3>
-                                <div class="precio">Desde $55.000/mes</div>
-                                <ul class="beneficios">
-                                    <li><i class="fas fa-check"></i> Todo lo del Plan Completo</li>
-                                    <li><i class="fas fa-check"></i> Cirugías mayores</li>
-                                    <li><i class="fas fa-check"></i> Tratamientos oncológicos</li>
-                                    <li><i class="fas fa-check"></i> Fisioterapia</li>
-                                    <li><i class="fas fa-check"></i> Servicio de búsqueda</li>
-                                    <li><i class="fas fa-check"></i> Responsabilidad civil $3.000.000</li>
-                                </ul>
-                                <button class="btn btn-outline">Seleccionar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section class="seguro-content-section" style="background: var(--gradient-hero); color: var(--white); text-align: center;">
+        <div class="container">
+            <h2 style="color: var(--white);">Protege a tu Mejor Amigo</h2>
+            <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 2rem; font-size: 1.15rem;">Tu mascota merece la mejor atenci&oacute;n. No esperes a que sea tarde.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="cotizador.html?type=pets" class="btn-white-inicio">Cotiza Gratis</a>
+                <a href="seguros-personas.html" class="btn-outline-white-inicio">Ver todos los Seguros para Personas</a>
             </div>
-        </section>
-
-        <!-- Servicios Veterinarios Cubiertos -->
-        <section class="servicios-veterinarios">
-            <div class="container">
-                <h2>Servicios Veterinarios Cubiertos</h2>
-                <div class="servicios-grid">
-                    <div class="servicio-categoria">
-                        <h3><i class="fas fa-stethoscope"></i> Consultas y Diagnóstico</h3>
-                        <ul>
-                            <li>Consultas veterinarias generales</li>
-                            <li>Exámenes de laboratorio</li>
-                            <li>Radiografías y ecografías</li>
-                            <li>Endoscopías</li>
-                            <li>Biopsias</li>
-                        </ul>
-                    </div>
-                    <div class="servicio-categoria">
-                        <h3><i class="fas fa-cut"></i> Cirugías y Procedimientos</h3>
-                        <ul>
-                            <li>Cirugías menores (esterilización)</li>
-                            <li>Cirugías mayores (ortopédicas)</li>
-                            <li>Cirugías de emergencia</li>
-                            <li>Procedimientos dentales</li>
-                            <li>Extracciones</li>
-                        </ul>
-                    </div>
-                    <div class="servicio-categoria">
-                        <h3><i class="fas fa-pills"></i> Medicamentos y Tratamientos</h3>
-                        <ul>
-                            <li>Medicamentos recetados</li>
-                            <li>Tratamientos crónicos</li>
-                            <li>Quimioterapia</li>
-                            <li>Terapias especializadas</li>
-                            <li>Suplementos nutricionales</li>
-                        </ul>
-                    </div>
-                    <div class="servicio-categoria">
-                        <h3><i class="fas fa-shield-virus"></i> Prevención</h3>
-                        <ul>
-                            <li>Vacunación anual</li>
-                            <li>Desparasitación</li>
-                            <li>Control antipulgas</li>
-                            <li>Check-ups preventivos</li>
-                            <li>Limpieza dental</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Red de Veterinarias -->
-        <section class="red-veterinarias">
-            <div class="container">
-                <h2>Red de Veterinarias Asociadas</h2>
-                <div class="veterinarias-grid">
-                    <div class="veterinaria-card">
-                        <h4>Veterinaria VetSalud</h4>
-                        <p><i class="fas fa-map-marker-alt"></i> Providencia, Las Condes, Ñuñoa</p>
-                        <p><i class="fas fa-clock"></i> 24/7 Urgencias</p>
-                        <div class="especialidades">
-                            <span class="especialidad">Cirugía</span>
-                            <span class="especialidad">Cardiología</span>
-                            <span class="especialidad">Oncología</span>
-                        </div>
-                    </div>
-                    <div class="veterinaria-card">
-                        <h4>Clínica Veterinaria UC</h4>
-                        <p><i class="fas fa-map-marker-alt"></i> San Joaquín</p>
-                        <p><i class="fas fa-clock"></i> Lun-Vie 8:00-20:00</p>
-                        <div class="especialidades">
-                            <span class="especialidad">Especialistas</span>
-                            <span class="especialidad">Imagenología</span>
-                            <span class="especialidad">Laboratorio</span>
-                        </div>
-                    </div>
-                    <div class="veterinaria-card">
-                        <h4>Red Veterinaria Bayer</h4>
-                        <p><i class="fas fa-map-marker-alt"></i> +50 sucursales</p>
-                        <p><i class="fas fa-clock"></i> Horarios extendidos</p>
-                        <div class="especialidades">
-                            <span class="especialidad">Medicina General</span>
-                            <span class="especialidad">Vacunación</span>
-                            <span class="especialidad">Farmacia</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Calculadora de Riesgo -->
-        <section class="calculadora-riesgo">
-            <div class="container">
-                <h2>Calcula el Riesgo de tu Mascota</h2>
-                <div class="calc-container">
-                    <div class="calc-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Tipo de Mascota:</label>
-                                <select id="tipoMascota">
-                                    <option value="perro">Perro</option>
-                                    <option value="gato">Gato</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Edad:</label>
-                                <select id="edadMascota">
-                                    <option value="cachorro">Cachorro (0-1 año)</option>
-                                    <option value="joven">Joven (1-3 años)</option>
-                                    <option value="adulto">Adulto (3-7 años)</option>
-                                    <option value="senior">Senior (7+ años)</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Raza:</label>
-                                <select id="razaMascota">
-                                    <option value="mixta">Raza mixta</option>
-                                    <option value="pequena">Raza pequeña</option>
-                                    <option value="mediana">Raza mediana</option>
-                                    <option value="grande">Raza grande</option>
-                                    <option value="gigante">Raza gigante</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Entorno:</label>
-                                <select id="entornoMascota">
-                                    <option value="casa">Casa con patio</option>
-                                    <option value="departamento">Departamento</option>
-                                    <option value="campo">Campo/Rural</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Actividades de riesgo:</label>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" id="deportes"> Deportes caninos</label>
-                                <label><input type="checkbox" id="caza"> Caza</label>
-                                <label><input type="checkbox" id="exteriores"> Mucho tiempo en exteriores</label>
-                                <label><input type="checkbox" id="otros-animales"> Convive con otros animales</label>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary" onclick="calcularRiesgoMascota()">Evaluar Riesgo</button>
-                    </div>
-                    <div class="calc-result" id="riesgoResult" style="display: none;">
-                        <h3>Evaluación de Riesgo</h3>
-                        <div class="riesgo-nivel" id="nivelRiesgo"></div>
-                        <div class="riesgo-recomendacion" id="recomendacion"></div>
-                        <div class="plan-sugerido" id="planSugerido"></div>
-                        <button class="btn btn-secondary" onclick="openCotizador('mascotas')">Cotizar Plan Recomendado</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="faq">
-            <div class="container">
-                <h2>Preguntas Frecuentes</h2>
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Desde qué edad puedo asegurar a mi mascota?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Puedes asegurar perros y gatos desde los 2 meses hasta los 8 años de edad. Para mascotas mayores ofrecemos planes especiales.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Las enfermedades congénitas están cubiertas?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Las enfermedades congénitas están cubiertas si se manifiestan después de 6 meses de vigencia del seguro y no fueron diagnosticadas previamente.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Cómo funciona el reembolso?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Pagas en la veterinaria y luego envías la documentación. Te reembolsamos según tu plan en un máximo de 7 días hábiles.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Puedo cambiar de veterinaria?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Sí, puedes atenderte en cualquier veterinaria de la red o fuera de ella. En veterinarias adheridas el trámite es más simple.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Protege a tu Mejor Amigo</h2>
-                    <p>Tu mascota merece la mejor atención veterinaria. No esperes a que sea tarde.</p>
-                    <div class="cta-buttons">
-                        <button class="btn btn-primary" onclick="openCotizador('mascotas')">Cotizar Online</button>
-                        <button class="btn btn-secondary" onclick="openChat()">Hablar con Asesor</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>BCP Corredora de Seguros</h4>
-                    <p>Tu tranquilidad es nuestra prioridad.</p>
+                    <h4>Navegaci&oacute;n</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Qui&eacute;nes Somos</a></li>
+                        <li><a href="seguros.html">Nuestros Seguros</a></li>
+                        <li><a href="cotizador.html">Cotizar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Seguros</h4>
+                    <ul>
+                        <li><a href="seguro-auto.html">Seguro Automotriz</a></li>
+                        <li><a href="seguro-hogar.html">Seguro Hogar</a></li>
+                        <li><a href="seguros-personas.html">Seguros para Personas</a></li>
+                        <li><a href="seguros-empresas.html">Seguros para Empresas</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contacto</h4>
-                    <p><i class="fas fa-phone"></i> +56 2 2345 6789</p>
-                    <p><i class="fas fa-envelope"></i> contacto@bcpseguros.cl</p>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+56600600292">600 6000 292</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/56600600292" target="_blank">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@bcp.cl">info@bcp.cl</a></li>
+                        <li><a href="contacto.html">Formulario de Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Pol&iacute;ticas de Privacidad</a></li>
+                        <li><a href="#">T&eacute;rminos y Condiciones</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 BCP Corredora de Seguros. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/56600600292" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <div class="chat-button" onclick="openChat()">
-        <i class="fas fa-comments"></i>
+    <div class="chat-widget" onclick="window.open('https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20de%20mascotas','_blank')">
+        <div class="chat-button"><i class="fab fa-whatsapp"></i></div>
+        <div class="chat-tooltip">&iquest;Necesitas ayuda? &iexcl;Hablemos!</div>
     </div>
 
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/seguros.js"></script>
-    <script>
-        function showMascotaTab(tabName) {
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
-            
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-        }
-        
-        function calcularRiesgoMascota() {
-            const tipo = document.getElementById('tipoMascota').value;
-            const edad = document.getElementById('edadMascota').value;
-            const raza = document.getElementById('razaMascota').value;
-            const entorno = document.getElementById('entornoMascota').value;
-            
-            let puntajeRiesgo = 0;
-            
-            // Factores de riesgo
-            if (edad === 'senior') puntajeRiesgo += 3;
-            else if (edad === 'cachorro') puntajeRiesgo += 2;
-            else if (edad === 'adulto') puntajeRiesgo += 1;
-            
-            if (raza === 'gigante') puntajeRiesgo += 3;
-            else if (raza === 'grande') puntajeRiesgo += 2;
-            
-            if (entorno === 'campo') puntajeRiesgo += 2;
-            else if (entorno === 'casa') puntajeRiesgo += 1;
-            
-            if (document.getElementById('deportes').checked) puntajeRiesgo += 2;
-            if (document.getElementById('caza').checked) puntajeRiesgo += 3;
-            if (document.getElementById('exteriores').checked) puntajeRiesgo += 1;
-            if (document.getElementById('otros-animales').checked) puntajeRiesgo += 1;
-            
-            // Determinar nivel de riesgo
-            let nivel, color, recomendacion, plan;
-            
-            if (puntajeRiesgo <= 3) {
-                nivel = 'Bajo';
-                color = 'green';
-                recomendacion = 'Tu mascota tiene un perfil de riesgo bajo. Un plan básico puede ser suficiente.';
-                plan = 'Plan Básico';
-            } else if (puntajeRiesgo <= 6) {
-                nivel = 'Medio';
-                color = 'orange';
-                recomendacion = 'Tu mascota tiene un perfil de riesgo moderado. Te recomendamos un plan completo.';
-                plan = 'Plan Completo';
-            } else {
-                nivel = 'Alto';
-                color = 'red';
-                recomendacion = 'Tu mascota tiene un perfil de riesgo alto. El plan premium es la mejor opción.';
-                plan = 'Plan Premium';
-            }
-            
-            document.getElementById('nivelRiesgo').innerHTML = `<span style="color: ${color}; font-weight: bold;">Riesgo ${nivel}</span>`;
-            document.getElementById('recomendacion').textContent = recomendacion;
-            document.getElementById('planSugerido').innerHTML = `<strong>Plan Recomendado:</strong> ${plan}`;
-            
-            document.getElementById('riesgoResult').style.display = 'block';
-        }
-    </script>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>

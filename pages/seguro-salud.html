@@ -4,470 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguro de Salud - BCP Corredora de Seguros</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/seguros.css">
-    <link rel="manifest" href="../manifest.json">
-    <meta name="theme-color" content="#00a651">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <meta name="theme-color" content="#0f2942">
+    <meta name="description" content="Seguro de Salud - Cobertura m&eacute;dica para consultas, ex&aacute;menes, hospitalizaciones y tratamientos.">
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="../assets/images/logo-bcp.png" alt="BCP Logo">
-                    <span>BCP Corredora de Seguros</span>
-                </div>
-                <div class="nav-menu" id="nav-menu">
-                    <ul class="nav-list">
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="#" class="dropdown-trigger">Seguros <i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="seguro-auto.html">Seguro Auto</a></li>
-                                <li><a href="seguro-hogar.html">Seguro Hogar</a></li>
-                                <li><a href="seguro-vida.html">Seguro de Vida</a></li>
-                                <li><a href="seguro-salud.html">Seguro de Salud</a></li>
-                                <li><a href="seguro-mascotas.html">Seguro Mascotas</a></li>
-                                <li><a href="seguro-viaje.html">Seguro de Viaje</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="../pages/nosotros.html">Nosotros</a></li>
-                        <li><a href="../pages/contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="nav-toggle" id="nav-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-img"></div>
+                <span class="logo-text">BCP</span>
+                <span class="logo-subtext">Corredora de Seguros</span>
             </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="nosotros.html" class="nav-link">Qui&eacute;nes Somos</a>
+                <div class="nav-item dropdown">
+                    <a href="seguros.html" class="nav-link active">Nuestros Seguros <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="seguro-auto.html">Seguro Automotriz</a>
+                        <a href="seguro-hogar.html">Seguro Hogar</a>
+                        <a href="seguros-personas.html">Seguros para Personas</a>
+                        <a href="seguros-empresas.html">Seguros para Empresas y Comunidades</a>
+                    </div>
+                </div>
+                <a href="../index.html#siniestros" class="nav-link">Siniestros</a>
+                <a href="../index.html#faq" class="nav-link">FAQ</a>
+            </div>
+            <div class="nav-actions">
+                <a href="cotizador.html" class="btn-primary">Cotiza Gratis</a>
+                <a href="https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20de%20salud" target="_blank" class="btn-secondary">Habla con un Asesor</a>
+            </div>
+            <div class="mobile-menu-toggle"><i class="fas fa-bars"></i></div>
         </nav>
     </header>
 
-    <main class="main">
-        <!-- Hero Section -->
-        <section class="hero-seguro">
-            <div class="hero-content">
-                <div class="container">
-                    <div class="hero-text">
-                        <h1>Seguro de Salud</h1>
-                        <p>Protege tu salud y la de tu familia con acceso a la mejor medicina privada del país.</p>
-                        <button class="btn btn-primary" onclick="openCotizador('salud')">Cotizar Ahora</button>
-                    </div>
-                    <div class="hero-image">
-                        <img src="../assets/images/seguro-salud-hero.jpg" alt="Seguro de Salud">
-                    </div>
-                </div>
+    <section class="seguro-page-hero">
+        <div class="container">
+            <div class="brand-colors">
+                <span class="dot red"></span><span class="dot orange"></span><span class="dot yellow"></span><span class="dot blue"></span>
             </div>
-        </section>
+            <h1><i class="fas fa-heartbeat"></i> Seguro de Salud</h1>
+            <p>Cobertura m&eacute;dica para consultas, ex&aacute;menes, hospitalizaciones y tratamientos. Protege tu bienestar y el de tu familia.</p>
+            <div class="hero-cta">
+                <a href="cotizador.html?type=health" class="btn-cta btn-cta-primary">Cotiza tu Seguro de Salud</a>
+                <a href="https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20de%20salud" target="_blank" class="btn-cta btn-cta-outline">Habla con un Asesor</a>
+            </div>
+        </div>
+    </section>
 
-        <!-- Planes de Salud -->
-        <section class="planes-salud">
-            <div class="container">
-                <h2>Planes de Salud Disponibles</h2>
-                <div class="planes-grid">
-                    <div class="plan-card">
-                        <h3>Plan Básico</h3>
-                        <div class="precio">Desde $85.000/mes</div>
-                        <div class="deducible">Deducible: 1.5 UF</div>
-                        <ul class="beneficios">
-                            <li><i class="fas fa-check"></i> Consultas médicas</li>
-                            <li><i class="fas fa-check"></i> Exámenes básicos</li>
-                            <li><i class="fas fa-check"></i> Medicamentos con bonificación</li>
-                            <li><i class="fas fa-check"></i> Urgencias 24/7</li>
-                            <li><i class="fas fa-check"></i> Red de clínicas regionales</li>
-                        </ul>
-                        <button class="btn btn-outline">Seleccionar</button>
-                    </div>
-                    <div class="plan-card featured">
-                        <div class="badge">Más Popular</div>
-                        <h3>Plan Completo</h3>
-                        <div class="precio">Desde $150.000/mes</div>
-                        <div class="deducible">Deducible: 1 UF</div>
-                        <ul class="beneficios">
-                            <li><i class="fas fa-check"></i> Todo lo del Plan Básico</li>
-                            <li><i class="fas fa-check"></i> Hospitalización completa</li>
-                            <li><i class="fas fa-check"></i> Cirugías mayores</li>
-                            <li><i class="fas fa-check"></i> Exámenes especializados</li>
-                            <li><i class="fas fa-check"></i> Medicina preventiva</li>
-                            <li><i class="fas fa-check"></i> Red premium de clínicas</li>
-                        </ul>
-                        <button class="btn btn-primary">Seleccionar</button>
-                    </div>
-                    <div class="plan-card">
-                        <h3>Plan Premium</h3>
-                        <div class="precio">Desde $280.000/mes</div>
-                        <div class="deducible">Sin deducible</div>
-                        <ul class="beneficios">
-                            <li><i class="fas fa-check"></i> Todo lo del Plan Completo</li>
-                            <li><i class="fas fa-check"></i> Libre elección médica</li>
-                            <li><i class="fas fa-check"></i> Habitación privada</li>
-                            <li><i class="fas fa-check"></i> Medicina alternativa</li>
-                            <li><i class="fas fa-check"></i> Cobertura internacional</li>
-                            <li><i class="fas fa-check"></i> Check-up anual gratuito</li>
-                        </ul>
-                        <button class="btn btn-outline">Seleccionar</button>
-                    </div>
+    <section class="seguro-content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Coberturas Principales</h2>
+                <p class="section-subtitle">Accede a la mejor atenci&oacute;n m&eacute;dica con cobertura integral</p>
+            </div>
+            <div class="seguro-cards-grid">
+                <div class="seguro-feature-card">
+                    <div class="card-icon"><i class="fas fa-user-md"></i></div>
+                    <h4>Consultas M&eacute;dicas</h4>
+                    <p>Acceso a medicina general y especialistas con cobertura adaptada a tu plan.</p>
+                </div>
+                <div class="seguro-feature-card">
+                    <div class="card-icon" style="background: var(--gradient-gold);"><i class="fas fa-vial" style="color: var(--primary-dark);"></i></div>
+                    <h4>Ex&aacute;menes y Diagn&oacute;stico</h4>
+                    <p>An&aacute;lisis cl&iacute;nicos, im&aacute;genes m&eacute;dicas y ex&aacute;menes especializados.</p>
+                </div>
+                <div class="seguro-feature-card">
+                    <div class="card-icon"><i class="fas fa-hospital"></i></div>
+                    <h4>Hospitalizaci&oacute;n</h4>
+                    <p>Cobertura de hospitalizaci&oacute;n, cirug&iacute;as y cuidados intensivos.</p>
+                </div>
+                <div class="seguro-feature-card">
+                    <div class="card-icon" style="background: var(--gradient-gold);"><i class="fas fa-pills" style="color: var(--primary-dark);"></i></div>
+                    <h4>Tratamientos</h4>
+                    <p>Medicamentos, rehabilitaci&oacute;n y tratamientos especializados.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Cobertura Detallada -->
-        <section class="cobertura-detallada">
-            <div class="container">
-                <h2>¿Qué Cubre tu Seguro de Salud?</h2>
-                <div class="cobertura-tabs">
-                    <div class="tab-buttons">
-                        <button class="tab-btn active" onclick="showTab('ambulatorio')">Atención Ambulatoria</button>
-                        <button class="tab-btn" onclick="showTab('hospitalizacion')">Hospitalización</button>
-                        <button class="tab-btn" onclick="showTab('maternidad')">Maternidad</button>
-                        <button class="tab-btn" onclick="showTab('dental')">Dental</button>
-                    </div>
-                    
-                    <div class="tab-content active" id="ambulatorio">
-                        <div class="cobertura-grid">
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-user-md"></i> Consultas Médicas</h4>
-                                <p>Medicina general y especialistas con bonificación del 70-90%</p>
-                            </div>
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-vial"></i> Exámenes de Laboratorio</h4>
-                                <p>Análisis completos con cobertura hasta 100%</p>
-                            </div>
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-x-ray"></i> Imágenes Médicas</h4>
-                                <p>Radiografías, ecografías, TAC, resonancias</p>
-                            </div>
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-pills"></i> Medicamentos</h4>
-                                <p>Bonificación en farmacias adheridas hasta 70%</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="tab-content" id="hospitalizacion">
-                        <div class="cobertura-grid">
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-bed"></i> Hospitalización</h4>
-                                <p>Habitación, alimentación y cuidados médicos</p>
-                            </div>
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-cut"></i> Cirugías</h4>
-                                <p>Operaciones menores y mayores con cobertura completa</p>
-                            </div>
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-ambulance"></i> Urgencias</h4>
-                                <p>Atención de urgencia 24/7 en toda la red</p>
-                            </div>
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-heartbeat"></i> Cuidados Intensivos</h4>
-                                <p>UCI, UTI y monitoreo especializado</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="tab-content" id="maternidad">
-                        <div class="cobertura-grid">
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-baby"></i> Control Prenatal</h4>
-                                <p>Seguimiento completo del embarazo</p>
-                            </div>
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-hospital"></i> Parto</h4>
-                                <p>Parto normal y cesárea con cobertura total</p>
-                            </div>
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-child"></i> Recién Nacido</h4>
-                                <p>Atención inmediata sin carencias</p>
-                            </div>
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-female"></i> Post Parto</h4>
-                                <p>Cuidados madre e hijo hasta 30 días</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="tab-content" id="dental">
-                        <div class="cobertura-grid">
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-tooth"></i> Consultas Dentales</h4>
-                                <p>Evaluación y diagnóstico con bonificación</p>
-                            </div>
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-tools"></i> Tratamientos</h4>
-                                <p>Obturaciones, limpiezas y endodoncia</p>
-                            </div>
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-crown"></i> Prótesis</h4>
-                                <p>Coronas, puentes y prótesis removibles</p>
-                            </div>
-                            <div class="cobertura-item">
-                                <h4><i class="fas fa-smile"></i> Ortodoncia</h4>
-                                <p>Tratamientos de corrección dental</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section class="seguro-content-section" style="background: var(--gradient-hero); color: var(--white); text-align: center;">
+        <div class="container">
+            <h2 style="color: var(--white);">Cotiza tu Seguro de Salud</h2>
+            <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 2rem; font-size: 1.15rem;">Tu salud no puede esperar. Encuentra el plan ideal para ti y tu familia.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="cotizador.html?type=health" class="btn-white-inicio">Cotiza Gratis</a>
+                <a href="seguros-personas.html" class="btn-outline-white-inicio">Ver todos los Seguros para Personas</a>
             </div>
-        </section>
-
-        <!-- Red de Prestadores -->
-        <section class="red-prestadores">
-            <div class="container">
-                <h2>Red de Prestadores</h2>
-                <div class="prestadores-grid">
-                    <div class="prestador-categoria">
-                        <h3><i class="fas fa-hospital"></i> Clínicas</h3>
-                        <ul>
-                            <li>Clínica Las Condes</li>
-                            <li>Clínica Alemana</li>
-                            <li>Clínica Santa María</li>
-                            <li>Clínica UC</li>
-                            <li>Clínica Dávila</li>
-                            <li>Red UC Christus</li>
-                        </ul>
-                    </div>
-                    <div class="prestador-categoria">
-                        <h3><i class="fas fa-user-md"></i> Centros Médicos</h3>
-                        <ul>
-                            <li>Centro Médico Providencia</li>
-                            <li>Centro Médico Ñuñoa</li>
-                            <li>Centro Médico Maipú</li>
-                            <li>Centro Médico Viña del Mar</li>
-                            <li>Centro Médico Concepción</li>
-                            <li>+150 centros en todo Chile</li>
-                        </ul>
-                    </div>
-                    <div class="prestador-categoria">
-                        <h3><i class="fas fa-vial"></i> Laboratorios</h3>
-                        <ul>
-                            <li>Laboratorio Clínico UC</li>
-                            <li>Bionet</li>
-                            <li>Labomed</li>
-                            <li>Megasalud</li>
-                            <li>Bioanálisis</li>
-                            <li>Red nacional completa</li>
-                        </ul>
-                    </div>
-                    <div class="prestador-categoria">
-                        <h3><i class="fas fa-pills"></i> Farmacias</h3>
-                        <ul>
-                            <li>Farmacias Ahumada</li>
-                            <li>Salcobrand</li>
-                            <li>Cruz Verde</li>
-                            <li>Farmacias Independientes</li>
-                            <li>Delivery de medicamentos</li>
-                            <li>+2000 farmacias adheridas</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Comparador de Planes -->
-        <section class="comparador">
-            <div class="container">
-                <h2>Compara Nuestros Planes</h2>
-                <div class="tabla-comparacion">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Beneficios</th>
-                                <th>Plan Básico</th>
-                                <th>Plan Completo</th>
-                                <th>Plan Premium</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Consultas médicas</td>
-                                <td><i class="fas fa-check text-green"></i> 70%</td>
-                                <td><i class="fas fa-check text-green"></i> 80%</td>
-                                <td><i class="fas fa-check text-green"></i> 90%</td>
-                            </tr>
-                            <tr>
-                                <td>Hospitalización</td>
-                                <td><i class="fas fa-times text-red"></i></td>
-                                <td><i class="fas fa-check text-green"></i> 90%</td>
-                                <td><i class="fas fa-check text-green"></i> 100%</td>
-                            </tr>
-                            <tr>
-                                <td>Cirugías mayores</td>
-                                <td><i class="fas fa-times text-red"></i></td>
-                                <td><i class="fas fa-check text-green"></i> 85%</td>
-                                <td><i class="fas fa-check text-green"></i> 100%</td>
-                            </tr>
-                            <tr>
-                                <td>Libre elección médica</td>
-                                <td><i class="fas fa-times text-red"></i></td>
-                                <td><i class="fas fa-times text-red"></i></td>
-                                <td><i class="fas fa-check text-green"></i></td>
-                            </tr>
-                            <tr>
-                                <td>Maternidad</td>
-                                <td><i class="fas fa-check text-green"></i> Básica</td>
-                                <td><i class="fas fa-check text-green"></i> Completa</td>
-                                <td><i class="fas fa-check text-green"></i> Premium</td>
-                            </tr>
-                            <tr>
-                                <td>Cobertura dental</td>
-                                <td><i class="fas fa-check text-green"></i> 50%</td>
-                                <td><i class="fas fa-check text-green"></i> 70%</td>
-                                <td><i class="fas fa-check text-green"></i> 90%</td>
-                            </tr>
-                            <tr>
-                                <td>Medicina alternativa</td>
-                                <td><i class="fas fa-times text-red"></i></td>
-                                <td><i class="fas fa-check text-green"></i> Limitada</td>
-                                <td><i class="fas fa-check text-green"></i> Completa</td>
-                            </tr>
-                            <tr>
-                                <td>Cobertura internacional</td>
-                                <td><i class="fas fa-times text-red"></i></td>
-                                <td><i class="fas fa-times text-red"></i></td>
-                                <td><i class="fas fa-check text-green"></i></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Beneficios Adicionales -->
-        <section class="beneficios-adicionales">
-            <div class="container">
-                <h2>Beneficios Adicionales</h2>
-                <div class="beneficios-grid">
-                    <div class="beneficio-card">
-                        <div class="beneficio-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3>App Móvil</h3>
-                        <p>Gestiona tus beneficios, reserva horas médicas y consulta tu historial desde tu teléfono.</p>
-                    </div>
-                    <div class="beneficio-card">
-                        <div class="beneficio-icon">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <h3>Telemedicina</h3>
-                        <p>Consultas médicas virtuales 24/7 sin costo adicional para afiliados.</p>
-                    </div>
-                    <div class="beneficio-card">
-                        <div class="beneficio-icon">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3>Delivery Medicamentos</h3>
-                        <p>Recibe tus medicamentos en casa con descuentos especiales.</p>
-                    </div>
-                    <div class="beneficio-card">
-                        <div class="beneficio-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h3>Medicina Preventiva</h3>
-                        <p>Check-ups anuales, vacunación y programas de prevención sin costo.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="faq">
-            <div class="container">
-                <h2>Preguntas Frecuentes</h2>
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Qué es el período de carencia?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Es el tiempo que debes esperar antes de usar ciertos beneficios. Urgencias no tienen carencia, consultas 30 días, hospitalización 6 meses y maternidad 10 meses.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Puedo cambiar de plan después de contratarlo?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Sí, puedes mejorar tu plan en cualquier momento. Para rebajar el plan debes esperar 12 meses y cumplir nuevas carencias.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Las enfermedades preexistentes están cubiertas?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Después de 18 meses de afiliación continua, todas las enfermedades quedan cubiertas sin exclusiones.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Cómo funciona el reembolso?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Pagas directo al prestador solo tu copago. Si pagas el total, presentas la documentación y te reembolsamos en 5 días hábiles.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Tu Salud No Puede Esperar</h2>
-                    <p>Accede a la mejor medicina privada con planes que se adaptan a tus necesidades.</p>
-                    <div class="cta-buttons">
-                        <button class="btn btn-primary" onclick="openCotizador('salud')">Cotizar Online</button>
-                        <button class="btn btn-secondary" onclick="openChat()">Hablar con Asesor</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>BCP Corredora de Seguros</h4>
-                    <p>Tu tranquilidad es nuestra prioridad.</p>
+                    <h4>Navegaci&oacute;n</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Qui&eacute;nes Somos</a></li>
+                        <li><a href="seguros.html">Nuestros Seguros</a></li>
+                        <li><a href="cotizador.html">Cotizar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Seguros</h4>
+                    <ul>
+                        <li><a href="seguro-auto.html">Seguro Automotriz</a></li>
+                        <li><a href="seguro-hogar.html">Seguro Hogar</a></li>
+                        <li><a href="seguros-personas.html">Seguros para Personas</a></li>
+                        <li><a href="seguros-empresas.html">Seguros para Empresas</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contacto</h4>
-                    <p><i class="fas fa-phone"></i> +56 2 2345 6789</p>
-                    <p><i class="fas fa-envelope"></i> contacto@bcpseguros.cl</p>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+56600600292">600 6000 292</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/56600600292" target="_blank">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@bcp.cl">info@bcp.cl</a></li>
+                        <li><a href="contacto.html">Formulario de Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Pol&iacute;ticas de Privacidad</a></li>
+                        <li><a href="#">T&eacute;rminos y Condiciones</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 BCP Corredora de Seguros. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/56600600292" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <div class="chat-button" onclick="openChat()">
-        <i class="fas fa-comments"></i>
+    <div class="chat-widget" onclick="window.open('https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20de%20salud','_blank')">
+        <div class="chat-button"><i class="fab fa-whatsapp"></i></div>
+        <div class="chat-tooltip">&iquest;Necesitas ayuda? &iexcl;Hablemos!</div>
     </div>
 
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/seguros.js"></script>
-    <script>
-        function showTab(tabName) {
-            // Ocultar todos los contenidos
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
-            
-            // Ocultar todos los botones activos
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            
-            // Mostrar el contenido seleccionado
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-        }
-    </script>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>
