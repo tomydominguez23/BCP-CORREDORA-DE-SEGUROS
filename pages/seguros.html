@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seguros - BCP Corredora de Seguros</title>
+    <title>Nuestros Seguros - BCP Corredora de Seguros</title>
     
-    <!-- Google Fonts - Tipografía Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/components.css">
     <link rel="stylesheet" href="../styles/seguros.css">
@@ -18,8 +16,10 @@
     
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
     <meta name="theme-color" content="#0f2942">
+    <meta name="description" content="Nuestros Seguros - Soluciones de protecci&oacute;n adaptadas a cada etapa de tu vida y a la realidad de tu empresa.">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
@@ -29,351 +29,143 @@
             </div>
             
             <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="nosotros.html" class="nav-link">Qui&eacute;nes Somos</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link active">Seguros <i class="fas fa-chevron-down"></i></a>
+                    <a href="seguros.html" class="nav-link active">Nuestros Seguros <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="#automotriz">Automotriz</a>
-                        <a href="#hogar">Hogar</a>
-                        <a href="#vida">Vida y Salud</a>
-                        <a href="#viaje">Viaje</a>
-                        <a href="#mascotas">Mascotas</a>
+                        <a href="seguro-auto.html">Seguro Automotriz</a>
+                        <a href="seguro-hogar.html">Seguro Hogar</a>
+                        <a href="seguros-personas.html">Seguros para Personas</a>
+                        <a href="seguros-empresas.html">Seguros para Empresas y Comunidades</a>
                     </div>
                 </div>
-                <a href="../index.html#asistencias" class="nav-link">Asistencias</a>
-                <a href="../index.html#denuncia" class="nav-link">Denuncia tu siniestro</a>
-                <a href="../index.html#servicios" class="nav-link">Servicios en línea</a>
+                <a href="../index.html#siniestros" class="nav-link">Siniestros</a>
+                <a href="../index.html#faq" class="nav-link">FAQ</a>
             </div>
             
             <div class="nav-actions">
-                <a href="#contacto" class="btn-service">Servicio al Cliente</a>
-                <a href="cotizador.html" class="btn-primary">Hazte Cliente</a>
+                <a href="cotizador.html" class="btn-primary">Cotiza Gratis</a>
+                <a href="https://wa.me/56600600292?text=Hola%2C%20necesito%20asesor%C3%ADa%20sobre%20seguros" target="_blank" class="btn-secondary">Habla con un Asesor</a>
+            </div>
+            
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
         </nav>
     </header>
 
-    <main class="seguros-main">
+    <!-- Hero -->
+    <section class="seguro-page-hero">
         <div class="container">
-            <div class="breadcrumb">
-                <a href="../index.html"><i class="fas fa-home"></i></a>
-                <span>/</span>
-                <span>Seguros</span>
+            <div class="brand-colors">
+                <span class="dot red"></span>
+                <span class="dot orange"></span>
+                <span class="dot yellow"></span>
+                <span class="dot blue"></span>
             </div>
+            <h1>Nuestros Seguros</h1>
+            <p>Soluciones de protecci&oacute;n adaptadas a cada etapa de tu vida y a la realidad de tu empresa.</p>
+        </div>
+    </section>
 
-            <div class="section-header">
-                <div class="brand-colors">
-                    <span class="dot red"></span>
-                    <span class="dot orange"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot blue"></span>
-                </div>
-                <h1>Nuestros Seguros</h1>
-                <p>Protección integral para lo que más te importa</p>
-            </div>
-
-            <!-- Seguro Automotriz -->
-            <section id="automotriz" class="insurance-section">
-                <div class="insurance-header">
-                    <div class="insurance-icon">
+    <!-- Categor&iacute;as de Seguros -->
+    <section class="seguro-content-section">
+        <div class="container">
+            <div class="seguro-cards-grid">
+                
+                <!-- Seguro Automotriz -->
+                <div class="seguro-feature-card">
+                    <div class="card-icon">
                         <i class="fas fa-car"></i>
                     </div>
-                    <div class="insurance-info">
-                        <h2>Seguro Automotriz</h2>
-                        <p>Protección completa para tu vehículo con la mejor cobertura del mercado</p>
+                    <h4>Seguro Automotriz</h4>
+                    <p>Protege tu veh&iacute;culo frente a accidentes, robo y da&ntilde;os a terceros con coberturas adaptadas a tu uso y presupuesto.</p>
+                    <ul class="sub-list">
+                        <li>Da&ntilde;os propios</li>
+                        <li>Robo</li>
+                        <li>Responsabilidad civil</li>
+                        <li>Asistencia en ruta</li>
+                        <li>Auto de reemplazo</li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="seguro-auto.html" class="btn-primary" style="display: inline-block; text-decoration: none;">Cotiza tu Seguro Automotriz</a>
                     </div>
                 </div>
                 
-                <div class="insurance-products">
-                    <div class="product-card featured">
-                        <div class="product-badge">MÁS VENDIDO</div>
-                        <h3>Seguro Auto Completo</h3>
-                        <div class="product-price">Desde $15.990/mes</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Cobertura total por daños</li>
-                            <li><i class="fas fa-check"></i> Asistencia en carretera 24/7</li>
-                            <li><i class="fas fa-check"></i> Auto de reemplazo hasta 30 días</li>
-                            <li><i class="fas fa-check"></i> Talleres especializados</li>
-                            <li><i class="fas fa-check"></i> Responsabilidad civil</li>
-                            <li><i class="fas fa-check"></i> Grúa y remolque</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
+                <!-- Seguro Hogar -->
+                <div class="seguro-feature-card">
+                    <div class="card-icon" style="background: var(--gradient-gold);">
+                        <i class="fas fa-home" style="color: var(--primary-dark);"></i>
                     </div>
-                    
-                    <div class="product-card">
-                        <div class="product-badge new">NUEVO</div>
-                        <h3>Seguro Pérdida Total</h3>
-                        <div class="product-price">Desde $8.990/mes</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Cobertura por pérdida total</li>
-                            <li><i class="fas fa-check"></i> Robo total del vehículo</li>
-                            <li><i class="fas fa-check"></i> Asistencia básica</li>
-                            <li><i class="fas fa-check"></i> Responsabilidad civil</li>
-                            <li><i class="fas fa-check"></i> Grúa en emergencias</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3>Seguro Auto Comercial</h3>
-                        <div class="product-price">Desde $25.990/mes</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Para uso comercial</li>
-                            <li><i class="fas fa-check"></i> Cobertura de carga</li>
-                            <li><i class="fas fa-check"></i> Responsabilidad civil ampliada</li>
-                            <li><i class="fas fa-check"></i> Asistencia especializada</li>
-                            <li><i class="fas fa-check"></i> Cobertura 24/7</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3>SOAP 2025</h3>
-                        <div class="product-price">Desde $28.490/año</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Seguro obligatorio</li>
-                            <li><i class="fas fa-check"></i> Accidentes personales</li>
-                            <li><i class="fas fa-check"></i> Gastos médicos</li>
-                            <li><i class="fas fa-check"></i> Indemnización por muerte</li>
-                            <li><i class="fas fa-check"></i> Rehabilitación</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Seguro de Hogar -->
-            <section id="hogar" class="insurance-section">
-                <div class="insurance-header">
-                    <div class="insurance-icon hogar">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <div class="insurance-info">
-                        <h2>Seguro de Hogar</h2>
-                        <p>Protege tu hogar y patrimonio con coberturas integrales</p>
+                    <h4>Seguro Hogar</h4>
+                    <p>Tu casa es tu patrimonio y tu tranquilidad. Protegemos tu vivienda y bienes frente a los principales riesgos.</p>
+                    <ul class="sub-list">
+                        <li>Incendio y da&ntilde;os estructurales</li>
+                        <li>Robo e intento de robo</li>
+                        <li>Da&ntilde;os por agua</li>
+                        <li>Sismo y eventos naturales</li>
+                        <li>Responsabilidad civil familiar</li>
+                        <li>Asistencia hogar</li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="seguro-hogar.html" class="btn-primary" style="display: inline-block; text-decoration: none;">Cotiza tu Seguro Hogar</a>
                     </div>
                 </div>
                 
-                <div class="insurance-products">
-                    <div class="product-card">
-                        <h3>Seguro Hogar Completo</h3>
-                        <div class="product-price">Desde $12.500/mes</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Incendio y explosión</li>
-                            <li><i class="fas fa-check"></i> Robo y hurto</li>
-                            <li><i class="fas fa-check"></i> Daños por agua</li>
-                            <li><i class="fas fa-check"></i> Fenómenos naturales</li>
-                            <li><i class="fas fa-check"></i> Responsabilidad civil</li>
-                            <li><i class="fas fa-check"></i> Gastos adicionales</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
+                <!-- Seguros para Personas -->
+                <div class="seguro-feature-card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-shield"></i>
                     </div>
-                    
-                    <div class="product-card">
-                        <div class="product-badge new">NUEVO</div>
-                        <h3>Seguro Hogar Contenido</h3>
-                        <div class="product-price">Desde $8.900/mes</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Contenido del hogar</li>
-                            <li><i class="fas fa-check"></i> Electrodomésticos</li>
-                            <li><i class="fas fa-check"></i> Robo de especies</li>
-                            <li><i class="fas fa-check"></i> Gastos adicionales</li>
-                            <li><i class="fas fa-check"></i> Responsabilidad civil</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3>Seguro Anti Robo</h3>
-                        <div class="product-price">Desde $4.990/mes</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Robo en la vía pública</li>
-                            <li><i class="fas fa-check"></i> Robo en cajeros automáticos</li>
-                            <li><i class="fas fa-check"></i> Robo de contenido vehicular</li>
-                            <li><i class="fas fa-check"></i> Responsabilidad civil</li>
-                            <li><i class="fas fa-check"></i> Asistencia legal</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Seguro de Vida y Salud -->
-            <section id="vida" class="insurance-section">
-                <div class="insurance-header">
-                    <div class="insurance-icon vida">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="insurance-info">
-                        <h2>Seguro de Vida y Salud</h2>
-                        <p>Tranquilidad y protección para ti y tu familia</p>
+                    <h4>Seguros para Personas</h4>
+                    <p>Protegemos tu salud, tu vida y tu tranquilidad con coberturas claras y flexibles.</p>
+                    <ul class="sub-list">
+                        <li>Seguros de Vida</li>
+                        <li>Seguro de Salud</li>
+                        <li>Seguro de Viaje</li>
+                        <li>Seguro de Mascotas</li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="seguros-personas.html" class="btn-primary" style="display: inline-block; text-decoration: none;">Ver Seguros para Personas</a>
                     </div>
                 </div>
                 
-                <div class="insurance-products">
-                    <div class="product-card">
-                        <h3>Seguro de Vida</h3>
-                        <div class="product-price">Desde $9.990/mes</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Muerte por cualquier causa</li>
-                            <li><i class="fas fa-check"></i> Invalidez total y permanente</li>
-                            <li><i class="fas fa-check"></i> Enfermedades graves</li>
-                            <li><i class="fas fa-check"></i> Gastos funerarios</li>
-                            <li><i class="fas fa-check"></i> Advance de indemnización</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
+                <!-- Seguros para Empresas y Comunidades -->
+                <div class="seguro-feature-card">
+                    <div class="card-icon" style="background: var(--gradient-gold);">
+                        <i class="fas fa-building" style="color: var(--primary-dark);"></i>
                     </div>
-                    
-                    <div class="product-card">
-                        <h3>Seguro Sala de Urgencias</h3>
-                        <div class="product-price">Desde $5.990/mes</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Atención de urgencia</li>
-                            <li><i class="fas fa-check"></i> Hospitalización</li>
-                            <li><i class="fas fa-check"></i> Exámenes médicos</li>
-                            <li><i class="fas fa-check"></i> Medicamentos</li>
-                            <li><i class="fas fa-check"></i> Procedimientos</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
-                    </div>
-                    
-                    <div class="product-card">
-                        <div class="product-badge new">NUEVO</div>
-                        <h3>Seguro Catastrófico</h3>
-                        <div class="product-price">Desde $7.500/mes</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Enfermedades catastróficas</li>
-                            <li><i class="fas fa-check"></i> Tratamientos especializados</li>
-                            <li><i class="fas fa-check"></i> Rehabilitación</li>
-                            <li><i class="fas fa-check"></i> Medicina alternativa</li>
-                            <li><i class="fas fa-check"></i> Segunda opinión médica</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
-                    </div>
-                    
-                    <div class="product-card">
-                        <div class="product-badge new">NUEVO</div>
-                        <h3>Muerte Accidental + Ahorro</h3>
-                        <div class="product-price">Desde $12.900/mes</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Muerte accidental</li>
-                            <li><i class="fas fa-check"></i> Ahorro programado</li>
-                            <li><i class="fas fa-check"></i> Rentabilidad garantizada</li>
-                            <li><i class="fas fa-check"></i> Retiros parciales</li>
-                            <li><i class="fas fa-check"></i> Beneficios fiscales</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Seguro de Mascotas -->
-            <section id="mascotas" class="insurance-section">
-                <div class="insurance-header">
-                    <div class="insurance-icon mascotas">
-                        <i class="fas fa-paw"></i>
-                    </div>
-                    <div class="insurance-info">
-                        <h2>Seguro de Mascotas</h2>
-                        <p>Cuida la salud del regalón de la casa</p>
+                    <h4>Seguros para Empresas y Comunidades</h4>
+                    <p>Soluciones integrales para proteger operaciones, contratos, activos y responsabilidades legales.</p>
+                    <ul class="sub-list">
+                        <li>Seguro Complementario de Salud</li>
+                        <li>Seguro de Vida Colectivo</li>
+                        <li>Seguro de Responsabilidad Civil</li>
+                        <li>Seguro Multirriesgo Empresa</li>
+                        <li>Seguro de Flota de Veh&iacute;culos</li>
+                        <li>Seguro de Garant&iacute;a</li>
+                        <li>Seguro Todo Riesgo Construcci&oacute;n</li>
+                        <li>Seguro de Comunidad</li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="seguros-empresas.html" class="btn-primary" style="display: inline-block; text-decoration: none;">Cotiza Seguros para Empresas</a>
                     </div>
                 </div>
                 
-                <div class="insurance-products">
-                    <div class="product-card featured">
-                        <div class="product-badge">DESTACADO</div>
-                        <h3>Seguro Mascotas Completo</h3>
-                        <div class="product-price">Desde $3.890/mes</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Consultas veterinarias</li>
-                            <li><i class="fas fa-check"></i> Cirugías de emergencia</li>
-                            <li><i class="fas fa-check"></i> Medicamentos</li>
-                            <li><i class="fas fa-check"></i> Hospitalización</li>
-                            <li><i class="fas fa-check"></i> Exámenes diagnósticos</li>
-                            <li><i class="fas fa-check"></i> Vacunas anuales</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
-                        <div class="promotion-note">¡1 mes gratis en la 2ª cuota!</div>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3>Seguro Mascotas Básico</h3>
-                        <div class="product-price">Desde $2.490/mes</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Consultas de emergencia</li>
-                            <li><i class="fas fa-check"></i> Accidentes</li>
-                            <li><i class="fas fa-check"></i> Medicamentos básicos</li>
-                            <li><i class="fas fa-check"></i> Primeros auxilios</li>
-                            <li><i class="fas fa-check"></i> Atención 24/7</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Seguro de Viaje -->
-            <section id="viaje" class="insurance-section">
-                <div class="insurance-header">
-                    <div class="insurance-icon viaje">
-                        <i class="fas fa-plane"></i>
-                    </div>
-                    <div class="insurance-info">
-                        <h2>Seguro de Viaje</h2>
-                        <p>Viaja tranquilo con la mejor protección</p>
-                    </div>
-                </div>
-                
-                <div class="insurance-products">
-                    <div class="product-card">
-                        <h3>Seguro Viaje Nacional</h3>
-                        <div class="product-price">Desde $4.990</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Gastos médicos</li>
-                            <li><i class="fas fa-check"></i> Cancelación de viaje</li>
-                            <li><i class="fas fa-check"></i> Pérdida de equipaje</li>
-                            <li><i class="fas fa-check"></i> Repatriación</li>
-                            <li><i class="fas fa-check"></i> Asistencia 24/7</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3>Seguro Viaje Internacional</h3>
-                        <div class="product-price">Desde $12.900</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Cobertura mundial</li>
-                            <li><i class="fas fa-check"></i> Gastos médicos USD 100.000</li>
-                            <li><i class="fas fa-check"></i> Deportes de aventura</li>
-                            <li><i class="fas fa-check"></i> Asistencia 24/7</li>
-                            <li><i class="fas fa-check"></i> COVID-19 incluido</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3>Seguro Viaje Estudios</h3>
-                        <div class="product-price">Desde $8.500</div>
-                        <ul class="product-features">
-                            <li><i class="fas fa-check"></i> Estudiantes en el extranjero</li>
-                            <li><i class="fas fa-check"></i> Cobertura extendida</li>
-                            <li><i class="fas fa-check"></i> Responsabilidad civil</li>
-                            <li><i class="fas fa-check"></i> Regreso anticipado</li>
-                            <li><i class="fas fa-check"></i> Equipaje académico</li>
-                        </ul>
-                        <button class="btn-quote" onclick="location.href='cotizador.html'">Cotizar Ahora</button>
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
-    </main>
+    </section>
 
-    <!-- CTA Section -->
+    <!-- CTA -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>¿Necesitas ayuda para elegir?</h2>
-                <p>Nuestros ejecutivos especializados te ayudarán a encontrar el seguro perfecto para ti</p>
+                <h2>&iquest;Necesitas ayuda para elegir?</h2>
+                <p>Nuestros asesores especializados te ayudar&aacute;n a encontrar el seguro perfecto para ti.</p>
                 <div class="cta-actions">
-                    <button class="btn-primary large" onclick="openChatWindow()">Hablar con un ejecutivo</button>
-                    <button class="btn-secondary large" onclick="location.href='cotizador.html'">Calculadora de seguros</button>
+                    <a href="https://wa.me/56600600292?text=Hola%2C%20necesito%20asesor%C3%ADa%20sobre%20seguros" target="_blank" class="btn-primary large">Habla con un Asesor</a>
+                    <a href="cotizador.html" class="btn-secondary large" style="text-decoration: none;">Cotiza Gratis</a>
                 </div>
             </div>
         </div>
@@ -384,58 +176,64 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Conócenos</h4>
+                    <h4>Navegaci&oacute;n</h4>
                     <ul>
-                        <li><a href="#">Presencia internacional</a></li>
-                        <li><a href="#">Investor relations</a></li>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Qui&eacute;nes Somos</a></li>
+                        <li><a href="seguros.html">Nuestros Seguros</a></li>
+                        <li><a href="cotizador.html">Cotizar</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-section">
-                    <h4>Información normativa</h4>
+                    <h4>Seguros</h4>
                     <ul>
-                        <li><a href="#">Licitaciones seguros hipotecarios</a></li>
+                        <li><a href="seguro-auto.html">Seguro Automotriz</a></li>
+                        <li><a href="seguro-hogar.html">Seguro Hogar</a></li>
+                        <li><a href="seguros-personas.html">Seguros para Personas</a></li>
+                        <li><a href="seguros-empresas.html">Seguros para Empresas</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-section">
-                    <h4>Filiales</h4>
+                    <h4>Contacto</h4>
                     <ul>
-                        <li><a href="#">BCP Miami</a></li>
-                        <li><a href="#">BCP Asset Management</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+56600600292">600 6000 292</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/56600600292" target="_blank">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@bcp.cl">info@bcp.cl</a></li>
+                        <li><a href="contacto.html">Formulario de Contacto</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-section">
-                    <h4>Sitios relacionados</h4>
+                    <h4>Legal</h4>
                     <ul>
-                        <li><a href="#">BCP Propiedades</a></li>
-                        <li><a href="#">Portal de APIS</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Encuéntranos</h4>
-                    <ul>
-                        <li><a href="#">Servicio al cliente</a></li>
-                        <li><a href="#">Cajeros y sucursales</a></li>
+                        <li><a href="#">Pol&iacute;ticas de Privacidad</a></li>
+                        <li><a href="#">T&eacute;rminos y Condiciones</a></li>
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2025 BCP Corredora de Seguros. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/56600600292" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 
     <!-- Chat Widget -->
-    <div class="chat-widget">
-        <div class="chat-button">
-            <i class="fas fa-comments"></i>
-        </div>
+    <div class="chat-widget" onclick="toggleChat()">
+        <div class="chat-button"><i class="fab fa-whatsapp"></i></div>
+        <div class="chat-tooltip">&iquest;Necesitas ayuda? &iexcl;Hablemos!</div>
     </div>
 
     <script src="../scripts/main.js"></script>
+    <script>
+        function toggleChat() {
+            const whatsappUrl = 'https://wa.me/56600600292?text=' + encodeURIComponent('Hola, necesito asesoría sobre seguros.');
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
 </body>
 </html>

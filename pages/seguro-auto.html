@@ -3,288 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seguro Auto - BCP Corredora de Seguros</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/seguros.css">
-    <link rel="manifest" href="../manifest.json">
-    <meta name="theme-color" content="#00a651">
+    <title>Seguro Automotriz - BCP Corredora de Seguros</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <meta name="theme-color" content="#0f2942">
+    <meta name="description" content="Seguro Automotriz - Protege tu veh&iacute;culo frente a accidentes, robo y da&ntilde;os a terceros con coberturas adaptadas a tu uso y presupuesto.">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="../assets/images/logo-bcp.png" alt="BCP Logo">
-                    <span>BCP Corredora de Seguros</span>
-                </div>
-                <div class="nav-menu" id="nav-menu">
-                    <ul class="nav-list">
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="#" class="dropdown-trigger">Seguros <i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="seguro-auto.html">Seguro Auto</a></li>
-                                <li><a href="seguro-hogar.html">Seguro Hogar</a></li>
-                                <li><a href="seguro-vida.html">Seguro de Vida</a></li>
-                                <li><a href="seguro-salud.html">Seguro de Salud</a></li>
-                                <li><a href="seguro-mascotas.html">Seguro Mascotas</a></li>
-                                <li><a href="seguro-viaje.html">Seguro de Viaje</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="../pages/nosotros.html">Nosotros</a></li>
-                        <li><a href="../pages/contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="nav-toggle" id="nav-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-img"></div>
+                <span class="logo-text">BCP</span>
+                <span class="logo-subtext">Corredora de Seguros</span>
             </div>
+            
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="nosotros.html" class="nav-link">Qui&eacute;nes Somos</a>
+                <div class="nav-item dropdown">
+                    <a href="seguros.html" class="nav-link active">Nuestros Seguros <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="seguro-auto.html">Seguro Automotriz</a>
+                        <a href="seguro-hogar.html">Seguro Hogar</a>
+                        <a href="seguros-personas.html">Seguros para Personas</a>
+                        <a href="seguros-empresas.html">Seguros para Empresas y Comunidades</a>
+                    </div>
+                </div>
+                <a href="../index.html#siniestros" class="nav-link">Siniestros</a>
+                <a href="../index.html#faq" class="nav-link">FAQ</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="cotizador.html" class="btn-primary">Cotiza Gratis</a>
+                <a href="https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20automotriz" target="_blank" class="btn-secondary">Habla con un Asesor</a>
+            </div>
+            
+            <div class="mobile-menu-toggle"><i class="fas fa-bars"></i></div>
         </nav>
     </header>
 
-    <main class="main">
-        <!-- Hero Section -->
-        <section class="hero-seguro">
-            <div class="hero-content">
-                <div class="container">
-                    <div class="hero-text">
-                        <h1>Seguro Auto</h1>
-                        <p>Protege tu vehículo con la mejor cobertura del mercado. Desde responsabilidad civil hasta cobertura total.</p>
-                        <button class="btn btn-primary" onclick="openCotizador('auto')">Cotizar Ahora</button>
-                    </div>
-                    <div class="hero-image">
-                        <img src="../assets/images/seguro-auto-hero.jpg" alt="Seguro Auto">
-                    </div>
+    <!-- Hero -->
+    <section class="seguro-page-hero">
+        <div class="container">
+            <div class="brand-colors">
+                <span class="dot red"></span>
+                <span class="dot orange"></span>
+                <span class="dot yellow"></span>
+                <span class="dot blue"></span>
+            </div>
+            <h1><i class="fas fa-car"></i> Seguro Automotriz</h1>
+            <p>Protege tu veh&iacute;culo frente a accidentes, robo y da&ntilde;os a terceros con coberturas adaptadas a tu uso y presupuesto.</p>
+            <div class="hero-cta">
+                <a href="cotizador.html?type=auto" class="btn-cta btn-cta-primary">Cotiza tu Seguro Automotriz</a>
+                <a href="https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20automotriz" target="_blank" class="btn-cta btn-cta-outline">Habla con un Asesor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coberturas -->
+    <section class="seguro-content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Coberturas Habituales</h2>
+                <p class="section-subtitle">Todo lo que necesitas para circular con tranquilidad</p>
+            </div>
+            
+            <div class="seguro-cards-grid">
+                <div class="seguro-feature-card">
+                    <div class="card-icon"><i class="fas fa-car-crash"></i></div>
+                    <h4>Da&ntilde;os Propios</h4>
+                    <p>Cobertura para reparaciones de tu veh&iacute;culo por accidentes de tr&aacute;nsito, choque, vuelco y otros eventos.</p>
+                </div>
+                
+                <div class="seguro-feature-card">
+                    <div class="card-icon" style="background: var(--gradient-gold);"><i class="fas fa-lock" style="color: var(--primary-dark);"></i></div>
+                    <h4>Robo</h4>
+                    <p>Protecci&oacute;n frente al robo total o parcial de tu veh&iacute;culo, incluyendo accesorios y equipamiento.</p>
+                </div>
+                
+                <div class="seguro-feature-card">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
+                    <h4>Responsabilidad Civil</h4>
+                    <p>Cobertura por da&ntilde;os materiales y lesiones causadas a terceros en caso de accidente.</p>
+                </div>
+                
+                <div class="seguro-feature-card">
+                    <div class="card-icon" style="background: var(--gradient-gold);"><i class="fas fa-road" style="color: var(--primary-dark);"></i></div>
+                    <h4>Asistencia en Ruta</h4>
+                    <p>Servicio de gr&uacute;a, mec&aacute;nico a domicilio, carga de bater&iacute;a y cambio de neum&aacute;ticos 24/7.</p>
+                </div>
+                
+                <div class="seguro-feature-card">
+                    <div class="card-icon"><i class="fas fa-car-side"></i></div>
+                    <h4>Auto de Reemplazo</h4>
+                    <p>Veh&iacute;culo de reemplazo mientras el tuyo est&aacute; en reparaci&oacute;n por un siniestro cubierto.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Información del Seguro -->
-        <section class="seguro-info">
-            <div class="container">
-                <div class="info-grid">
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Cobertura Completa</h3>
-                        <p>Protección total para tu vehículo contra accidentes, robo, incendio y fenómenos naturales.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h3>Asistencia 24/7</h3>
-                        <p>Servicio de grúa, mecánico a domicilio y auto de reemplazo las 24 horas del día.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-dollar-sign"></i>
-                        </div>
-                        <h3>Mejores Precios</h3>
-                        <p>Tarifas competitivas y descuentos especiales por buen conductor y antigüedad.</p>
-                    </div>
-                </div>
+    <!-- CTA Final -->
+    <section class="seguro-content-section" style="background: var(--gradient-hero); color: var(--white); text-align: center;">
+        <div class="container">
+            <h2 style="color: var(--white);">Cotiza tu Seguro Automotriz</h2>
+            <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 2rem; font-size: 1.15rem;">Comparamos entre las mejores aseguradoras para encontrar la cobertura ideal para ti.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="cotizador.html?type=auto" class="btn-white-inicio">Cotiza Gratis</a>
+                <a href="https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20automotriz" target="_blank" class="btn-outline-white-inicio">Habla con un Asesor</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Tipos de Cobertura -->
-        <section class="coberturas">
-            <div class="container">
-                <h2>Tipos de Cobertura Disponibles</h2>
-                <div class="cobertura-grid">
-                    <div class="cobertura-card">
-                        <h3>Responsabilidad Civil</h3>
-                        <div class="precio">Desde $35.000/mes</div>
-                        <ul class="beneficios">
-                            <li><i class="fas fa-check"></i> Daños a terceros</li>
-                            <li><i class="fas fa-check"></i> Lesiones corporales</li>
-                            <li><i class="fas fa-check"></i> Defensa jurídica</li>
-                            <li><i class="fas fa-check"></i> Cobertura hasta $2.000 UF</li>
-                        </ul>
-                        <button class="btn btn-outline">Seleccionar</button>
-                    </div>
-                    <div class="cobertura-card featured">
-                        <div class="badge">Más Popular</div>
-                        <h3>Cobertura Amplia</h3>
-                        <div class="precio">Desde $85.000/mes</div>
-                        <ul class="beneficios">
-                            <li><i class="fas fa-check"></i> Todo lo de Responsabilidad Civil</li>
-                            <li><i class="fas fa-check"></i> Robo total y parcial</li>
-                            <li><i class="fas fa-check"></i> Incendio y rayos</li>
-                            <li><i class="fas fa-check"></i> Daños por granizo</li>
-                            <li><i class="fas fa-check"></i> Cristales y lunetas</li>
-                            <li><i class="fas fa-check"></i> Asistencia en viaje</li>
-                        </ul>
-                        <button class="btn btn-primary">Seleccionar</button>
-                    </div>
-                    <div class="cobertura-card">
-                        <h3>Cobertura Total</h3>
-                        <div class="precio">Desde $120.000/mes</div>
-                        <ul class="beneficios">
-                            <li><i class="fas fa-check"></i> Todo lo de Cobertura Amplia</li>
-                            <li><i class="fas fa-check"></i> Choque y vuelco</li>
-                            <li><i class="fas fa-check"></i> Auto de reemplazo</li>
-                            <li><i class="fas fa-check"></i> Accesorios musicales</li>
-                            <li><i class="fas fa-check"></i> Valor factura hasta 12 meses</li>
-                            <li><i class="fas fa-check"></i> Cobertura en todo América</li>
-                        </ul>
-                        <button class="btn btn-outline">Seleccionar</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Asistencias Incluidas -->
-        <section class="asistencias">
-            <div class="container">
-                <h2>Asistencias Incluidas</h2>
-                <div class="asistencia-grid">
-                    <div class="asistencia-item">
-                        <i class="fas fa-truck"></i>
-                        <h4>Servicio de Grúa</h4>
-                        <p>Hasta 150 km sin costo adicional</p>
-                    </div>
-                    <div class="asistencia-item">
-                        <i class="fas fa-car"></i>
-                        <h4>Auto de Reemplazo</h4>
-                        <p>Hasta 30 días por siniestro</p>
-                    </div>
-                    <div class="asistencia-item">
-                        <i class="fas fa-wrench"></i>
-                        <h4>Mecánico a Domicilio</h4>
-                        <p>Reparaciones menores en el lugar</p>
-                    </div>
-                    <div class="asistencia-item">
-                        <i class="fas fa-battery-half"></i>
-                        <h4>Carga de Batería</h4>
-                        <p>Servicio gratuito las 24 horas</p>
-                    </div>
-                    <div class="asistencia-item">
-                        <i class="fas fa-key"></i>
-                        <h4>Cerrajería</h4>
-                        <p>Apertura de vehículo sin daños</p>
-                    </div>
-                    <div class="asistencia-item">
-                        <i class="fas fa-gas-pump"></i>
-                        <h4>Combustible de Emergencia</h4>
-                        <p>5 litros sin costo</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Compañías Aseguradoras -->
-        <section class="companias">
-            <div class="container">
-                <h2>Trabajamos con las Mejores Aseguradoras</h2>
-                <div class="companias-grid">
-                    <img src="../assets/images/liberty-logo.png" alt="Liberty Seguros">
-                    <img src="../assets/images/mapfre-logo.png" alt="Mapfre">
-                    <img src="../assets/images/bci-logo.png" alt="BCI Seguros">
-                    <img src="../assets/images/chilena-logo.png" alt="Chilena Consolidada">
-                    <img src="../assets/images/renta-logo.png" alt="Renta Nacional">
-                    <img src="../assets/images/sura-logo.png" alt="Sura">
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="faq">
-            <div class="container">
-                <h2>Preguntas Frecuentes</h2>
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Qué documentos necesito para contratar un seguro auto?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Necesitas: Cédula de identidad, permiso de circulación vigente, licencia de conducir al día, y factura o contrato de compraventa del vehículo.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Puedo contratar el seguro si mi auto tiene más de 10 años?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Sí, pero las coberturas pueden estar limitadas. Para autos de más de 10 años generalmente se ofrece responsabilidad civil y coberturas básicas.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Cómo funciona el deducible?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>El deducible es el monto que debes pagar de tu bolsillo en caso de siniestro. Puede ser fijo (UF) o variable (% del daño). A mayor deducible, menor prima.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿El seguro cubre si manejo en estado de ebriedad?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>No, manejar bajo los efectos del alcohol es una exclusión en todos los seguros. La cobertura quedaría sin efecto en estos casos.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>¿Listo para Proteger tu Auto?</h2>
-                    <p>Obtén una cotización personalizada en menos de 3 minutos</p>
-                    <div class="cta-buttons">
-                        <button class="btn btn-primary" onclick="openCotizador('auto')">Cotizar Online</button>
-                        <button class="btn btn-secondary" onclick="openChat()">Hablar con Asesor</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>BCP Corredora de Seguros</h4>
-                    <p>Tu tranquilidad es nuestra prioridad. Más de 15 años protegiendo a familias chilenas.</p>
+                    <h4>Navegaci&oacute;n</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Qui&eacute;nes Somos</a></li>
+                        <li><a href="seguros.html">Nuestros Seguros</a></li>
+                        <li><a href="cotizador.html">Cotizar</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Seguros</h4>
                     <ul>
-                        <li><a href="seguro-auto.html">Seguro Auto</a></li>
+                        <li><a href="seguro-auto.html">Seguro Automotriz</a></li>
                         <li><a href="seguro-hogar.html">Seguro Hogar</a></li>
-                        <li><a href="seguro-vida.html">Seguro de Vida</a></li>
-                        <li><a href="seguro-salud.html">Seguro de Salud</a></li>
+                        <li><a href="seguros-personas.html">Seguros para Personas</a></li>
+                        <li><a href="seguros-empresas.html">Seguros para Empresas</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contacto</h4>
-                    <p><i class="fas fa-phone"></i> +56 2 2345 6789</p>
-                    <p><i class="fas fa-envelope"></i> contacto@bcpseguros.cl</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Av. Providencia 1234, Santiago</p>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+56600600292">600 6000 292</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/56600600292" target="_blank">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@bcp.cl">info@bcp.cl</a></li>
+                        <li><a href="contacto.html">Formulario de Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Pol&iacute;ticas de Privacidad</a></li>
+                        <li><a href="#">T&eacute;rminos y Condiciones</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 BCP Corredora de Seguros. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/56600600292" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Botón Chat -->
-    <div class="chat-button" onclick="openChat()">
-        <i class="fas fa-comments"></i>
+    <div class="chat-widget" onclick="window.open('https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20automotriz','_blank')">
+        <div class="chat-button"><i class="fab fa-whatsapp"></i></div>
+        <div class="chat-tooltip">&iquest;Necesitas ayuda? &iexcl;Hablemos!</div>
     </div>
 
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/seguros.js"></script>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>
