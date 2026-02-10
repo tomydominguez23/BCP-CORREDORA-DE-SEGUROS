@@ -549,7 +549,7 @@ body {
 .quienes-somos-inicio {
     background: var(--white);
     color: var(--dark-gray);
-    padding: 60px 0 30px 0;
+    padding: 60px 0 20px 0;
     position: relative;
     overflow: hidden;
 }
@@ -575,7 +575,7 @@ body {
 
 .quienes-header {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 }
 
 .quienes-header h2 {
@@ -836,7 +836,7 @@ body {
 
 .cta-section-inicio {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 0;
 }
 
 .cta-buttons-inicio {
@@ -891,29 +891,38 @@ body {
 }
 
 /* ========================================
-   Galería de Imágenes Quiénes Somos
+   Carrusel de Imágenes Quiénes Somos
    ======================================== */
-.quienes-gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-bottom: 48px;
-}
-
-.gallery-item {
-    border-radius: var(--radius-xl);
-    overflow: hidden;
+.quienes-carousel-container {
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 auto 16px;
+    max-width: 100%;
 }
 
-.gallery-item-wide {
-    grid-column: span 2;
+.quienes-carousel-track-container {
+    overflow: hidden;
+    flex: 1;
+    border-radius: var(--radius-xl);
+}
+
+.quienes-carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.quienes-carousel-slide {
+    min-width: calc(100% / 3);
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .gallery-img-wrapper {
     position: relative;
     width: 100%;
-    height: 240px;
+    height: 280px;
     overflow: hidden;
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-md);
@@ -926,7 +935,7 @@ body {
     transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-.gallery-item:hover .gallery-img-wrapper img {
+.quienes-carousel-slide:hover .gallery-img-wrapper img {
     transform: scale(1.08);
     filter: brightness(0.85);
 }
@@ -946,7 +955,7 @@ body {
     border-radius: var(--radius-xl);
 }
 
-.gallery-item:hover .gallery-overlay {
+.quienes-carousel-slide:hover .gallery-overlay {
     opacity: 1;
 }
 
@@ -978,33 +987,113 @@ body {
     letter-spacing: 0.3px;
 }
 
-/* Responsive para la galería de imágenes */
-@media (max-width: 992px) {
-    .quienes-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* Botones de navegación del carrusel Quiénes Somos */
+.quienes-carousel-btn {
+    background: var(--white);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-lg);
+    color: var(--primary-dark);
+    font-size: 18px;
+    flex-shrink: 0;
+    z-index: 10;
+}
 
-    .gallery-item-wide {
-        grid-column: span 2;
+.quienes-carousel-btn:hover {
+    background: var(--gradient-gold);
+    transform: scale(1.1);
+    box-shadow: var(--shadow-gold);
+}
+
+.quienes-carousel-btn:active {
+    transform: scale(0.95);
+}
+
+/* Indicadores del carrusel Quiénes Somos */
+.quienes-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.quienes-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    background: transparent;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    padding: 0;
+}
+
+.quienes-indicator:hover {
+    background: var(--primary-light);
+    transform: scale(1.2);
+}
+
+.quienes-indicator.active {
+    background: var(--primary);
+    transform: scale(1.2);
+}
+
+/* Responsive para el carrusel Quiénes Somos */
+@media (max-width: 1024px) {
+    .quienes-carousel-slide {
+        min-width: calc(100% / 2);
     }
 }
 
-@media (max-width: 600px) {
-    .quienes-gallery {
-        grid-template-columns: 1fr;
-        gap: 16px;
+@media (max-width: 768px) {
+    .quienes-carousel-slide {
+        min-width: 100%;
+    }
+    
+    .quienes-carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
     }
 
-    .gallery-item-wide {
-        grid-column: span 1;
+    .quienes-carousel-container {
+        gap: 8px;
     }
 
     .gallery-img-wrapper {
-        height: 200px;
+        height: 220px;
     }
 
     .gallery-overlay {
         opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .quienes-carousel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+    }
+    
+    .gallery-img-wrapper {
+        height: 200px;
+    }
+
+    .quienes-carousel-indicators {
+        gap: 8px;
+    }
+
+    .quienes-indicator {
+        width: 8px;
+        height: 8px;
     }
 }
 
