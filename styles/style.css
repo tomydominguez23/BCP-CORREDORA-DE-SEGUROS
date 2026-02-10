@@ -890,6 +890,124 @@ body {
     transform: translateY(-3px);
 }
 
+/* ========================================
+   Galería de Imágenes Quiénes Somos
+   ======================================== */
+.quienes-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 48px;
+}
+
+.gallery-item {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item-wide {
+    grid-column: span 2;
+}
+
+.gallery-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.gallery-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img-wrapper img {
+    transform: scale(1.08);
+    filter: brightness(0.85);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(15, 41, 66, 0.85) 0%, rgba(15, 41, 66, 0.2) 50%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: var(--radius-xl);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.gallery-label i {
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-dark);
+    font-size: 1rem;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-gold);
+}
+
+.gallery-label span {
+    font-family: var(--font-display);
+    letter-spacing: 0.3px;
+}
+
+/* Responsive para la galería de imágenes */
+@media (max-width: 992px) {
+    .quienes-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item-wide {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .quienes-gallery {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .gallery-item-wide {
+        grid-column: span 1;
+    }
+
+    .gallery-img-wrapper {
+        height: 200px;
+    }
+
+    .gallery-overlay {
+        opacity: 1;
+    }
+}
+
 /* Animaciones para Quiénes Somos */
 @keyframes fadeInUp {
     from {
