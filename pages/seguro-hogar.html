@@ -4,379 +4,214 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seguro Hogar - BCP Corredora de Seguros</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/seguros.css">
-    <link rel="manifest" href="../manifest.json">
-    <meta name="theme-color" content="#00a651">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <meta name="theme-color" content="#0f2942">
+    <meta name="description" content="Seguro Hogar - Tu casa es tu patrimonio y tu tranquilidad. Protegemos tu vivienda y bienes frente a los principales riesgos.">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="../assets/images/logo-bcp.png" alt="BCP Logo">
-                    <span>BCP Corredora de Seguros</span>
-                </div>
-                <div class="nav-menu" id="nav-menu">
-                    <ul class="nav-list">
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="#" class="dropdown-trigger">Seguros <i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="seguro-auto.html">Seguro Auto</a></li>
-                                <li><a href="seguro-hogar.html">Seguro Hogar</a></li>
-                                <li><a href="seguro-vida.html">Seguro de Vida</a></li>
-                                <li><a href="seguro-salud.html">Seguro de Salud</a></li>
-                                <li><a href="seguro-mascotas.html">Seguro Mascotas</a></li>
-                                <li><a href="seguro-viaje.html">Seguro de Viaje</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="../pages/nosotros.html">Nosotros</a></li>
-                        <li><a href="../pages/contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="nav-toggle" id="nav-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-img"></div>
+                <span class="logo-text">BCP</span>
+                <span class="logo-subtext">Corredora de Seguros</span>
             </div>
+            
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="nosotros.html" class="nav-link">Qui&eacute;nes Somos</a>
+                <div class="nav-item dropdown">
+                    <a href="seguros.html" class="nav-link active">Nuestros Seguros <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="seguro-auto.html">Seguro Automotriz</a>
+                        <a href="seguro-hogar.html">Seguro Hogar</a>
+                        <a href="seguros-personas.html">Seguros para Personas</a>
+                        <a href="seguros-empresas.html">Seguros para Empresas y Comunidades</a>
+                    </div>
+                </div>
+                <a href="../index.html#siniestros" class="nav-link">Siniestros</a>
+                <a href="../index.html#faq" class="nav-link">FAQ</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="cotizador.html" class="btn-primary">Cotiza Gratis</a>
+                <a href="https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20hogar" target="_blank" class="btn-secondary">Habla con un Asesor</a>
+            </div>
+            
+            <div class="mobile-menu-toggle"><i class="fas fa-bars"></i></div>
         </nav>
     </header>
 
-    <main class="main">
-        <!-- Hero Section -->
-        <section class="hero-seguro">
-            <div class="hero-content">
-                <div class="container">
-                    <div class="hero-text">
-                        <h1>Seguro Hogar</h1>
-                        <p>Protege tu hogar y todo lo que más quieres. Cobertura integral contra incendio, robo, terremotos y más.</p>
-                        <button class="btn btn-primary" onclick="openCotizador('hogar')">Cotizar Ahora</button>
-                    </div>
-                    <div class="hero-image">
-                        <img src="../assets/images/seguro-hogar-hero.jpg" alt="Seguro Hogar">
-                    </div>
+    <!-- Hero -->
+    <section class="seguro-page-hero">
+        <div class="container">
+            <div class="brand-colors">
+                <span class="dot red"></span>
+                <span class="dot orange"></span>
+                <span class="dot yellow"></span>
+                <span class="dot blue"></span>
+            </div>
+            <h1><i class="fas fa-home"></i> Seguro Hogar</h1>
+            <p>Tu casa es tu patrimonio y tu tranquilidad. Protegemos tu vivienda y bienes frente a los principales riesgos.</p>
+            <div class="hero-cta">
+                <a href="cotizador.html?type=home" class="btn-cta btn-cta-primary">Cotiza tu Seguro Hogar</a>
+                <a href="https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20hogar" target="_blank" class="btn-cta btn-cta-outline">Habla con un Asesor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coberturas -->
+    <section class="seguro-content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Coberturas</h2>
+                <p class="section-subtitle">Protecci&oacute;n integral para tu vivienda y todo lo que contiene</p>
+            </div>
+            
+            <div class="seguro-cards-grid">
+                <div class="seguro-feature-card">
+                    <div class="card-icon"><i class="fas fa-fire"></i></div>
+                    <h4>Incendio y Da&ntilde;os Estructurales</h4>
+                    <p>Protecci&oacute;n contra incendios, explosiones y da&ntilde;os a la estructura de tu vivienda.</p>
+                </div>
+                
+                <div class="seguro-feature-card">
+                    <div class="card-icon" style="background: var(--gradient-gold);"><i class="fas fa-lock" style="color: var(--primary-dark);"></i></div>
+                    <h4>Robo e Intento de Robo</h4>
+                    <p>Cobertura contra robo de contenido, da&ntilde;os por intento de robo y vandalismo.</p>
+                </div>
+                
+                <div class="seguro-feature-card">
+                    <div class="card-icon"><i class="fas fa-tint"></i></div>
+                    <h4>Da&ntilde;os por Agua</h4>
+                    <p>Protecci&oacute;n frente a filtraciones, roturas de ca&ntilde;er&iacute;as e inundaciones.</p>
+                </div>
+                
+                <div class="seguro-feature-card">
+                    <div class="card-icon" style="background: var(--gradient-gold);"><i class="fas fa-mountain" style="color: var(--primary-dark);"></i></div>
+                    <h4>Sismo y Eventos Naturales</h4>
+                    <p>Cobertura ante terremotos, temporales y otros fen&oacute;menos naturales.</p>
+                </div>
+                
+                <div class="seguro-feature-card">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
+                    <h4>Responsabilidad Civil Familiar</h4>
+                    <p>Protecci&oacute;n por da&ntilde;os que t&uacute; o tu familia puedan causar a terceros.</p>
+                </div>
+                
+                <div class="seguro-feature-card">
+                    <div class="card-icon" style="background: var(--gradient-gold);"><i class="fas fa-tools" style="color: var(--primary-dark);"></i></div>
+                    <h4>Asistencia Hogar</h4>
+                    <p>Servicios de cerrajer&iacute;a, plomer&iacute;a, electricidad y m&aacute;s disponibles 24/7.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Información del Seguro -->
-        <section class="seguro-info">
-            <div class="container">
-                <div class="info-grid">
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <h3>Protección Total</h3>
-                        <p>Cubre estructura, contenido y responsabilidad civil familiar con las mejores coberturas del mercado.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Contra Todo Riesgo</h3>
-                        <p>Incendio, terremoto, robo, inundación, explosión y daños por agua. Tu hogar protegido 365 días al año.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h3>Asistencia 24/7</h3>
-                        <p>Servicios de emergencia, cerrajería, plomería, electricidad y más. Siempre que lo necesites.</p>
-                    </div>
+    <!-- Ideal Para -->
+    <section class="seguro-content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ideal Para</h2>
+            </div>
+            <div class="seguro-cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="seguro-feature-card" style="text-align: center;">
+                    <div class="card-icon" style="margin: 0 auto 1rem;"><i class="fas fa-key"></i></div>
+                    <h4>Propietarios</h4>
+                    <p>Protege tu patrimonio m&aacute;s importante: tu hogar propio.</p>
+                </div>
+                <div class="seguro-feature-card" style="text-align: center;">
+                    <div class="card-icon" style="margin: 0 auto 1rem; background: var(--gradient-gold);"><i class="fas fa-file-contract" style="color: var(--primary-dark);"></i></div>
+                    <h4>Arrendatarios</h4>
+                    <p>Protege tu contenido y responsabilidad como arrendatario.</p>
+                </div>
+                <div class="seguro-feature-card" style="text-align: center;">
+                    <div class="card-icon" style="margin: 0 auto 1rem;"><i class="fas fa-university"></i></div>
+                    <h4>Cr&eacute;dito Hipotecario</h4>
+                    <p>Cumple con los requisitos del banco y protege tu inversi&oacute;n.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Tipos de Cobertura -->
-        <section class="coberturas">
-            <div class="container">
-                <h2>Planes de Cobertura para tu Hogar</h2>
-                <div class="cobertura-grid">
-                    <div class="cobertura-card">
-                        <h3>Plan Básico</h3>
-                        <div class="precio">Desde $25.000/mes</div>
-                        <ul class="beneficios">
-                            <li><i class="fas fa-check"></i> Incendio y rayo</li>
-                            <li><i class="fas fa-check"></i> Explosión</li>
-                            <li><i class="fas fa-check"></i> Responsabilidad civil</li>
-                            <li><i class="fas fa-check"></i> Cobertura hasta 2.000 UF</li>
-                            <li><i class="fas fa-check"></i> Asistencia básica</li>
-                        </ul>
-                        <button class="btn btn-outline">Seleccionar</button>
-                    </div>
-                    <div class="cobertura-card featured">
-                        <div class="badge">Más Popular</div>
-                        <h3>Plan Completo</h3>
-                        <div class="precio">Desde $45.000/mes</div>
-                        <ul class="beneficios">
-                            <li><i class="fas fa-check"></i> Todo lo del Plan Básico</li>
-                            <li><i class="fas fa-check"></i> Robo con fuerza</li>
-                            <li><i class="fas fa-check"></i> Terremoto y temblor</li>
-                            <li><i class="fas fa-check"></i> Daños por agua</li>
-                            <li><i class="fas fa-check"></i> Cristales y espejos</li>
-                            <li><i class="fas fa-check"></i> Asistencia completa</li>
-                            <li><i class="fas fa-check"></i> Cobertura hasta 5.000 UF</li>
-                        </ul>
-                        <button class="btn btn-primary">Seleccionar</button>
-                    </div>
-                    <div class="cobertura-card">
-                        <h3>Plan Premium</h3>
-                        <div class="precio">Desde $75.000/mes</div>
-                        <ul class="beneficios">
-                            <li><i class="fas fa-check"></i> Todo lo del Plan Completo</li>
-                            <li><i class="fas fa-check"></i> Todo riesgo contenido</li>
-                            <li><i class="fas fa-check"></i> Gastos de habitación</li>
-                            <li><i class="fas fa-check"></i> Robo fuera del hogar</li>
-                            <li><i class="fas fa-check"></i> Equipos electrónicos</li>
-                            <li><i class="fas fa-check"></i> Joyas y objetos de valor</li>
-                            <li><i class="fas fa-check"></i> Cobertura hasta 10.000 UF</li>
-                        </ul>
-                        <button class="btn btn-outline">Seleccionar</button>
-                    </div>
-                </div>
+    <!-- CTA -->
+    <section class="seguro-content-section" style="background: var(--gradient-hero); color: var(--white); text-align: center;">
+        <div class="container">
+            <h2 style="color: var(--white);">Cotiza tu Seguro Hogar</h2>
+            <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 2rem; font-size: 1.15rem;">No esperes a que sea tarde. Tu hogar es tu refugio, prot&eacute;gelo con el mejor seguro.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="cotizador.html?type=home" class="btn-white-inicio">Cotiza Gratis</a>
+                <a href="https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20hogar" target="_blank" class="btn-outline-white-inicio">Habla con un Asesor</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Coberturas Detalladas -->
-        <section class="coberturas-detalle">
-            <div class="container">
-                <h2>¿Qué Cubre tu Seguro de Hogar?</h2>
-                <div class="detalle-grid">
-                    <div class="detalle-category">
-                        <h3><i class="fas fa-building"></i> Estructura</h3>
-                        <ul>
-                            <li>Muros, techos y cimientos</li>
-                            <li>Instalaciones fijas</li>
-                            <li>Piscinas y terrazas</li>
-                            <li>Cierres y portones</li>
-                        </ul>
-                    </div>
-                    <div class="detalle-category">
-                        <h3><i class="fas fa-couch"></i> Contenido</h3>
-                        <ul>
-                            <li>Muebles y enseres</li>
-                            <li>Electrodomésticos</li>
-                            <li>Ropa y efectos personales</li>
-                            <li>Equipos electrónicos</li>
-                        </ul>
-                    </div>
-                    <div class="detalle-category">
-                        <h3><i class="fas fa-users"></i> Responsabilidad Civil</h3>
-                        <ul>
-                            <li>Daños a terceros</li>
-                            <li>Lesiones a visitas</li>
-                            <li>Daños por mascotas</li>
-                            <li>Defensa jurídica</li>
-                        </ul>
-                    </div>
-                    <div class="detalle-category">
-                        <h3><i class="fas fa-tools"></i> Servicios</h3>
-                        <ul>
-                            <li>Cerrajería de emergencia</li>
-                            <li>Plomería y electricidad</li>
-                            <li>Vidriería</li>
-                            <li>Limpieza post-siniestro</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Asistencias -->
-        <section class="asistencias">
-            <div class="container">
-                <h2>Servicios de Asistencia Incluidos</h2>
-                <div class="asistencia-grid">
-                    <div class="asistencia-item">
-                        <i class="fas fa-key"></i>
-                        <h4>Cerrajería 24/7</h4>
-                        <p>Apertura de puertas sin daño estructural</p>
-                    </div>
-                    <div class="asistencia-item">
-                        <i class="fas fa-wrench"></i>
-                        <h4>Plomería de Emergencia</h4>
-                        <p>Reparación de filtraciones y desatoros</p>
-                    </div>
-                    <div class="asistencia-item">
-                        <i class="fas fa-bolt"></i>
-                        <h4>Electricista</h4>
-                        <p>Reparación de fallas eléctricas menores</p>
-                    </div>
-                    <div class="asistencia-item">
-                        <i class="fas fa-tools"></i>
-                        <h4>Maestro a Domicilio</h4>
-                        <p>Reparaciones menores del hogar</p>
-                    </div>
-                    <div class="asistencia-item">
-                        <i class="fas fa-shield-virus"></i>
-                        <h4>Fumigación</h4>
-                        <p>Control de plagas y desinfección</p>
-                    </div>
-                    <div class="asistencia-item">
-                        <i class="fas fa-broom"></i>
-                        <h4>Limpieza</h4>
-                        <p>Servicio de limpieza post-siniestro</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Calculadora de Valor -->
-        <section class="calculadora">
-            <div class="container">
-                <h2>Calcula el Valor de tu Hogar</h2>
-                <div class="calc-container">
-                    <div class="calc-form">
-                        <div class="form-group">
-                            <label>Tipo de Vivienda:</label>
-                            <select id="tipoVivienda">
-                                <option value="casa">Casa</option>
-                                <option value="departamento">Departamento</option>
-                                <option value="parcela">Parcela</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Metros Cuadrados:</label>
-                            <input type="number" id="metrosCuadrados" placeholder="Ej: 120">
-                        </div>
-                        <div class="form-group">
-                            <label>Año de Construcción:</label>
-                            <input type="number" id="anoConstraccion" placeholder="Ej: 2010">
-                        </div>
-                        <div class="form-group">
-                            <label>Región:</label>
-                            <select id="region">
-                                <option value="metropolitana">Región Metropolitana</option>
-                                <option value="valparaiso">Valparaíso</option>
-                                <option value="biobio">Biobío</option>
-                                <option value="otras">Otras Regiones</option>
-                            </select>
-                        </div>
-                        <button class="btn btn-primary" onclick="calcularValor()">Calcular Valor</button>
-                    </div>
-                    <div class="calc-result" id="calcResult" style="display: none;">
-                        <h3>Valor Estimado de tu Hogar</h3>
-                        <div class="valor-estimado" id="valorEstimado">$0</div>
-                        <p>Este es un valor referencial para el seguro. Te recomendamos una evaluación profesional.</p>
-                        <button class="btn btn-secondary" onclick="openCotizador('hogar')">Cotizar con este Valor</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="faq">
-            <div class="container">
-                <h2>Preguntas Frecuentes</h2>
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Qué diferencia hay entre valor comercial y valor de reposición?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>El valor comercial es lo que vale tu casa hoy en el mercado. El valor de reposición es lo que costaría reconstruirla completamente. Para el seguro se usa el valor de reposición.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿El seguro cubre terremotos?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Sí, en los planes Completo y Premium incluimos cobertura para terremoto y temblor con deducibles especiales para este tipo de siniestros.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h4>¿Puedo asegurar una casa en construcción?</h4>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Sí, ofrecemos seguros especiales para obra gruesa y construcción que cubren materiales, maquinaria y responsabilidad civil del constructor.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Protege tu Hogar Hoy Mismo</h2>
-                    <p>No esperes a que sea tarde. Tu hogar es tu refugio, protégelo con el mejor seguro.</p>
-                    <div class="cta-buttons">
-                        <button class="btn btn-primary" onclick="openCotizador('hogar')">Cotizar Online</button>
-                        <button class="btn btn-secondary" onclick="openChat()">Hablar con Asesor</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>BCP Corredora de Seguros</h4>
-                    <p>Tu tranquilidad es nuestra prioridad.</p>
+                    <h4>Navegaci&oacute;n</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Qui&eacute;nes Somos</a></li>
+                        <li><a href="seguros.html">Nuestros Seguros</a></li>
+                        <li><a href="cotizador.html">Cotizar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Seguros</h4>
+                    <ul>
+                        <li><a href="seguro-auto.html">Seguro Automotriz</a></li>
+                        <li><a href="seguro-hogar.html">Seguro Hogar</a></li>
+                        <li><a href="seguros-personas.html">Seguros para Personas</a></li>
+                        <li><a href="seguros-empresas.html">Seguros para Empresas</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contacto</h4>
-                    <p><i class="fas fa-phone"></i> +56 2 2345 6789</p>
-                    <p><i class="fas fa-envelope"></i> contacto@bcpseguros.cl</p>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+56600600292">600 6000 292</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/56600600292" target="_blank">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@bcp.cl">info@bcp.cl</a></li>
+                        <li><a href="contacto.html">Formulario de Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Pol&iacute;ticas de Privacidad</a></li>
+                        <li><a href="#">T&eacute;rminos y Condiciones</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 BCP Corredora de Seguros. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/56600600292" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <div class="chat-button" onclick="openChat()">
-        <i class="fas fa-comments"></i>
+    <div class="chat-widget" onclick="window.open('https://wa.me/56600600292?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20hogar','_blank')">
+        <div class="chat-button"><i class="fab fa-whatsapp"></i></div>
+        <div class="chat-tooltip">&iquest;Necesitas ayuda? &iexcl;Hablemos!</div>
     </div>
 
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/seguros.js"></script>
-    <script>
-        function calcularValor() {
-            const tipo = document.getElementById('tipoVivienda').value;
-            const metros = parseInt(document.getElementById('metrosCuadrados').value);
-            const ano = parseInt(document.getElementById('anoConstraccion').value);
-            const region = document.getElementById('region').value;
-            
-            if (!metros || !ano) {
-                alert('Por favor completa todos los campos');
-                return;
-            }
-            
-            let valorBase = 25; // UF por m2 base
-            
-            // Ajuste por tipo de vivienda
-            if (tipo === 'casa') valorBase += 5;
-            if (tipo === 'parcela') valorBase += 10;
-            
-            // Ajuste por región
-            if (region === 'metropolitana') valorBase += 8;
-            if (region === 'valparaiso') valorBase += 5;
-            
-            // Ajuste por antigüedad
-            const antiguedad = 2025 - ano;
-            if (antiguedad < 5) valorBase += 5;
-            else if (antiguedad > 20) valorBase -= 3;
-            
-            const valorTotal = metros * valorBase;
-            const valorPesos = valorTotal * 37000; // UF aproximada
-            
-            document.getElementById('valorEstimado').textContent = 
-                new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(valorPesos);
-            
-            document.getElementById('calcResult').style.display = 'block';
-        }
-    </script>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>
