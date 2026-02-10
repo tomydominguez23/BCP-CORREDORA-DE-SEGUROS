@@ -80,7 +80,74 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="placeholder-image">Familia protegida</div>
+                <div class="hero-carousel-images">
+                    <div class="hero-img-slide active">
+                        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&h=450&fit=crop" 
+                             alt="Familia protegida" loading="eager">
+                        <div class="hero-img-label">
+                            <i class="fas fa-heart"></i>
+                            <span>Familia protegida</span>
+                        </div>
+                    </div>
+                    <div class="hero-img-slide">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&h=450&fit=crop" 
+                             alt="Seguro Automotriz" loading="lazy">
+                        <div class="hero-img-label">
+                            <i class="fas fa-car"></i>
+                            <span>Seguro Automotriz</span>
+                        </div>
+                    </div>
+                    <div class="hero-img-slide">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=450&fit=crop" 
+                             alt="Seguro Hogar" loading="lazy">
+                        <div class="hero-img-label">
+                            <i class="fas fa-home"></i>
+                            <span>Seguro Hogar</span>
+                        </div>
+                    </div>
+                    <div class="hero-img-slide">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=450&fit=crop" 
+                             alt="Seguro de Salud" loading="lazy">
+                        <div class="hero-img-label">
+                            <i class="fas fa-user-shield"></i>
+                            <span>Seguro de Salud</span>
+                        </div>
+                    </div>
+                    <div class="hero-img-slide">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=450&fit=crop" 
+                             alt="Seguros para Empresas" loading="lazy">
+                        <div class="hero-img-label">
+                            <i class="fas fa-building"></i>
+                            <span>Seguros para Empresas</span>
+                        </div>
+                    </div>
+                    <div class="hero-img-slide">
+                        <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=600&h=450&fit=crop" 
+                             alt="Seguro de Viaje" loading="lazy">
+                        <div class="hero-img-label">
+                            <i class="fas fa-plane"></i>
+                            <span>Seguro de Viaje</span>
+                        </div>
+                    </div>
+                    <div class="hero-img-slide">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=450&fit=crop" 
+                             alt="Seguro de Mascotas" loading="lazy">
+                        <div class="hero-img-label">
+                            <i class="fas fa-paw"></i>
+                            <span>Seguro de Mascotas</span>
+                        </div>
+                    </div>
+                    <!-- Indicadores del carrusel hero -->
+                    <div class="hero-img-indicators">
+                        <button class="hero-img-dot active" onclick="goToHeroImage(0)"></button>
+                        <button class="hero-img-dot" onclick="goToHeroImage(1)"></button>
+                        <button class="hero-img-dot" onclick="goToHeroImage(2)"></button>
+                        <button class="hero-img-dot" onclick="goToHeroImage(3)"></button>
+                        <button class="hero-img-dot" onclick="goToHeroImage(4)"></button>
+                        <button class="hero-img-dot" onclick="goToHeroImage(5)"></button>
+                        <button class="hero-img-dot" onclick="goToHeroImage(6)"></button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -759,6 +826,63 @@
         }
 
         document.addEventListener('DOMContentLoaded', initCarousel);
+
+        // ========================================
+        // Carrusel de Imágenes del Hero
+        // ========================================
+        let heroImgCurrentIndex = 0;
+        const heroImgSlides = document.querySelectorAll('.hero-img-slide');
+        const heroImgDots = document.querySelectorAll('.hero-img-dot');
+        let autoHeroImgInterval;
+
+        function updateHeroImage() {
+            heroImgSlides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === heroImgCurrentIndex);
+            });
+            heroImgDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === heroImgCurrentIndex);
+            });
+        }
+
+        function nextHeroImage() {
+            heroImgCurrentIndex = (heroImgCurrentIndex + 1) % heroImgSlides.length;
+            updateHeroImage();
+        }
+
+        function goToHeroImage(index) {
+            heroImgCurrentIndex = index;
+            updateHeroImage();
+            resetAutoHeroImage();
+        }
+
+        function startAutoHeroImage() {
+            autoHeroImgInterval = setInterval(nextHeroImage, 4000);
+        }
+
+        function resetAutoHeroImage() {
+            clearInterval(autoHeroImgInterval);
+            startAutoHeroImage();
+        }
+
+        function initHeroImageCarousel() {
+            if (heroImgSlides.length > 0) {
+                updateHeroImage();
+                startAutoHeroImage();
+
+                // Pausar al hacer hover
+                const heroCarouselContainer = document.querySelector('.hero-carousel-images');
+                if (heroCarouselContainer) {
+                    heroCarouselContainer.addEventListener('mouseenter', () => {
+                        clearInterval(autoHeroImgInterval);
+                    });
+                    heroCarouselContainer.addEventListener('mouseleave', () => {
+                        startAutoHeroImage();
+                    });
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', initHeroImageCarousel);
 
         // ========================================
         // Carrusel Quiénes Somos - Funcionalidad
