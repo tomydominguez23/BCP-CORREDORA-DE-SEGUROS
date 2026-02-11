@@ -1758,14 +1758,14 @@ body {
 
 .claims-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
     margin-bottom: 40px;
 }
 
 .claims-card {
     background: var(--white);
-    padding: 48px;
+    padding: 32px 28px;
     border-radius: var(--radius-xl);
     border-left: 5px solid var(--primary);
     transition: all var(--transition-normal);
@@ -2775,6 +2775,10 @@ body {
         font-size: 13px;
         padding: 8px 12px;
     }
+
+    .claims-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 992px) {
@@ -2795,6 +2799,10 @@ body {
 
     .hero-text h1 {
         font-size: 42px;
+    }
+
+    .claims-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
