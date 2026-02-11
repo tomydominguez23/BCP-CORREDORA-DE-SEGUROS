@@ -661,16 +661,7 @@ body {
     overflow: hidden;
 }
 
-.quienes-somos-inicio::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-dark), var(--secondary), var(--secondary-light), var(--primary-light));
-    pointer-events: none;
-}
+/* Línea superior eliminada */
 
 .quienes-content {
     position: relative;
