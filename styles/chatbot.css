@@ -1,0 +1,628 @@
+/* ========================================
+   BCP Asistente Virtual - Estilos Premium
+   ======================================== */
+
+/* ========================================
+   Botón Flotante del Chat
+   ======================================== */
+.bcp-chat-widget {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.bcp-chat-btn {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--gradient-gold, linear-gradient(135deg, #a88a2f 0%, #c9a43e 50%, #dbb85a 100%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(201, 164, 62, 0.4), 0 0 0 0 rgba(201, 164, 62, 0.4);
+    transition: all 0.3s ease;
+    animation: bcpChatPulse 2.5s infinite;
+    position: relative;
+}
+
+.bcp-chat-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 30px rgba(201, 164, 62, 0.5);
+}
+
+.bcp-chat-btn:active {
+    transform: scale(0.95);
+}
+
+.bcp-chat-btn-icon,
+.bcp-chat-btn-close {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-dark, #0f2942);
+    font-size: 26px;
+}
+
+.bcp-chat-btn-close {
+    font-size: 22px;
+}
+
+@keyframes bcpChatPulse {
+    0% {
+        box-shadow: 0 4px 20px rgba(201, 164, 62, 0.4), 0 0 0 0 rgba(201, 164, 62, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(201, 164, 62, 0.5), 0 0 0 14px rgba(201, 164, 62, 0);
+    }
+    100% {
+        box-shadow: 0 4px 20px rgba(201, 164, 62, 0.4), 0 0 0 0 rgba(201, 164, 62, 0);
+    }
+}
+
+/* ========================================
+   Tooltip
+   ======================================== */
+.bcp-chat-tooltip {
+    position: absolute;
+    bottom: 76px;
+    right: 0;
+    background: var(--white, #ffffff);
+    color: var(--dark-gray, #343a40);
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: 0 4px 20px rgba(15, 41, 66, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(15, 41, 66, 0.08);
+}
+
+.bcp-chat-tooltip.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.bcp-chat-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    right: 24px;
+    width: 14px;
+    height: 14px;
+    background: var(--white, #ffffff);
+    transform: rotate(45deg);
+    border-right: 1px solid rgba(15, 41, 66, 0.08);
+    border-bottom: 1px solid rgba(15, 41, 66, 0.08);
+}
+
+.bcp-tooltip-close {
+    background: none;
+    border: none;
+    color: var(--medium-gray, #6c757d);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.bcp-tooltip-close:hover {
+    color: var(--dark-gray, #343a40);
+}
+
+/* ========================================
+   Ventana del Chat
+   ======================================== */
+.bcp-chat-window {
+    position: fixed;
+    bottom: 100px;
+    right: 24px;
+    width: 400px;
+    height: 600px;
+    max-height: calc(100vh - 130px);
+    background: var(--white, #ffffff);
+    border-radius: 20px;
+    box-shadow: 0 12px 48px rgba(15, 41, 66, 0.2), 0 0 0 1px rgba(15, 41, 66, 0.06);
+    display: flex;
+    flex-direction: column;
+    z-index: 9998;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bcp-chat-window.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* ========================================
+   Header del Chat
+   ======================================== */
+.bcp-chat-header {
+    background: linear-gradient(135deg, #0f2942 0%, #1e4a7a 100%);
+    color: #ffffff;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.bcp-chat-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #a88a2f, #c9a43e, #dbb85a, #c9a43e, #a88a2f);
+}
+
+.bcp-chat-header-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bcp-chat-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(201, 164, 62, 0.5);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.bcp-chat-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.bcp-chat-status-dot {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 12px;
+    height: 12px;
+    background: #22c55e;
+    border-radius: 50%;
+    border: 2px solid #0f2942;
+}
+
+.bcp-chat-header-text h4 {
+    font-family: var(--font-display, 'Montserrat', sans-serif);
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+.bcp-chat-status {
+    font-size: 12px;
+    opacity: 0.85;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bcp-chat-header-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.bcp-chat-action-btn {
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.bcp-chat-action-btn:hover {
+    background: rgba(255, 255, 255, 0.22);
+    transform: scale(1.05);
+}
+
+.bcp-chat-whatsapp-btn:hover {
+    background: #25D366;
+}
+
+/* ========================================
+   Área de Mensajes
+   ======================================== */
+.bcp-chat-messages {
+    flex: 1;
+    padding: 20px 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: #f4f6f9;
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar personalizado */
+.bcp-chat-messages::-webkit-scrollbar {
+    width: 5px;
+}
+
+.bcp-chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.bcp-chat-messages::-webkit-scrollbar-thumb {
+    background: rgba(15, 41, 66, 0.2);
+    border-radius: 10px;
+}
+
+.bcp-chat-messages::-webkit-scrollbar-thumb:hover {
+    background: rgba(15, 41, 66, 0.35);
+}
+
+/* ========================================
+   Mensajes
+   ======================================== */
+.bcp-msg {
+    display: flex;
+    gap: 8px;
+    max-width: 88%;
+    animation: bcpMsgFadeIn 0.35s ease;
+}
+
+@keyframes bcpMsgFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bcp-msg-user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.bcp-msg-bot {
+    align-self: flex-start;
+}
+
+.bcp-msg-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.bcp-msg-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.bcp-msg-bubble {
+    padding: 12px 16px;
+    border-radius: 16px;
+    line-height: 1.55;
+    font-size: 14px;
+    position: relative;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.bcp-msg-user .bcp-msg-bubble {
+    background: linear-gradient(135deg, #0f2942 0%, #1e4a7a 100%);
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 2px 8px rgba(15, 41, 66, 0.15);
+}
+
+.bcp-msg-bot .bcp-msg-bubble {
+    background: #ffffff;
+    color: #343a40;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 1px 4px rgba(15, 41, 66, 0.08);
+    border: 1px solid rgba(15, 41, 66, 0.06);
+}
+
+.bcp-msg-text {
+    font-family: var(--font-primary, 'Inter', sans-serif);
+}
+
+.bcp-msg-text strong {
+    font-weight: 600;
+    color: #0f2942;
+}
+
+.bcp-msg-user .bcp-msg-text strong {
+    color: #dbb85a;
+}
+
+.bcp-msg-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    padding: 8px 14px;
+    background: linear-gradient(135deg, #a88a2f 0%, #c9a43e 50%, #dbb85a 100%);
+    color: #0f2942;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(201, 164, 62, 0.3);
+}
+
+.bcp-msg-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(201, 164, 62, 0.4);
+}
+
+.bcp-msg-link i {
+    font-size: 10px;
+}
+
+.bcp-msg-time {
+    font-size: 10px;
+    opacity: 0.55;
+    margin-top: 6px;
+    text-align: right;
+}
+
+.bcp-msg-bot .bcp-msg-time {
+    text-align: left;
+}
+
+/* ========================================
+   Indicador de Escritura
+   ======================================== */
+.bcp-typing-dots {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 4px;
+}
+
+.bcp-typing-dots span {
+    width: 8px;
+    height: 8px;
+    background: #0f2942;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: bcpTypingBounce 1.4s ease-in-out infinite;
+}
+
+.bcp-typing-dots span:nth-child(1) { animation-delay: 0s; }
+.bcp-typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.bcp-typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bcpTypingBounce {
+    0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+    30% {
+        transform: translateY(-6px);
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   Sugerencias
+   ======================================== */
+.bcp-chat-suggestions {
+    padding: 0 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #f4f6f9;
+}
+
+.bcp-chat-suggestions:has(.bcp-suggestion-chip) {
+    padding: 8px 16px 12px;
+    max-height: 200px;
+}
+
+.bcp-suggestion-chip {
+    background: #ffffff;
+    color: #1e4a7a;
+    border: 1.5px solid #1e4a7a;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: var(--font-primary, 'Inter', sans-serif);
+    white-space: nowrap;
+}
+
+.bcp-suggestion-chip:hover {
+    background: #1e4a7a;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(30, 74, 122, 0.25);
+}
+
+.bcp-suggestion-chip:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+   Área de Input
+   ======================================== */
+.bcp-chat-input-area {
+    background: #ffffff;
+    padding: 12px 16px 10px;
+    border-top: 1px solid #e9ecef;
+    flex-shrink: 0;
+}
+
+.bcp-chat-input-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f4f6f9;
+    border-radius: 24px;
+    padding: 4px 4px 4px 16px;
+    border: 2px solid #e9ecef;
+    transition: border-color 0.2s ease;
+}
+
+.bcp-chat-input-container:focus-within {
+    border-color: #1e4a7a;
+}
+
+.bcp-chat-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-family: var(--font-primary, 'Inter', sans-serif);
+    color: #343a40;
+    outline: none;
+    padding: 8px 0;
+}
+
+.bcp-chat-input::placeholder {
+    color: #6c757d;
+}
+
+.bcp-chat-send-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a88a2f 0%, #c9a43e 50%, #dbb85a 100%);
+    color: #0f2942;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(201, 164, 62, 0.3);
+}
+
+.bcp-chat-send-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 12px rgba(201, 164, 62, 0.4);
+}
+
+.bcp-chat-send-btn:active {
+    transform: scale(0.95);
+}
+
+.bcp-chat-powered {
+    text-align: center;
+    font-size: 10px;
+    color: #6c757d;
+    margin-top: 8px;
+    padding-bottom: 2px;
+}
+
+.bcp-chat-powered strong {
+    color: #0f2942;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+@media (max-width: 480px) {
+    .bcp-chat-window {
+        width: calc(100vw - 16px);
+        height: calc(100vh - 90px);
+        max-height: calc(100vh - 90px);
+        bottom: 82px;
+        right: 8px;
+        border-radius: 16px;
+    }
+
+    .bcp-chat-widget {
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .bcp-chat-btn {
+        width: 56px;
+        height: 56px;
+    }
+
+    .bcp-chat-btn-icon,
+    .bcp-chat-btn-close {
+        font-size: 22px;
+    }
+
+    .bcp-chat-tooltip {
+        display: none;
+    }
+
+    .bcp-chat-header {
+        padding: 14px 16px;
+    }
+
+    .bcp-chat-messages {
+        padding: 16px 12px;
+    }
+
+    .bcp-msg {
+        max-width: 92%;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+    .bcp-chat-window {
+        width: 360px;
+        height: 560px;
+        bottom: 96px;
+    }
+}
+
+/* ========================================
+   Ocultar el chat-widget original de WhatsApp
+   cuando el chatbot está activo
+   ======================================== */
+.chat-widget {
+    display: none !important;
+}
