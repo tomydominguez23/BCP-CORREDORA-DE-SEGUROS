@@ -175,6 +175,7 @@ body {
 
 .nav-menu {
     display: flex;
+    align-items: center;
     gap: 8px;
     flex-grow: 1;
     justify-content: center;
@@ -216,6 +217,8 @@ body {
 
 .dropdown {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .dropdown-content {
