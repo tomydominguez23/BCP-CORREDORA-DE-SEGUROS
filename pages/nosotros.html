@@ -13,6 +13,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/chatbot.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
@@ -362,22 +363,7 @@
         </div>
     </footer>
 
-    <!-- Chat Widget -->
-    <div class="chat-widget" onclick="toggleChat()">
-        <div class="chat-button">
-            <i class="fab fa-whatsapp"></i>
-        </div>
-        <div class="chat-tooltip">&iquest;Necesitas ayuda? &iexcl;Hablemos!</div>
-    </div>
-
     <script src="../scripts/main.js"></script>
-    <script>
-        function toggleChat() {
-            const phoneNumber = '+56600600292';
-            const message = '&iexcl;Hola! Me interesa conocer m&aacute;s sobre sus seguros.';
-            const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-        }
-    </script>
+    <script src="../scripts/chatbot.js"></script>
 </body>
 </html>
