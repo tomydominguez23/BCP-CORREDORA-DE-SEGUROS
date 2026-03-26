@@ -45,10 +45,10 @@
 
         // --- CONTACTO ---
         contacto: {
-            telefono: '600 6000 292',
-            celular: '226 799 700',
-            whatsapp: '+56600600292',
-            whatsappUrl: 'https://wa.me/56600600292?text=Hola%2C%20necesito%20asesor%C3%ADa%20sobre%20seguros',
+            telefono: '+569 64431292',
+            celular: '+569 64431292',
+            whatsapp: '+56964431292',
+            whatsappUrl: 'https://wa.me/56964431292?text=Hola%2C%20necesito%20asesor%C3%ADa%20sobre%20seguros',
             email: 'contacto@bcpcorredoradeseguros.com',
             emailCotizaciones: 'contacto@bcpcorredoradeseguros.com',
             horario: 'Lunes a Viernes de 8:00 a 18:00 hrs. Sábados de 9:00 a 14:00 hrs.',
@@ -161,9 +161,9 @@
         // --- SINIESTROS ---
         siniestros: {
             descripcion: 'Cuando ocurre un imprevisto, no te dejamos solo. Te orientamos en el proceso, gestionamos con la aseguradora y defendemos tus intereses para que el seguro responda como corresponde.',
-            telefonoFijo: '600 6000 292',
-            celular: '226 799 700',
-            whatsapp: 'https://wa.me/56600600292?text=Hola%2C%20necesito%20reportar%20un%20siniestro'
+            telefonoFijo: '+569 64431292',
+            celular: '+569 64431292',
+            whatsapp: 'https://wa.me/56964431292?text=Hola%2C%20necesito%20reportar%20un%20siniestro'
         },
 
         // --- FAQ ---
@@ -322,7 +322,7 @@
 
             case 'despedida':
                 return {
-                    text: `¡Fue un gusto ayudarte! Recuerda que en BCP estamos siempre disponibles para ti. Si necesitas algo más, no dudes en escribirme.\n\n📞 600 6000 292\n💬 WhatsApp disponible\n📧 contacto@bcpcorredoradeseguros.com\n\n¡Que tengas un excelente día!`,
+                    text: `¡Fue un gusto ayudarte! Recuerda que en BCP estamos siempre disponibles para ti. Si necesitas algo más, no dudes en escribirme.\n\n📞 +569 64431292\n💬 WhatsApp disponible\n📧 contacto@bcpcorredoradeseguros.com\n\n¡Que tengas un excelente día!`,
                     suggestions: []
                 };
 
@@ -396,21 +396,21 @@
 
             case 'cotizar':
                 return {
-                    text: `¡Perfecto! Cotizar con nosotros es **gratis y sin compromiso**. Tienes varias opciones:\n\n📋 **Cotizador Online** — Completa nuestro formulario y recibe tu cotización en menos de 24 horas.\n\n📞 **Llámanos** — 600 6000 292 o 226 799 700\n\n💬 **WhatsApp** — Escríbenos directamente\n\n📧 **Email** — contacto@bcpcorredoradeseguros.com\n\n¿Qué tipo de seguro te interesa cotizar?`,
+                    text: `¡Perfecto! Cotizar con nosotros es **gratis y sin compromiso**. Tienes varias opciones:\n\n📋 **Cotizador Online** — Completa nuestro formulario y recibe tu cotización en menos de 24 horas.\n\n📞 **Llámanos** — +569 64431292\n\n💬 **WhatsApp** — Escríbenos directamente\n\n📧 **Email** — contacto@bcpcorredoradeseguros.com\n\n¿Qué tipo de seguro te interesa cotizar?`,
                     suggestions: ['Seguro Automotriz', 'Seguro Hogar', 'Seguro de Vida', 'Seguro de Salud', 'Seguro de Viaje', 'Seguro Empresarial'],
                     link: { text: 'Ir al Cotizador Online', url: getPageUrl('cotizador.html') }
                 };
 
             case 'siniestro':
                 return {
-                    text: `🛡️ **Reportar un Siniestro**\n\nEstamos contigo cuando más lo necesitas. Te orientamos en el proceso, gestionamos con la aseguradora y defendemos tus intereses.\n\n**Contacto directo para siniestros:**\n\n📞 **Teléfono fijo:** 600 6000 292\n📱 **Celulares:** 226 799 700\n💬 **WhatsApp:** Disponible para enviar tu reporte\n\nTe recomendamos tener a mano tu número de póliza y los detalles del incidente. Nuestro equipo te guiará paso a paso.`,
+                    text: `🛡️ **Reportar un Siniestro**\n\nEstamos contigo cuando más lo necesitas. Te orientamos en el proceso, gestionamos con la aseguradora y defendemos tus intereses.\n\n**Contacto directo para siniestros:**\n\n📞 **Teléfono:** +569 64431292\n💬 **WhatsApp:** Disponible para enviar tu reporte\n\nTe recomendamos tener a mano tu número de póliza y los detalles del incidente. Nuestro equipo te guiará paso a paso.`,
                     suggestions: ['Llamar por teléfono', 'Escribir por WhatsApp', 'Tengo otra consulta'],
                     link: { text: 'Contactar por WhatsApp para siniestro', url: kb.siniestros.whatsapp, external: true }
                 };
 
             case 'contacto':
                 return {
-                    text: `📞 **Canales de Contacto BCP**\n\n• **Teléfono fijo:** 600 6000 292\n• **Desde celulares:** 226 799 700\n• **WhatsApp:** Escríbenos directamente\n• **Email general:** contacto@bcpcorredoradeseguros.com\n• **Email cotizaciones:** contacto@bcpcorredoradeseguros.com\n• **Formulario web:** Disponible en nuestra página de contacto\n\n⏰ **Horario:** Lun-Vie 8:00-18:00 | Sáb 9:00-14:00\n\n¿Prefieres que un asesor te contacte? Solo dime y te guío.`,
+                    text: `📞 **Canales de Contacto BCP**\n\n• **Teléfono:** +569 64431292\n• **WhatsApp:** Escríbenos directamente\n• **Email general:** contacto@bcpcorredoradeseguros.com\n• **Email cotizaciones:** contacto@bcpcorredoradeseguros.com\n• **Formulario web:** Disponible en nuestra página de contacto\n\n⏰ **Horario:** Lun-Vie 8:00-18:00 | Sáb 9:00-14:00\n\n¿Prefieres que un asesor te contacte? Solo dime y te guío.`,
                     suggestions: ['Escribir por WhatsApp', 'Ir al formulario de contacto', 'Quiero cotizar un seguro'],
                     link: { text: 'Ir a la página de Contacto', url: getPageUrl('contacto.html') }
                 };

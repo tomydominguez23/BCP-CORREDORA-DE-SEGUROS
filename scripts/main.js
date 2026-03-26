@@ -4,11 +4,47 @@
 function initMobileMenu() {
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const navActions = document.querySelector('.nav-actions');
     
     if (mobileToggle && navMenu) {
+        // En móvil, replicamos los CTAs del header dentro del menú desplegable.
+        if (navActions && !navMenu.querySelector('.mobile-nav-actions')) {
+            const mobileActions = navActions.cloneNode(true);
+            mobileActions.classList.add('mobile-nav-actions');
+            navMenu.appendChild(mobileActions);
+        }
+
         mobileToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             mobileToggle.classList.toggle('active');
+        });
+
+        // Cerrar menú al tocar un enlace en móvil
+        navMenu.addEventListener('click', (event) => {
+            const target = event.target.closest('a');
+            if (!target) return;
+            if (window.innerWidth <= 768) {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            }
+        });
+
+        // Cerrar menú al tocar fuera del header en móvil
+        document.addEventListener('click', (event) => {
+            if (window.innerWidth > 768) return;
+            const clickedInsideHeader = event.target.closest('.header');
+            if (!clickedInsideHeader) {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            }
+        });
+
+        // Restablecer estado del menú cuando se vuelve a desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            }
         });
     }
 }
@@ -75,9 +111,22 @@ function initQuoteCalculator() {
     
     quoteButtons.forEach(button => {
         button.addEventListener('click', (e) => {
+            const href = button.getAttribute('href');
+            if (!href) return;
+
+            // Solo forzamos redirección en CTA comerciales.
+            // Evitamos interceptar submits u otros botones primarios de formularios.
+            if (button.closest('form')) return;
+            if (href.includes('wa.me') || href.startsWith('tel:') || href.startsWith('mailto:')) return;
+
+            const pointsToCotizador = href.includes('cotizador.html');
+            if (!pointsToCotizador) return;
+
             e.preventDefault();
-            // Redirigir al cotizador
-            window.location.href = 'pages/cotizador.html';
+
+            // Normaliza la ruta según si estamos en raíz o dentro de /pages/
+            const isInPages = window.location.pathname.includes('/pages/');
+            window.location.href = isInPages ? 'cotizador.html' : 'pages/cotizador.html';
         });
     });
 }

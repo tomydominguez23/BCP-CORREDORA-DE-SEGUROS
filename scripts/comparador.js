@@ -527,7 +527,7 @@ function requestMultipleQuotes() {
 
 function contactAdviser() {
     // Open contact modal or redirect to contact page
-    const phoneNumber = '+56600600292';
+    const phoneNumber = '+56964431292';
     const message = `Hola, me interesa recibir asesoría sobre las siguientes pólizas de seguro:\n\n${selectedPolicies.map(policyId => `- ${policyDetails[policyId].name} (${policyDetails[policyId].company})`).join('\n')}\n\n¿Podrían contactarme para más información?`;
     
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`;
