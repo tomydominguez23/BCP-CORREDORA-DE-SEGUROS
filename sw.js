@@ -1,7 +1,7 @@
 // Service Worker para BCP Corredora de Seguros
 // Proporciona funcionalidades PWA básicas
 
-const CACHE_NAME = 'bcp-seguros-v1.0.0';
+const CACHE_NAME = 'bcp-seguros-v1.0.1';
 const urlsToCache = [
   '/',
   '/index.html',
