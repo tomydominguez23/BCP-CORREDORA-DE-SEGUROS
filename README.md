@@ -137,7 +137,7 @@ php -S localhost:8000
 ## 📞 Información de Contacto
 
 ### Datos de la empresa (simulados):
-- **Teléfono**: 600 6000 292
+- **Teléfono**: +569 64431292
 - **Celular**: 226799700
 - **Web**: bcpseguros.cl
 - **Horario**: Lunes a Viernes 9:00-18:00

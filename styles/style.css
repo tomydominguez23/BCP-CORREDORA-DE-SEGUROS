@@ -73,12 +73,20 @@ body {
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 24px;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Colores de Marca - Indicadores Premium */
@@ -263,6 +271,10 @@ body {
     gap: 12px;
     align-items: center;
     flex-shrink: 0;
+}
+
+.mobile-nav-actions {
+    display: none;
 }
 
 .btn-primary {
@@ -2798,6 +2810,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
     .mobile-menu-toggle {
         display: block;
     }
@@ -2813,6 +2829,8 @@ body {
         padding: 20px;
         box-shadow: var(--shadow-lg);
         border-top: 3px solid var(--secondary);
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
     }
 
     .nav-menu.active {
@@ -2820,8 +2838,30 @@ body {
     }
 
     .nav-menu .nav-link {
+        width: 100%;
+        text-align: left;
         padding: 16px;
         border-bottom: 1px solid var(--light-gray);
+    }
+
+    .nav-menu .dropdown {
+        width: 100%;
+        display: block;
+    }
+
+    .nav-menu .dropdown-content {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        border: 1px solid var(--light-gray);
+        margin: 0;
+        min-width: 100%;
+        border-radius: var(--radius-sm);
+    }
+
+    .nav-menu .dropdown-content a {
+        padding: 10px 16px;
     }
     
     .nav-container {
@@ -2830,7 +2870,23 @@ body {
     }
     
     .nav-actions {
-        gap: 8px;
+        display: none;
+    }
+
+    .mobile-nav-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .mobile-nav-actions .btn-primary,
+    .mobile-nav-actions .btn-secondary {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 12px 16px;
     }
     
     .btn-primary,
@@ -2847,6 +2903,7 @@ body {
         flex-direction: column;
         text-align: center;
         gap: 40px;
+        padding: 0;
     }
 
     .hero-text .brand-colors {
@@ -2877,6 +2934,21 @@ body {
     .hero-nav {
         display: none;
     }
+
+    .hero-cta-group {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-cta-group .btn-buy,
+    .hero-cta-group .btn-buy-outline,
+    .hero-cta-group .btn-primary,
+    .hero-cta-group .btn-secondary {
+        width: 100%;
+        max-width: 360px;
+        justify-content: center;
+        text-align: center;
+    }
     
     .services-grid {
         grid-template-columns: 1fr;
@@ -2896,6 +2968,24 @@ body {
     
     .services-options-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .seguro-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .seguro-feature-card {
+        padding: 28px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-section h4 {
+        margin-bottom: 12px;
     }
 
     .footer-bottom {
@@ -2945,6 +3035,10 @@ body {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+
     .hero-text h1 {
         font-size: 28px;
     }
@@ -2997,10 +3091,6 @@ body {
         gap: 0.5rem;
     }
     
-    .nav-actions {
-        gap: 6px;
-    }
-    
     .btn-primary,
     .search-btn {
         padding: 10px 16px;
@@ -3014,6 +3104,10 @@ body {
     .logo-img {
         width: 40px;
         height: 40px;
+    }
+
+    .logo-subtext {
+        display: none;
     }
 
     .chat-widget {

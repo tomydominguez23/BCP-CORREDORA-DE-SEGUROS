@@ -4,11 +4,47 @@
 function initMobileMenu() {
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const navActions = document.querySelector('.nav-actions');
     
     if (mobileToggle && navMenu) {
+        // En móvil, replicamos los CTAs del header dentro del menú desplegable.
+        if (navActions && !navMenu.querySelector('.mobile-nav-actions')) {
+            const mobileActions = navActions.cloneNode(true);
+            mobileActions.classList.add('mobile-nav-actions');
+            navMenu.appendChild(mobileActions);
+        }
+
         mobileToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             mobileToggle.classList.toggle('active');
+        });
+
+        // Cerrar menú al tocar un enlace en móvil
+        navMenu.addEventListener('click', (event) => {
+            const target = event.target.closest('a');
+            if (!target) return;
+            if (window.innerWidth <= 768) {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            }
+        });
+
+        // Cerrar menú al tocar fuera del header en móvil
+        document.addEventListener('click', (event) => {
+            if (window.innerWidth > 768) return;
+            const clickedInsideHeader = event.target.closest('.header');
+            if (!clickedInsideHeader) {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            }
+        });
+
+        // Restablecer estado del menú cuando se vuelve a desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            }
         });
     }
 }

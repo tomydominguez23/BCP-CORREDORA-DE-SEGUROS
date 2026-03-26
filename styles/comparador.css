@@ -496,11 +496,13 @@
 
 #comparisonTable {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     margin-bottom: 2rem;
 }
 
 .comparison-table {
     width: 100%;
+    min-width: 680px;
     border-collapse: collapse;
     background: var(--white);
     border-radius: var(--radius-lg);
