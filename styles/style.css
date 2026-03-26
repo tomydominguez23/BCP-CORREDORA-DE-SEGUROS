@@ -63,6 +63,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: clip;
 }
 
 body {
@@ -74,6 +75,15 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+}
+
+/* Evita desbordes horizontales en móvil por subpíxeles/transforms */
+body,
+.header,
+.hero,
+.seguro-page-hero,
+.nav-container {
+    max-width: 100%;
 }
 
 .container {
