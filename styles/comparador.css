@@ -799,6 +799,10 @@
 }
 
 @media (max-width: 480px) {
+    #comparisonTable {
+        -webkit-overflow-scrolling: touch;
+    }
+
     .filter-section {
         padding: 20px 0;
     }

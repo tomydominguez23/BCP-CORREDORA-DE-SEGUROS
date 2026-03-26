@@ -111,9 +111,22 @@ function initQuoteCalculator() {
     
     quoteButtons.forEach(button => {
         button.addEventListener('click', (e) => {
+            const href = button.getAttribute('href');
+            if (!href) return;
+
+            // Solo forzamos redirección en CTA comerciales.
+            // Evitamos interceptar submits u otros botones primarios de formularios.
+            if (button.closest('form')) return;
+            if (href.includes('wa.me') || href.startsWith('tel:') || href.startsWith('mailto:')) return;
+
+            const pointsToCotizador = href.includes('cotizador.html');
+            if (!pointsToCotizador) return;
+
             e.preventDefault();
-            // Redirigir al cotizador
-            window.location.href = 'pages/cotizador.html';
+
+            // Normaliza la ruta según si estamos en raíz o dentro de /pages/
+            const isInPages = window.location.pathname.includes('/pages/');
+            window.location.href = isInPages ? 'cotizador.html' : 'pages/cotizador.html';
         });
     });
 }
