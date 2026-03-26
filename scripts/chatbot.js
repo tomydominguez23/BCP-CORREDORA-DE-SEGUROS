@@ -49,8 +49,8 @@
             celular: '226 799 700',
             whatsapp: '+56600600292',
             whatsappUrl: 'https://wa.me/56600600292?text=Hola%2C%20necesito%20asesor%C3%ADa%20sobre%20seguros',
-            email: 'info@bcp.cl',
-            emailCotizaciones: 'cotizaciones@bcp.cl',
+            email: 'contacto@bcpcorredoradeseguros.com',
+            emailCotizaciones: 'contacto@bcpcorredoradeseguros.com',
             horario: 'Lunes a Viernes de 8:00 a 18:00 hrs. Sábados de 9:00 a 14:00 hrs.',
             formularioContacto: 'pages/contacto.html'
         },
@@ -322,7 +322,7 @@
 
             case 'despedida':
                 return {
-                    text: `¡Fue un gusto ayudarte! Recuerda que en BCP estamos siempre disponibles para ti. Si necesitas algo más, no dudes en escribirme.\n\n📞 600 6000 292\n💬 WhatsApp disponible\n📧 info@bcp.cl\n\n¡Que tengas un excelente día!`,
+                    text: `¡Fue un gusto ayudarte! Recuerda que en BCP estamos siempre disponibles para ti. Si necesitas algo más, no dudes en escribirme.\n\n📞 600 6000 292\n💬 WhatsApp disponible\n📧 contacto@bcpcorredoradeseguros.com\n\n¡Que tengas un excelente día!`,
                     suggestions: []
                 };
 
@@ -396,7 +396,7 @@
 
             case 'cotizar':
                 return {
-                    text: `¡Perfecto! Cotizar con nosotros es **gratis y sin compromiso**. Tienes varias opciones:\n\n📋 **Cotizador Online** — Completa nuestro formulario y recibe tu cotización en menos de 24 horas.\n\n📞 **Llámanos** — 600 6000 292 o 226 799 700\n\n💬 **WhatsApp** — Escríbenos directamente\n\n📧 **Email** — cotizaciones@bcp.cl\n\n¿Qué tipo de seguro te interesa cotizar?`,
+                    text: `¡Perfecto! Cotizar con nosotros es **gratis y sin compromiso**. Tienes varias opciones:\n\n📋 **Cotizador Online** — Completa nuestro formulario y recibe tu cotización en menos de 24 horas.\n\n📞 **Llámanos** — 600 6000 292 o 226 799 700\n\n💬 **WhatsApp** — Escríbenos directamente\n\n📧 **Email** — contacto@bcpcorredoradeseguros.com\n\n¿Qué tipo de seguro te interesa cotizar?`,
                     suggestions: ['Seguro Automotriz', 'Seguro Hogar', 'Seguro de Vida', 'Seguro de Salud', 'Seguro de Viaje', 'Seguro Empresarial'],
                     link: { text: 'Ir al Cotizador Online', url: getPageUrl('cotizador.html') }
                 };
@@ -410,7 +410,7 @@
 
             case 'contacto':
                 return {
-                    text: `📞 **Canales de Contacto BCP**\n\n• **Teléfono fijo:** 600 6000 292\n• **Desde celulares:** 226 799 700\n• **WhatsApp:** Escríbenos directamente\n• **Email general:** info@bcp.cl\n• **Email cotizaciones:** cotizaciones@bcp.cl\n• **Formulario web:** Disponible en nuestra página de contacto\n\n⏰ **Horario:** Lun-Vie 8:00-18:00 | Sáb 9:00-14:00\n\n¿Prefieres que un asesor te contacte? Solo dime y te guío.`,
+                    text: `📞 **Canales de Contacto BCP**\n\n• **Teléfono fijo:** 600 6000 292\n• **Desde celulares:** 226 799 700\n• **WhatsApp:** Escríbenos directamente\n• **Email general:** contacto@bcpcorredoradeseguros.com\n• **Email cotizaciones:** contacto@bcpcorredoradeseguros.com\n• **Formulario web:** Disponible en nuestra página de contacto\n\n⏰ **Horario:** Lun-Vie 8:00-18:00 | Sáb 9:00-14:00\n\n¿Prefieres que un asesor te contacte? Solo dime y te guío.`,
                     suggestions: ['Escribir por WhatsApp', 'Ir al formulario de contacto', 'Quiero cotizar un seguro'],
                     link: { text: 'Ir a la página de Contacto', url: getPageUrl('contacto.html') }
                 };

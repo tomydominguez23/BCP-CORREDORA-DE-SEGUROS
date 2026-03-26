@@ -181,7 +181,7 @@ function sendEmailNotification(quoteData) {
     // Example with EmailJS:
     /*
     emailjs.send('service_id', 'template_id', {
-        to_email: 'cotizaciones@bcp.cl',
+        to_email: 'contacto@bcpcorredoradeseguros.com',
         from_name: quoteData.fullName,
         from_email: quoteData.email,
         message: generateEmailContent(quoteData)
